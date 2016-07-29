@@ -1,0 +1,7 @@
+dist/
+node_modules/
+lib/
+www/
+coverage/
+__site/
+npm-debug.log
