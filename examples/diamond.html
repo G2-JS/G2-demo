@@ -771,30 +771,29 @@
       <h2>code</h2>
 <div class="highlight"><pre><code language=html><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"c1"</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
-<div class="highlight"><pre><code language=js><span class="hljs-keyword">var</span> $ = <span class="hljs-built_in">require</span>(<span class="hljs-string">'jquery'</span>);
+<div class="highlight"><pre><code language=js><span class="hljs-keyword">import</span> data <span class="hljs-keyword">from</span> <span class="hljs-string">'./diamond.json'</span>;
+<span class="hljs-keyword">var</span> $ = <span class="hljs-built_in">require</span>(<span class="hljs-string">'jquery'</span>);
 <span class="hljs-keyword">var</span> G2 = <span class="hljs-built_in">require</span>(<span class="hljs-string">'g2'</span>);
 <span class="hljs-keyword">var</span> Stat = G2.Stat;
 
-$.getJSON(<span class="hljs-string">'./diamond.json?nowrap'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>) </span>{
-  <span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> G2.Chart({
-    id : <span class="hljs-string">'c1'</span>,
-    width : <span class="hljs-number">800</span>,
-    height : <span class="hljs-number">500</span>,
-    plotCfg: {
-      margin: [<span class="hljs-number">50</span>,<span class="hljs-number">80</span>,<span class="hljs-number">50</span>,<span class="hljs-number">60</span>]
-    }
-  });
+<span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> G2.Chart({
+  id : <span class="hljs-string">'c1'</span>,
+  width : <span class="hljs-number">800</span>,
+  height : <span class="hljs-number">500</span>,
+  plotCfg: {
+    margin: [<span class="hljs-number">50</span>,<span class="hljs-number">80</span>,<span class="hljs-number">50</span>,<span class="hljs-number">60</span>]
+  }
+});
 
-  chart.source(data);
-  chart.interval().position(Stat.summary.mean(<span class="hljs-string">'cut*price'</span>)).color(<span class="hljs-string">'cut'</span>); <span class="hljs-comment">// 绘制柱状图</span>
-  <span class="hljs-comment">// chart.interval().position(Stat.summary.mean('cut*price')).color('cut').shape('tick'); // 不同的 shape</span>
-  <span class="hljs-comment">// chart.coord('polar'); // 改变坐标系</span>
+chart.source(data);
+chart.interval().position(Stat.summary.mean(<span class="hljs-string">'cut*price'</span>)).color(<span class="hljs-string">'cut'</span>); <span class="hljs-comment">// 绘制柱状图</span>
+<span class="hljs-comment">// chart.interval().position(Stat.summary.mean('cut*price')).color('cut').shape('tick'); // 不同的 shape</span>
+<span class="hljs-comment">// chart.coord('polar'); // 改变坐标系</span>
 
-  <span class="hljs-comment">// chart.coord('rect'); // 恢复至笛卡尔坐标系</span>
-  <span class="hljs-comment">// chart.intervalDodge().position(Stat.summary.mean('cut*price')).color('color'); // 分组柱状图</span>
-  <span class="hljs-comment">// chart.facet(['clarity'],{type: 'tree',line: {stroke: '#c0d0e0'},smooth:true,margin: 30}); // 添加分面</span>
-  chart.render();
-});</code></pre></div>
+<span class="hljs-comment">// chart.coord('rect'); // 恢复至笛卡尔坐标系</span>
+<span class="hljs-comment">// chart.intervalDodge().position(Stat.summary.mean('cut*price')).color('color'); // 分组柱状图</span>
+<span class="hljs-comment">// chart.facet(['clarity'],{type: 'tree',line: {stroke: '#c0d0e0'},smooth:true,margin: 30}); // 添加分面</span>
+chart.render();</code></pre></div>
 <h2>R 语言包中的钻石数据</h2>
       </div>
     </div>
