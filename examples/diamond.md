@@ -10,7 +10,7 @@ var $ = require('jquery');
 var G2 = require('g2');
 var Stat = G2.Stat;
 
-$.getJSON('./data/diamond.json?nowrap', function(data) {
+$.getJSON('./diamond.json?nowrap', function(data) {
   var chart = new G2.Chart({
     id : 'c1',
     width : 800,
