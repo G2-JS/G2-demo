@@ -25,8 +25,8 @@
   "dependencies": {
   },
   "devDependencies": {
-    "atool-build": "0.6.x",
-    "atool-doc": "^0.1.0",
+    "atool-build": "~0.8.0",
+    "atool-doc": "~0.5.0",
     "atool-test": "^0.4.5",
     "babel-cli": "~6.6.4",
     "babel-core": "~6.7.4",

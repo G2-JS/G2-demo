@@ -6,7 +6,7 @@
 ```
 
 ```js
-import data from './diamond.json';
+import data from '../data/diamond.json';
 var $ = require('jquery');
 var G2 = require('g2');
 var Stat = G2.Stat;
