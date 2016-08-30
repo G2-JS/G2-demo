@@ -1,0 +1,11 @@
+[
+  {"week": "周一", "source": "直接访问", "item": "直接访问", "value": 320},
+  {"week": "周一", "source": "视频广告", "item": "广告", "value": 150},
+  {"week": "周一", "source": "联盟广告", "item": "广告", "value": 220},
+  {"week": "周一", "source": "邮件营销", "item": "广告", "value": 120},
+  {"week": "周一", "source": "百度", "item": "搜索引擎", "value": 620},
+  {"week": "周一", "source": "谷歌", "item": "搜索引擎", "value": 120},
+  {"week": "周一", "source": "必应", "item": "搜索引擎", "value": 100},
+  {"week": "周一", "source": "其他", "item": "搜索引擎", "value": 62}
+]
+
