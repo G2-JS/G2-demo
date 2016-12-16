@@ -59,7 +59,8 @@
     tickCount: 11,
     nice: false,
     mask: 'yyyy/m/d',
-    alias: 'Year/Month/Day'
+    alias: 'Year/Month/Day',
+    range: [0, 1]
   });
   chart.col('share', {
     alias: 'The Share Price',

@@ -50,6 +50,9 @@
       formatter: function(val) {
         return val + 'k';
       }
+    },
+    'Year': {
+      range: [0, 1]
     }
   });
   chart.tooltip({

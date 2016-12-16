@@ -28,6 +28,9 @@
 		height: 500
 	});
 	chart.source(data);
+	chart.legend({
+	  selectedMode: false
+	});
 	chart.heatmap().position('g*l').color('tmp').size(50);//非统计数据的默认叠加范围是50，统计数据支持自动计算无需配置
 	chart.render();
 ```

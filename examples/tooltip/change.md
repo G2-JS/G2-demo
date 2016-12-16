@@ -43,8 +43,8 @@
         type: 'time',
         mask: 'yyyy-mm-dd HH:MM:ss'
       },
-      'trend': { //设置条件，显示不同的颜色
-        type: 'condition',
+      'trend': {
+        type: 'cat',
         alias: '趋势',
         values: ['上涨','下跌']
       }

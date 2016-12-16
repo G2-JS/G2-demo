@@ -27,6 +27,9 @@ var chart = new G2.Chart({
 	height: 500
 });
 chart.source(data);//服从二维正太分布的样本数据
+chart.legend({
+  selectedMode: false
+});
 chart.heatmap().position(Stat.smooth.loess.gaussian('g*l*tmp',0.03)).color('tmp');
 chart.render();
 

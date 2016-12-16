@@ -43,7 +43,8 @@ chart.source(frame, {
     }
   },
   'name': {
-    alias: '化妆品'
+    alias: '化妆品',
+    range: [0, 1]
   }
 });
 chart.areaStack().position('name*Revenue').color('City');

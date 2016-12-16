@@ -52,6 +52,9 @@ chart.source(frame, {
     formatter: function(val) {
       return '$' + val;
     }
+  },
+  'year': {
+    range: [0, 1]
   }
 });
 chart.tooltip({

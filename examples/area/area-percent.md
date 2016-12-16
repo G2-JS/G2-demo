@@ -59,6 +59,9 @@ chart.source(data, {
       value = value * 100;
       return parseInt(value);
     }
+  },
+  'year': {
+    range: [0, 1]
   }
 });
 chart.areaStack().position(Stat.summary.percent('year*value')).color('country');

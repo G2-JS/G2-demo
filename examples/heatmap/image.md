@@ -66,8 +66,10 @@ chart.coord().reflect();
 //使用图片后可以隐藏坐标轴
 chart.axis(false);
 chart.source(data,defs);
+chart.legend({
+	selectedMode: false
+});
 chart.heatmap().position('x*y').color('value').size(80);//为了呈献更好的效果，需要调整热力图的叠加范围
-
 //引入背景图片
 chart.guide().image([0,384],[512,0],{
 	src: 'https://t.alipayobjects.com/images/T15opoXj0aXXXXXXXX.jpg'

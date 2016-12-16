@@ -28,6 +28,10 @@
 		height: 500
 	});
 	chart.source(data);
+	chart.legend({
+	  selectedMode: false
+	});
+
 	chart.heatmap().position('g*l').color('tmp','rgb(0,0,0)-rgb(0,0,90)-blue-cyan');
 	chart.render();
 ```

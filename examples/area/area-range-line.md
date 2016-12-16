@@ -55,7 +55,8 @@ chart.source(data, {
   time: {
     type: 'timeCat',
     mask: 'dd/mm',
-    tickCount: 16
+    tickCount: 16,
+    range: [0, 1]
   },
   Temperature: {
     min: 5,

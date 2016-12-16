@@ -19,6 +19,9 @@
 		height: 500
 	});
 	chart.source(data);
+	chart.legend({
+	  selectedMode: false
+	});
 	chart.heatmap().position(Stat.density.kernel.gaussian('carat*price')).color('..density');
 	chart.render();
 ```
