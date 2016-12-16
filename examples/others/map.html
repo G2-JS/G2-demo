@@ -880,11 +880,11 @@
         
           <a href="../area/area.html" class="menu-item">area/area</a>
         
+          <a href="../bar/bar-bullet.html" class="menu-item">bar/bar-bullet</a>
+        
           <a href="../bar/bar-dodge.html" class="menu-item">bar/bar-dodge</a>
         
           <a href="../bar/bar.html" class="menu-item">bar/bar</a>
-        
-          <a href="../bar/column-bullet.html" class="menu-item">bar/column-bullet</a>
         
           <a href="../bar/column-dodge.html" class="menu-item">bar/column-dodge</a>
         
@@ -894,21 +894,21 @@
         
           <a href="../bar/column-stack.html" class="menu-item">bar/column-stack</a>
         
+          <a href="../bar/column-symmetric.html" class="menu-item">bar/column-symmetric</a>
+        
+          <a href="../bar/column-tick.html" class="menu-item">bar/column-tick</a>
+        
           <a href="../bar/column.html" class="menu-item">bar/column</a>
         
           <a href="../bar/range-bar.html" class="menu-item">bar/range-bar</a>
         
-          <a href="../bar/symmetric.html" class="menu-item">bar/symmetric</a>
+          <a href="../boxplot/coord-plus.html" class="menu-item">boxplot/coord-plus</a>
         
-          <a href="../bar/tick.html" class="menu-item">bar/tick</a>
+          <a href="../boxplot/coord-polar.html" class="menu-item">boxplot/coord-polar</a>
         
-          <a href="../boxplot/one-dim-m.html" class="menu-item">boxplot/one-dim-m</a>
+          <a href="../boxplot/one-dim-dodge.html" class="menu-item">boxplot/one-dim-dodge</a>
         
           <a href="../boxplot/one-dim.html" class="menu-item">boxplot/one-dim</a>
-        
-          <a href="../boxplot/plus.html" class="menu-item">boxplot/plus</a>
-        
-          <a href="../boxplot/polar.html" class="menu-item">boxplot/polar</a>
         
           <a href="../boxplot/two-dim-dodge.html" class="menu-item">boxplot/two-dim-dodge</a>
         
@@ -920,7 +920,7 @@
         
           <a href="../contour/line.html" class="menu-item">contour/line</a>
         
-          <a href="../coordinate/combin.html" class="menu-item">coordinate/combin</a>
+          <a href="../coordinate/combine.html" class="menu-item">coordinate/combine</a>
         
           <a href="../coordinate/plus-reflect.html" class="menu-item">coordinate/plus-reflect</a>
         
@@ -1060,7 +1060,7 @@
         
           <a href="map-albers-project.html" class="menu-item">others/map-albers-project</a>
         
-          <a href="map-bubble.html" class="menu-item">others/map-bubble</a>
+          <a href="map-dot-and-edge.html" class="menu-item">others/map-dot-and-edge</a>
         
           <a href="" class="menu-item selected">others/map</a>
         
@@ -1226,79 +1226,76 @@
 <hr></hr>
 <h2>code</h2>
 <div class="highlight"><pre><code language=html><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"c1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
-<div class="highlight"><pre><code language=js><span class="hljs-keyword">var</span> G2 = <span class="hljs-built_in">require</span>(<span class="hljs-string">'g2'</span>);
+<div class="highlight"><pre><code language=js><span class="hljs-keyword">import</span> mapData <span class="hljs-keyword">from</span> <span class="hljs-string">'./data/world.geo.json'</span>;
+<span class="hljs-keyword">import</span> G2 <span class="hljs-keyword">from</span> <span class="hljs-string">'g2'</span>;
 <span class="hljs-keyword">var</span> Stat = G2.Stat;
 <span class="hljs-keyword">var</span> Frame = G2.Frame;
-<span class="hljs-keyword">var</span> $ = <span class="hljs-built_in">require</span>(<span class="hljs-string">'jquery'</span>);
+<span class="hljs-keyword">var</span> userData = [
+  {name: <span class="hljs-string">'Russia'</span>,value: <span class="hljs-number">86.8</span>},
+  {name: <span class="hljs-string">'China'</span>,value: <span class="hljs-number">106.3</span>},
+  {name: <span class="hljs-string">'Japan'</span>,value: <span class="hljs-number">94.7</span>},
+  {name: <span class="hljs-string">'Mongolia'</span>,value: <span class="hljs-number">98</span>},
+  {name: <span class="hljs-string">'Canada'</span>,value: <span class="hljs-number">98.4</span>},
+  {name: <span class="hljs-string">'United Kingdom'</span>,value: <span class="hljs-number">97.2</span>},
+  {name: <span class="hljs-string">'United States of America'</span>,value: <span class="hljs-number">98.3</span>},
+  {name: <span class="hljs-string">'Brazil'</span>,value: <span class="hljs-number">96.7</span>},
+  {name: <span class="hljs-string">'Argentina'</span>,value: <span class="hljs-number">95.8</span>},
+  {name: <span class="hljs-string">'Algeria'</span>,value: <span class="hljs-number">101.3</span>},
+  {name: <span class="hljs-string">'France'</span>,value: <span class="hljs-number">94.8</span>},
+  {name: <span class="hljs-string">'Germany'</span>,value: <span class="hljs-number">96.6</span>},
+  {name: <span class="hljs-string">'Ukraine'</span>,value: <span class="hljs-number">86.3</span>},
+  {name: <span class="hljs-string">'Egypt'</span>,value: <span class="hljs-number">102.1</span>},
+  {name: <span class="hljs-string">'South Africa'</span>,value: <span class="hljs-number">101.3</span>},
+  {name: <span class="hljs-string">'India'</span>,value: <span class="hljs-number">107.6</span>},
+  {name: <span class="hljs-string">'Australia'</span>,value: <span class="hljs-number">99.9</span>},
+  {name: <span class="hljs-string">'Saudi Arabia'</span>,value:<span class="hljs-number">130.1</span>},
+  {name: <span class="hljs-string">'Afghanistan'</span>,value: <span class="hljs-number">106.5</span>},
+  {name: <span class="hljs-string">'Kazakhstan'</span>,value:<span class="hljs-number">93.4</span>},
+  {name: <span class="hljs-string">'Indonesia'</span>,value: <span class="hljs-number">101.4</span>}
+];
 
-$.getJSON(<span class="hljs-string">'./data/world.geo.json?nowrap'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">mapData</span>) </span>{
-  <span class="hljs-keyword">var</span> userData = [
-    {name: <span class="hljs-string">'Russia'</span>,value: <span class="hljs-number">86.8</span>},
-    {name: <span class="hljs-string">'China'</span>,value: <span class="hljs-number">106.3</span>},
-    {name: <span class="hljs-string">'Japan'</span>,value: <span class="hljs-number">94.7</span>},
-    {name: <span class="hljs-string">'Mongolia'</span>,value: <span class="hljs-number">98</span>},
-    {name: <span class="hljs-string">'Canada'</span>,value: <span class="hljs-number">98.4</span>},
-    {name: <span class="hljs-string">'United Kingdom'</span>,value: <span class="hljs-number">97.2</span>},
-    {name: <span class="hljs-string">'United States of America'</span>,value: <span class="hljs-number">98.3</span>},
-    {name: <span class="hljs-string">'Brazil'</span>,value: <span class="hljs-number">96.7</span>},
-    {name: <span class="hljs-string">'Argentina'</span>,value: <span class="hljs-number">95.8</span>},
-    {name: <span class="hljs-string">'Algeria'</span>,value: <span class="hljs-number">101.3</span>},
-    {name: <span class="hljs-string">'France'</span>,value: <span class="hljs-number">94.8</span>},
-    {name: <span class="hljs-string">'Germany'</span>,value: <span class="hljs-number">96.6</span>},
-    {name: <span class="hljs-string">'Ukraine'</span>,value: <span class="hljs-number">86.3</span>},
-    {name: <span class="hljs-string">'Egypt'</span>,value: <span class="hljs-number">102.1</span>},
-    {name: <span class="hljs-string">'South Africa'</span>,value: <span class="hljs-number">101.3</span>},
-    {name: <span class="hljs-string">'India'</span>,value: <span class="hljs-number">107.6</span>},
-    {name: <span class="hljs-string">'Australia'</span>,value: <span class="hljs-number">99.9</span>},
-    {name: <span class="hljs-string">'Saudi Arabia'</span>,value:<span class="hljs-number">130.1</span>},
-    {name: <span class="hljs-string">'Afghanistan'</span>,value: <span class="hljs-number">106.5</span>},
-    {name: <span class="hljs-string">'Kazakhstan'</span>,value:<span class="hljs-number">93.4</span>},
-    {name: <span class="hljs-string">'Indonesia'</span>,value: <span class="hljs-number">101.4</span>}
-  ];
+<span class="hljs-keyword">var</span> frame = <span class="hljs-keyword">new</span> Frame(userData);
+frame.addCol(<span class="hljs-string">'trend'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">obj</span>) </span>{
+  <span class="hljs-keyword">return</span> (obj.value &gt; <span class="hljs-number">100</span>) ? <span class="hljs-number">1</span> : <span class="hljs-number">0</span>;
+});
 
-  <span class="hljs-keyword">var</span> frame = <span class="hljs-keyword">new</span> Frame(userData);
-  frame.addCol(<span class="hljs-string">'trend'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">obj</span>) </span>{
-    <span class="hljs-keyword">return</span> (obj.value &gt; <span class="hljs-number">100</span>) ? <span class="hljs-number">1</span> : <span class="hljs-number">0</span>;
+<span class="hljs-keyword">var</span> map = [];
+<span class="hljs-keyword">var</span> features = mapData.features;
+<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i=<span class="hljs-number">0</span>; i&lt;features.length; i++) {
+  <span class="hljs-keyword">var</span> name = features[i].properties.name;
+  map.push({
+    <span class="hljs-string">"name"</span>: name,
+    <span class="hljs-string">"value"</span>: <span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random()*<span class="hljs-number">1000</span>)
   });
+}
 
-  <span class="hljs-keyword">var</span> map = [];
-  <span class="hljs-keyword">var</span> features = mapData.features;
-  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i=<span class="hljs-number">0</span>; i&lt;features.length; i++) {
-    <span class="hljs-keyword">var</span> name = features[i].properties.name;
-    map.push({
-      <span class="hljs-string">"name"</span>: name,
-      <span class="hljs-string">"value"</span>: <span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random()*<span class="hljs-number">1000</span>)
-    });
+<span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> G2.Chart({
+  id: <span class="hljs-string">'c1'</span>,
+  width: <span class="hljs-number">1000</span>,
+  height: <span class="hljs-number">500</span>,
+  forceFit: <span class="hljs-literal">true</span>
+});
+chart.legend(<span class="hljs-string">'left'</span>);
+chart.source(map);
+chart.tooltip({
+  title: <span class="hljs-string">'name'</span>
+});
+chart.polygon().position(Stat.map.region(<span class="hljs-string">'name'</span>, mapData)).shape(<span class="hljs-string">'stroke'</span>).style({
+  fill: <span class="hljs-string">'#fff'</span>,
+  stroke: <span class="hljs-string">'#ccc'</span>,
+  <span class="hljs-string">'stroke-width'</span>: <span class="hljs-number">1</span>
+});
+
+<span class="hljs-keyword">var</span> view = chart.createView();
+view.source(frame, {
+  <span class="hljs-string">'trend'</span>: {
+    type: <span class="hljs-string">'cat'</span>,
+    alias: <span class="hljs-string">'每100位女性对应的男性数量'</span>,
+    values: [<span class="hljs-string">'女性更多'</span>, <span class="hljs-string">'男性更多'</span>]
   }
-
-  <span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> G2.Chart({
-    id: <span class="hljs-string">'c1'</span>,
-    width: <span class="hljs-number">1000</span>,
-    height: <span class="hljs-number">500</span>,
-    forceFit: <span class="hljs-literal">true</span>
-  });
-  chart.legend(<span class="hljs-string">'left'</span>);
-  chart.source(map);
-  chart.tooltip({
-    title: <span class="hljs-string">'name'</span>
-  });
-  chart.polygon().position(Stat.map.region(<span class="hljs-string">'name'</span>, mapData)).shape(<span class="hljs-string">'stroke'</span>).style({
-    fill: <span class="hljs-string">'#fff'</span>,
-    stroke: <span class="hljs-string">'#ccc'</span>,
-    <span class="hljs-string">'stroke-width'</span>: <span class="hljs-number">1</span>
-  });
-
-  <span class="hljs-keyword">var</span> view = chart.createView();
-  view.source(frame, {
-    <span class="hljs-string">'trend'</span>: {
-      type: <span class="hljs-string">'cat'</span>,
-      alias: <span class="hljs-string">'每100位女性对应的男性数量'</span>,
-      values: [<span class="hljs-string">'女性更多'</span>, <span class="hljs-string">'男性更多'</span>]
-    }
-  });
-  view.polygon().position(Stat.map.region(<span class="hljs-string">'name*value'</span>, mapData)).color(<span class="hljs-string">'trend'</span>,[<span class="hljs-string">'#C45A5A'</span>,<span class="hljs-string">'#14647D'</span>]).opacity(<span class="hljs-string">'value'</span>).tooltip(<span class="hljs-string">'trend'</span>);
-  chart.render();
-});</code></pre></div>
+});
+view.polygon().position(Stat.map.region(<span class="hljs-string">'name*value'</span>, mapData)).color(<span class="hljs-string">'trend'</span>,[<span class="hljs-string">'#C45A5A'</span>,<span class="hljs-string">'#14647D'</span>]).opacity(<span class="hljs-string">'value'</span>).tooltip(<span class="hljs-string">'trend'</span>);
+chart.render();</code></pre></div>
             </div>
           </div>
         

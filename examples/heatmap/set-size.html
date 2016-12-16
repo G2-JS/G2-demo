@@ -880,11 +880,11 @@
         
           <a href="../area/area.html" class="menu-item">area/area</a>
         
+          <a href="../bar/bar-bullet.html" class="menu-item">bar/bar-bullet</a>
+        
           <a href="../bar/bar-dodge.html" class="menu-item">bar/bar-dodge</a>
         
           <a href="../bar/bar.html" class="menu-item">bar/bar</a>
-        
-          <a href="../bar/column-bullet.html" class="menu-item">bar/column-bullet</a>
         
           <a href="../bar/column-dodge.html" class="menu-item">bar/column-dodge</a>
         
@@ -894,21 +894,21 @@
         
           <a href="../bar/column-stack.html" class="menu-item">bar/column-stack</a>
         
+          <a href="../bar/column-symmetric.html" class="menu-item">bar/column-symmetric</a>
+        
+          <a href="../bar/column-tick.html" class="menu-item">bar/column-tick</a>
+        
           <a href="../bar/column.html" class="menu-item">bar/column</a>
         
           <a href="../bar/range-bar.html" class="menu-item">bar/range-bar</a>
         
-          <a href="../bar/symmetric.html" class="menu-item">bar/symmetric</a>
+          <a href="../boxplot/coord-plus.html" class="menu-item">boxplot/coord-plus</a>
         
-          <a href="../bar/tick.html" class="menu-item">bar/tick</a>
+          <a href="../boxplot/coord-polar.html" class="menu-item">boxplot/coord-polar</a>
         
-          <a href="../boxplot/one-dim-m.html" class="menu-item">boxplot/one-dim-m</a>
+          <a href="../boxplot/one-dim-dodge.html" class="menu-item">boxplot/one-dim-dodge</a>
         
           <a href="../boxplot/one-dim.html" class="menu-item">boxplot/one-dim</a>
-        
-          <a href="../boxplot/plus.html" class="menu-item">boxplot/plus</a>
-        
-          <a href="../boxplot/polar.html" class="menu-item">boxplot/polar</a>
         
           <a href="../boxplot/two-dim-dodge.html" class="menu-item">boxplot/two-dim-dodge</a>
         
@@ -920,7 +920,7 @@
         
           <a href="../contour/line.html" class="menu-item">contour/line</a>
         
-          <a href="../coordinate/combin.html" class="menu-item">coordinate/combin</a>
+          <a href="../coordinate/combine.html" class="menu-item">coordinate/combine</a>
         
           <a href="../coordinate/plus-reflect.html" class="menu-item">coordinate/plus-reflect</a>
         
@@ -1060,7 +1060,7 @@
         
           <a href="../others/map-albers-project.html" class="menu-item">others/map-albers-project</a>
         
-          <a href="../others/map-bubble.html" class="menu-item">others/map-bubble</a>
+          <a href="../others/map-dot-and-edge.html" class="menu-item">others/map-dot-and-edge</a>
         
           <a href="../others/map.html" class="menu-item">others/map</a>
         
@@ -1244,6 +1244,9 @@
         height: <span class="hljs-number">500</span>
     });
     chart.source(data);
+    chart.legend({
+      selectedMode: <span class="hljs-literal">false</span>
+    });
     chart.heatmap().position(<span class="hljs-string">'g*l'</span>).color(<span class="hljs-string">'tmp'</span>).size(<span class="hljs-number">50</span>);<span class="hljs-comment">//非统计数据的默认叠加范围是50，统计数据支持自动计算无需配置</span>
     chart.render();</code></pre></div>
             </div>

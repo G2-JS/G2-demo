@@ -880,11 +880,11 @@
         
           <a href="../area/area.html" class="menu-item">area/area</a>
         
+          <a href="../bar/bar-bullet.html" class="menu-item">bar/bar-bullet</a>
+        
           <a href="../bar/bar-dodge.html" class="menu-item">bar/bar-dodge</a>
         
           <a href="../bar/bar.html" class="menu-item">bar/bar</a>
-        
-          <a href="../bar/column-bullet.html" class="menu-item">bar/column-bullet</a>
         
           <a href="../bar/column-dodge.html" class="menu-item">bar/column-dodge</a>
         
@@ -894,21 +894,21 @@
         
           <a href="../bar/column-stack.html" class="menu-item">bar/column-stack</a>
         
+          <a href="../bar/column-symmetric.html" class="menu-item">bar/column-symmetric</a>
+        
+          <a href="../bar/column-tick.html" class="menu-item">bar/column-tick</a>
+        
           <a href="../bar/column.html" class="menu-item">bar/column</a>
         
           <a href="../bar/range-bar.html" class="menu-item">bar/range-bar</a>
         
-          <a href="../bar/symmetric.html" class="menu-item">bar/symmetric</a>
+          <a href="../boxplot/coord-plus.html" class="menu-item">boxplot/coord-plus</a>
         
-          <a href="../bar/tick.html" class="menu-item">bar/tick</a>
+          <a href="../boxplot/coord-polar.html" class="menu-item">boxplot/coord-polar</a>
         
-          <a href="../boxplot/one-dim-m.html" class="menu-item">boxplot/one-dim-m</a>
+          <a href="../boxplot/one-dim-dodge.html" class="menu-item">boxplot/one-dim-dodge</a>
         
           <a href="../boxplot/one-dim.html" class="menu-item">boxplot/one-dim</a>
-        
-          <a href="../boxplot/plus.html" class="menu-item">boxplot/plus</a>
-        
-          <a href="../boxplot/polar.html" class="menu-item">boxplot/polar</a>
         
           <a href="../boxplot/two-dim-dodge.html" class="menu-item">boxplot/two-dim-dodge</a>
         
@@ -920,7 +920,7 @@
         
           <a href="../contour/line.html" class="menu-item">contour/line</a>
         
-          <a href="../coordinate/combin.html" class="menu-item">coordinate/combin</a>
+          <a href="../coordinate/combine.html" class="menu-item">coordinate/combine</a>
         
           <a href="../coordinate/plus-reflect.html" class="menu-item">coordinate/plus-reflect</a>
         
@@ -1060,7 +1060,7 @@
         
           <a href="map-albers-project.html" class="menu-item">others/map-albers-project</a>
         
-          <a href="map-bubble.html" class="menu-item">others/map-bubble</a>
+          <a href="map-dot-and-edge.html" class="menu-item">others/map-dot-and-edge</a>
         
           <a href="map.html" class="menu-item">others/map</a>
         
@@ -1204,17 +1204,11 @@
 
           
             <div class="example-html">
-              <link rel="stylesheet" type="text/css" href="https://os.alipayobjects.com/rmsportal/UBXCMkzNVlaZYNs.css">
-<style>
-  #range {
-    position: absolute!important;
-    bottom: 180px;
-    margin: 5px 80px;
-  }
-</style>
-<script src="https://as.alipayobjects.com/g/datavis/g2/2.0.0/index.js"></script>
-<script src="https://as.alipayobjects.com/g/datavis/g-plugin-range/0.0.9/index.js"></script>
+              <script src="https://as.alipayobjects.com/g/datavis/g2/2.2.0/g2.js"></script>
+<script src="https://a.alipayobjects.com/g/datavis/g2-plugin-slider/1.0.0/slider.js"></script>
+
 <div id="c1"></div>
+<div id="slider"></div>
             </div>
           
 
@@ -1230,150 +1224,109 @@
         
           <div class="boxed-group" id="desc">
             <div class="markdown-body">
-              <h2>大数据量 K 线图</h2>
+              <h2>K 线图</h2>
 <hr></hr>
 <h2>code</h2>
-<div class="highlight"><pre><code language=html><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://os.alipayobjects.com/rmsportal/UBXCMkzNVlaZYNs.css"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-  <span class="hljs-selector-id">#range</span> {
-    <span class="hljs-attribute">position</span>: absolute<span class="hljs-meta">!important</span>;
-    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">180px</span>;
-    <span class="hljs-attribute">margin</span>: <span class="hljs-number">5px</span> <span class="hljs-number">80px</span>;
-  }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://as.alipayobjects.com/g/datavis/g2/2.0.0/index.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://as.alipayobjects.com/g/datavis/g-plugin-range/0.0.9/index.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"c1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
-<div class="highlight"><pre><code language=js><span class="hljs-keyword">import</span> data <span class="hljs-keyword">from</span> <span class="hljs-string">'./data/Dow-johns.json'</span>;
-<span class="hljs-keyword">import</span> $ <span class="hljs-keyword">from</span> <span class="hljs-string">'jquery'</span>;
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">splitData</span>(<span class="hljs-params">rawData</span>) </span>{
-  <span class="hljs-keyword">var</span> values = [];
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; rawData.length; i++) {
-    <span class="hljs-keyword">var</span> item = rawData[i];
-    values.push(item.slice(<span class="hljs-number">1</span>, <span class="hljs-number">5</span>));
-  }
-  <span class="hljs-keyword">return</span> {
-    <span class="hljs-string">'md5'</span>: calculateMA(<span class="hljs-number">5</span>, values),
-    <span class="hljs-string">'md10'</span>: calculateMA(<span class="hljs-number">10</span>, values),
-    <span class="hljs-string">'md20'</span>: calculateMA(<span class="hljs-number">20</span>, values),
-    <span class="hljs-string">'md30'</span>: calculateMA(<span class="hljs-number">30</span>, values)
-  };
-}
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">calculateMA</span>(<span class="hljs-params">dayCount, data</span>) </span>{
-  <span class="hljs-keyword">var</span> result = [];
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>, len = data.length; i &lt; len; i++) {
-    <span class="hljs-keyword">if</span> (i &lt; dayCount) {
-      result.push(<span class="hljs-literal">null</span>);
-      <span class="hljs-keyword">continue</span>;
-    }
-    <span class="hljs-keyword">var</span> sum = <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> j = <span class="hljs-number">0</span>; j &lt; dayCount; j++) {
-      sum += data[i - j][<span class="hljs-number">1</span>];
-    }
-    result.push(+(sum / dayCount).toFixed(<span class="hljs-number">3</span>));
-  }
-  <span class="hljs-keyword">return</span> result;
-}
-$(<span class="hljs-string">'&lt;div id="range"&gt;&lt;/div&gt;'</span>).appendTo(<span class="hljs-string">'#c1'</span>);
-<span class="hljs-keyword">var</span> source = [];
-<span class="hljs-keyword">var</span> values = splitData(data);
-<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>, l = data.length; i &lt; l; i++) {
-  <span class="hljs-keyword">var</span> item = {};
-  <span class="hljs-keyword">var</span> arr = data[i];
-  item.date = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(arr[<span class="hljs-number">0</span>]).getTime();
-  item.start = arr[<span class="hljs-number">1</span>];
-  item.end = arr[<span class="hljs-number">2</span>];
-  item.lowest = arr[<span class="hljs-number">3</span>];
-  item.highest = arr[<span class="hljs-number">4</span>];
-  <span class="hljs-keyword">if</span> (arr[<span class="hljs-number">1</span>] &lt;= arr[<span class="hljs-number">2</span>]) {
-    item.trend = <span class="hljs-string">'up'</span>;
-  } <span class="hljs-keyword">else</span> {
-    item.trend = <span class="hljs-string">'down'</span>;
-  }
-  item.volumn = arr[<span class="hljs-number">5</span>];
-  item.md5 = values.md5[i];
-  item.md10 = values.md10[i];
-  item.md20 = values.md20[i];
-  item.md30 = values.md30[i];
-  source.push(item);
-}
-<span class="hljs-keyword">var</span> Frame = G2.Frame;
-<span class="hljs-keyword">var</span> frame = <span class="hljs-keyword">new</span> Frame(source);
-frame = Frame.combinColumns(frame, [<span class="hljs-string">'md5'</span>,<span class="hljs-string">'md10'</span>,<span class="hljs-string">'md20'</span>,<span class="hljs-string">'md30'</span>], <span class="hljs-string">'value'</span>, <span class="hljs-string">'type'</span>);
+<div class="highlight"><pre><code language=html><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://as.alipayobjects.com/g/datavis/g2/2.2.0/g2.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://a.alipayobjects.com/g/datavis/g2-plugin-slider/1.0.0/slider.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"c1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"slider"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
+<div class="highlight"><pre><code language=js><span class="hljs-keyword">import</span> data <span class="hljs-keyword">from</span> <span class="hljs-string">'./data/candleSticks.json'</span>;
+<span class="hljs-keyword">var</span> Stat = G2.Stat;
 <span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> G2.Chart({
   id: <span class="hljs-string">'c1'</span>,
   width: <span class="hljs-number">1000</span>,
   height: <span class="hljs-number">350</span>,
   plotCfg: {
-    margin: [<span class="hljs-number">30</span>, <span class="hljs-number">120</span>, <span class="hljs-number">30</span>]
+    margin: [<span class="hljs-number">60</span>, <span class="hljs-number">120</span>, <span class="hljs-number">30</span>],
+    background: {
+      fill: <span class="hljs-string">'#191821'</span>
+    }
   }
+});
+<span class="hljs-comment">// 创建数据源</span>
+<span class="hljs-keyword">var</span> Frame = G2.Frame;
+<span class="hljs-keyword">var</span> frame = <span class="hljs-keyword">new</span> Frame(data);
+frame.addCol(<span class="hljs-string">'trend'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">obj</span>) </span>{
+  <span class="hljs-keyword">return</span> (obj.start &lt;= obj.end) ? <span class="hljs-number">0</span> : <span class="hljs-number">1</span>;
 });
 chart.source(frame, {
-  <span class="hljs-string">'date'</span>: {
+  <span class="hljs-string">'trend'</span>: {
+    type: <span class="hljs-string">'cat'</span>,
+    alias: <span class="hljs-string">'趋势'</span>,
+    values: [<span class="hljs-string">'上涨'</span>,<span class="hljs-string">'下跌'</span>]
+  },
+  <span class="hljs-string">'time'</span>: {
     type: <span class="hljs-string">'timeCat'</span>,
     nice: <span class="hljs-literal">false</span>,
-    mask: <span class="hljs-string">'yyyy-mm-dd'</span>,
-    tickCount: <span class="hljs-number">8</span>
-  }
+    mask: <span class="hljs-string">'mm-dd'</span>,
+    alias: <span class="hljs-string">'时间'</span>,
+    tickCount: <span class="hljs-number">10</span>
+  },
+  <span class="hljs-string">'volumn'</span>: {alias: <span class="hljs-string">'成交量'</span>},
+  <span class="hljs-string">'start'</span>: {alias: <span class="hljs-string">'开盘价'</span>},
+  <span class="hljs-string">'end'</span>: {alias: <span class="hljs-string">'收盘价'</span>},
+  <span class="hljs-string">'max'</span>: {alias: <span class="hljs-string">'最高价'</span>},
+  <span class="hljs-string">'min'</span>: {alias: <span class="hljs-string">'最低价'</span>},
+  <span class="hljs-string">'start+end+max+min'</span>: {alias: <span class="hljs-string">'股票价格'</span>}
 });
-chart.axis(<span class="hljs-string">'date'</span>, {
+chart.axis(<span class="hljs-string">'time'</span>, {
   title: <span class="hljs-literal">null</span>
-});
-chart.axis(<span class="hljs-string">'start+end+highest+lowest'</span>, {
-  title: <span class="hljs-literal">null</span>
-});
-chart.axis(<span class="hljs-string">'value'</span>, <span class="hljs-literal">false</span>);
-chart.tooltip({
-  crosshairs: <span class="hljs-literal">true</span>
 });
 chart.schema()
-  .position(<span class="hljs-string">'date*(start+end+highest+lowest)'</span>)
-  .color(<span class="hljs-string">'trend'</span>, [<span class="hljs-string">'#8F454A'</span>,<span class="hljs-string">'#39495E'</span>])
+  .position(<span class="hljs-string">'time*(start+end+max+min)'</span>)
+  .color(<span class="hljs-string">'trend'</span>, [<span class="hljs-string">'#2AF483'</span>,<span class="hljs-string">'#F80041'</span>])
   .shape(<span class="hljs-string">'candle'</span>)
-  .tooltip(<span class="hljs-string">'start*end*highest*lowest'</span>);
-chart.line().position(<span class="hljs-string">'date*value'</span>).color(<span class="hljs-string">'type'</span>, [<span class="hljs-string">'#AC4640'</span>, <span class="hljs-string">'#2D3C48'</span>, <span class="hljs-string">'#609099'</span>, <span class="hljs-string">'#BE7459'</span>]);
+  .tooltip(<span class="hljs-string">'start*end*max*min*volumn'</span>);
 
 <span class="hljs-keyword">var</span> chart1 = <span class="hljs-keyword">new</span> G2.Chart({
   id: <span class="hljs-string">'c1'</span>,
   width: <span class="hljs-number">1000</span>,
-  height: <span class="hljs-number">150</span>,
+  height: <span class="hljs-number">100</span>,
   plotCfg: {
-    margin: [<span class="hljs-number">10</span>, <span class="hljs-number">120</span>, <span class="hljs-number">50</span>]
+    margin: [<span class="hljs-number">5</span>, <span class="hljs-number">120</span>, <span class="hljs-number">10</span>],
+    background: {
+      fill: <span class="hljs-string">'#191821'</span>
+    }
   }
 });
-chart1.source(frame, {
-  <span class="hljs-string">'date'</span>: {
-    type: <span class="hljs-string">'timeCat'</span>,
-    nice: <span class="hljs-literal">false</span>,
-    mask: <span class="hljs-string">'yyyy-mm-dd'</span>,
-    tickCount: <span class="hljs-number">8</span>
+chart1.source(frame);
+chart1.col(<span class="hljs-string">'volumn'</span>, {
+  alias: <span class="hljs-string">'成交量(万)'</span>,
+  tickCount: <span class="hljs-number">2</span>,
+});
+chart1.col(<span class="hljs-string">'time'</span>,{
+  type: <span class="hljs-string">'timeCat'</span>,
+  nice: <span class="hljs-literal">false</span>,
+  mask: <span class="hljs-string">'mm-dd'</span>,
+  alias: <span class="hljs-string">'时间'</span>,
+  tickCount: <span class="hljs-number">10</span>
+});
+chart1.axis(<span class="hljs-string">'time'</span>, <span class="hljs-literal">false</span>);
+chart1.axis(<span class="hljs-string">'volumn'</span>, {
+  title: {
+    textAlign: <span class="hljs-string">'center'</span>
+  },
+  formatter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">val</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">parseInt</span>(val / <span class="hljs-number">1000</span>, <span class="hljs-number">10</span>) + <span class="hljs-string">'k'</span>;
   }
 });
-chart1.axis(<span class="hljs-string">'date'</span>, {
-  title: <span class="hljs-literal">null</span>,
-  labels: <span class="hljs-literal">null</span>,
-  tickLine: <span class="hljs-literal">null</span>,
-  line: {
-    stroke: <span class="hljs-string">'#444'</span>
-  }
-});
-chart1.axis(<span class="hljs-string">'volumn'</span>, <span class="hljs-literal">false</span>);
 chart1.interval()
-  .position(<span class="hljs-string">'date*volumn'</span>)
-  .color(<span class="hljs-string">'#81BC9D'</span>)
+  .position(<span class="hljs-string">'time*volumn'</span>)
+  .color(<span class="hljs-string">'trend'</span>, [<span class="hljs-string">'#2AF483'</span>,<span class="hljs-string">'#F80041'</span>])
   .tooltip(<span class="hljs-string">'volumn'</span>);
 chart1.legend(<span class="hljs-string">'trend'</span>, <span class="hljs-literal">false</span>);
-<span class="hljs-keyword">var</span> range = <span class="hljs-keyword">new</span> G2.Plugin.range({
-  id: <span class="hljs-string">"range"</span>, <span class="hljs-comment">//DOM id</span>
-  width: <span class="hljs-number">840</span>,
-  height: <span class="hljs-number">26</span>,
-  dim: <span class="hljs-string">'date'</span>,
-  start: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">'2015-06-04'</span>).getTime(),
-  end: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">'2016-01-15'</span>).getTime()
+
+<span class="hljs-keyword">var</span> slider = <span class="hljs-keyword">new</span> Slider({
+  domId: <span class="hljs-string">'slider'</span>,
+  width: <span class="hljs-number">1000</span>,
+  height: <span class="hljs-number">30</span>,
+  charts: [chart, chart1],
+  xDim: <span class="hljs-string">'time'</span>,
+  yDim: <span class="hljs-string">'max'</span>
 });
-range.source(frame);
-range.link([chart, chart1]);
-range.render();</code></pre></div>
+slider.render();</code></pre></div>
             </div>
           </div>
         

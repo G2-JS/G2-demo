@@ -880,11 +880,11 @@
         
           <a href="../area/area.html" class="menu-item">area/area</a>
         
+          <a href="../bar/bar-bullet.html" class="menu-item">bar/bar-bullet</a>
+        
           <a href="../bar/bar-dodge.html" class="menu-item">bar/bar-dodge</a>
         
           <a href="../bar/bar.html" class="menu-item">bar/bar</a>
-        
-          <a href="../bar/column-bullet.html" class="menu-item">bar/column-bullet</a>
         
           <a href="../bar/column-dodge.html" class="menu-item">bar/column-dodge</a>
         
@@ -894,21 +894,21 @@
         
           <a href="../bar/column-stack.html" class="menu-item">bar/column-stack</a>
         
+          <a href="../bar/column-symmetric.html" class="menu-item">bar/column-symmetric</a>
+        
+          <a href="../bar/column-tick.html" class="menu-item">bar/column-tick</a>
+        
           <a href="../bar/column.html" class="menu-item">bar/column</a>
         
           <a href="../bar/range-bar.html" class="menu-item">bar/range-bar</a>
         
-          <a href="../bar/symmetric.html" class="menu-item">bar/symmetric</a>
+          <a href="../boxplot/coord-plus.html" class="menu-item">boxplot/coord-plus</a>
         
-          <a href="../bar/tick.html" class="menu-item">bar/tick</a>
+          <a href="../boxplot/coord-polar.html" class="menu-item">boxplot/coord-polar</a>
         
-          <a href="../boxplot/one-dim-m.html" class="menu-item">boxplot/one-dim-m</a>
+          <a href="../boxplot/one-dim-dodge.html" class="menu-item">boxplot/one-dim-dodge</a>
         
           <a href="../boxplot/one-dim.html" class="menu-item">boxplot/one-dim</a>
-        
-          <a href="../boxplot/plus.html" class="menu-item">boxplot/plus</a>
-        
-          <a href="../boxplot/polar.html" class="menu-item">boxplot/polar</a>
         
           <a href="../boxplot/two-dim-dodge.html" class="menu-item">boxplot/two-dim-dodge</a>
         
@@ -920,7 +920,7 @@
         
           <a href="../contour/line.html" class="menu-item">contour/line</a>
         
-          <a href="../coordinate/combin.html" class="menu-item">coordinate/combin</a>
+          <a href="../coordinate/combine.html" class="menu-item">coordinate/combine</a>
         
           <a href="../coordinate/plus-reflect.html" class="menu-item">coordinate/plus-reflect</a>
         
@@ -1060,7 +1060,7 @@
         
           <a href="map-albers-project.html" class="menu-item">others/map-albers-project</a>
         
-          <a href="map-bubble.html" class="menu-item">others/map-bubble</a>
+          <a href="map-dot-and-edge.html" class="menu-item">others/map-dot-and-edge</a>
         
           <a href="map.html" class="menu-item">others/map</a>
         
@@ -1224,64 +1224,62 @@
             <div class="markdown-body">
               <h1>Tree</h1>
 <hr></hr>
+<h2>code</h2>
 <div class="highlight"><pre><code language=html><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"c1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn"</span>&gt;</span>去除线<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre></div>
-<div class="highlight"><pre><code language=js>
-<span class="hljs-keyword">var</span> G2 = <span class="hljs-built_in">require</span>(<span class="hljs-string">'g2'</span>);
+<div class="highlight"><pre><code language=js><span class="hljs-keyword">import</span> data <span class="hljs-keyword">from</span> <span class="hljs-string">'./data/d3.json'</span>;
+<span class="hljs-keyword">import</span> G2 <span class="hljs-keyword">from</span> <span class="hljs-string">'g2'</span>;
+
 <span class="hljs-keyword">var</span> Layout = G2.Layout;
-<span class="hljs-keyword">var</span> $ = <span class="hljs-built_in">require</span>(<span class="hljs-string">'jquery'</span>);
 <span class="hljs-keyword">var</span> Stat = G2.Stat;
-$.getJSON(<span class="hljs-string">'./data/d3.json'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
-  <span class="hljs-keyword">var</span> layout = <span class="hljs-keyword">new</span> Layout.Tree({
-      nodes: data
-    });
-    <span class="hljs-keyword">var</span> nodes = layout.getNodes();
-    <span class="hljs-keyword">var</span> edges = layout.getEdges();
+<span class="hljs-keyword">var</span> layout = <span class="hljs-keyword">new</span> Layout.Tree({
+  nodes: data
+});
+<span class="hljs-keyword">var</span> nodes = layout.getNodes();
+<span class="hljs-keyword">var</span> edges = layout.getEdges();
 
-    <span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> G2.Chart({
-      id: <span class="hljs-string">'c1'</span>,
-      width: <span class="hljs-number">800</span>,
-      height: <span class="hljs-number">800</span>,
-      plotCfg: {
-        margin: <span class="hljs-number">0</span>
-      }
-    });
-    chart.tooltip({
-      title: <span class="hljs-literal">null</span><span class="hljs-comment">/*,
-      custom: true*/</span>
-    });
+<span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> G2.Chart({
+  id: <span class="hljs-string">'c1'</span>,
+  width: <span class="hljs-number">800</span>,
+  height: <span class="hljs-number">800</span>,
+  plotCfg: {
+    margin: <span class="hljs-number">0</span>
+  }
+});
+chart.tooltip({
+  title: <span class="hljs-literal">null</span>
+});
 
-    <span class="hljs-keyword">var</span> view0 = chart.createView();
-    view0.source(edges);
-    view0.coord(<span class="hljs-string">'polar'</span>)<span class="hljs-comment">//.transpose(); // </span>
-    view0.axis(<span class="hljs-literal">false</span>);
-    view0.tooltip(<span class="hljs-literal">false</span>);
-    view0.edge()
-         .position(Stat.link(<span class="hljs-string">'source*target'</span>,nodes))
-         .shape(<span class="hljs-string">'smooth'</span>)
-         .color(<span class="hljs-string">'#ccc'</span>);
+<span class="hljs-keyword">var</span> view0 = chart.createView();
+view0.source(edges);
+view0.coord(<span class="hljs-string">'polar'</span>)<span class="hljs-comment">//.transpose(); // </span>
+view0.axis(<span class="hljs-literal">false</span>);
+view0.tooltip(<span class="hljs-literal">false</span>);
+view0.edge()
+  .position(Stat.link(<span class="hljs-string">'source*target'</span>,nodes))
+  .shape(<span class="hljs-string">'smooth'</span>)
+  .color(<span class="hljs-string">'#ccc'</span>);
 
-    <span class="hljs-keyword">var</span> view = chart.createView();
-    view.coord(<span class="hljs-string">'polar'</span>)<span class="hljs-comment">//.transpose(); //'polar'</span>
-    view.axis(<span class="hljs-literal">false</span>);
+<span class="hljs-keyword">var</span> view = chart.createView();
+view.coord(<span class="hljs-string">'polar'</span>);
+view.axis(<span class="hljs-literal">false</span>);
 
-    view.source(nodes, {
-      x: {min: <span class="hljs-number">0</span>,max:<span class="hljs-number">1</span>},
-      y: {min: <span class="hljs-number">0</span>, max:<span class="hljs-number">1</span>},
-      value: {min: <span class="hljs-number">0</span>}
-    });
-    view.point().position(<span class="hljs-string">'x*y'</span>).color(<span class="hljs-string">'steelblue'</span>).size(<span class="hljs-number">3</span>).label(<span class="hljs-string">'name'</span>, {
-      offset: <span class="hljs-number">5</span>,
-      labelEmit: <span class="hljs-literal">true</span>
-    })
-    .tooltip(<span class="hljs-string">'name'</span>);
-    chart.render();
+view.source(nodes, {
+  x: {min: <span class="hljs-number">0</span>,max:<span class="hljs-number">1</span>},
+  y: {min: <span class="hljs-number">0</span>, max:<span class="hljs-number">1</span>},
+  value: {min: <span class="hljs-number">0</span>}
+});
+view.point().position(<span class="hljs-string">'x*y'</span>).color(<span class="hljs-string">'steelblue'</span>).size(<span class="hljs-number">3</span>).label(<span class="hljs-string">'name'</span>, {
+    offset: <span class="hljs-number">5</span>,
+    labelEmit: <span class="hljs-literal">true</span>
+  }).tooltip(<span class="hljs-string">'name'</span>);
 
-    $(<span class="hljs-string">'#btn'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-      view0.clear();
-      chart.render();
-    });
+chart.render();
+
+$(<span class="hljs-string">'#btn'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  view0.clear();
+  chart.render();
 });</code></pre></div>
             </div>
           </div>

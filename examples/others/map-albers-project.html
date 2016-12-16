@@ -880,11 +880,11 @@
         
           <a href="../area/area.html" class="menu-item">area/area</a>
         
+          <a href="../bar/bar-bullet.html" class="menu-item">bar/bar-bullet</a>
+        
           <a href="../bar/bar-dodge.html" class="menu-item">bar/bar-dodge</a>
         
           <a href="../bar/bar.html" class="menu-item">bar/bar</a>
-        
-          <a href="../bar/column-bullet.html" class="menu-item">bar/column-bullet</a>
         
           <a href="../bar/column-dodge.html" class="menu-item">bar/column-dodge</a>
         
@@ -894,21 +894,21 @@
         
           <a href="../bar/column-stack.html" class="menu-item">bar/column-stack</a>
         
+          <a href="../bar/column-symmetric.html" class="menu-item">bar/column-symmetric</a>
+        
+          <a href="../bar/column-tick.html" class="menu-item">bar/column-tick</a>
+        
           <a href="../bar/column.html" class="menu-item">bar/column</a>
         
           <a href="../bar/range-bar.html" class="menu-item">bar/range-bar</a>
         
-          <a href="../bar/symmetric.html" class="menu-item">bar/symmetric</a>
+          <a href="../boxplot/coord-plus.html" class="menu-item">boxplot/coord-plus</a>
         
-          <a href="../bar/tick.html" class="menu-item">bar/tick</a>
+          <a href="../boxplot/coord-polar.html" class="menu-item">boxplot/coord-polar</a>
         
-          <a href="../boxplot/one-dim-m.html" class="menu-item">boxplot/one-dim-m</a>
+          <a href="../boxplot/one-dim-dodge.html" class="menu-item">boxplot/one-dim-dodge</a>
         
           <a href="../boxplot/one-dim.html" class="menu-item">boxplot/one-dim</a>
-        
-          <a href="../boxplot/plus.html" class="menu-item">boxplot/plus</a>
-        
-          <a href="../boxplot/polar.html" class="menu-item">boxplot/polar</a>
         
           <a href="../boxplot/two-dim-dodge.html" class="menu-item">boxplot/two-dim-dodge</a>
         
@@ -920,7 +920,7 @@
         
           <a href="../contour/line.html" class="menu-item">contour/line</a>
         
-          <a href="../coordinate/combin.html" class="menu-item">coordinate/combin</a>
+          <a href="../coordinate/combine.html" class="menu-item">coordinate/combine</a>
         
           <a href="../coordinate/plus-reflect.html" class="menu-item">coordinate/plus-reflect</a>
         
@@ -1060,7 +1060,7 @@
         
           <a href="" class="menu-item selected">others/map-albers-project</a>
         
-          <a href="map-bubble.html" class="menu-item">others/map-bubble</a>
+          <a href="map-dot-and-edge.html" class="menu-item">others/map-dot-and-edge</a>
         
           <a href="map.html" class="menu-item">others/map</a>
         
@@ -1224,45 +1224,42 @@
 <hr></hr>
 <h2>code</h2>
 <div class="highlight"><pre><code language=html><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"c1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
-<div class="highlight"><pre><code language=js><span class="hljs-keyword">var</span> $ = <span class="hljs-built_in">require</span>(<span class="hljs-string">'jquery'</span>);
-<span class="hljs-keyword">var</span> G2 = <span class="hljs-built_in">require</span>(<span class="hljs-string">'g2'</span>);
+<div class="highlight"><pre><code language=js><span class="hljs-keyword">import</span> mapData <span class="hljs-keyword">from</span> <span class="hljs-string">'./data/world.geo.json'</span>;
+<span class="hljs-keyword">import</span> G2 <span class="hljs-keyword">from</span> <span class="hljs-string">'g2'</span>;
 <span class="hljs-keyword">var</span> Stat = G2.Stat;
+<span class="hljs-keyword">var</span> userData = [];
+<span class="hljs-keyword">var</span> features = mapData.features;
+<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i=<span class="hljs-number">0</span>; i&lt;features.length; i++) {
+  <span class="hljs-keyword">var</span> name = features[i].properties.name;
+  userData.push({
+    <span class="hljs-string">"name"</span>: name,
+    <span class="hljs-string">"value"</span>: <span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random()*<span class="hljs-number">1000</span>)
+  });
+}
 
-$.getJSON(<span class="hljs-string">'./data/world.geo.json?nowrap'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">mapData</span>)</span>{
-  <span class="hljs-keyword">var</span> userData = [];
-  <span class="hljs-keyword">var</span> features = mapData.features;
-  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i=<span class="hljs-number">0</span>; i&lt;features.length; i++) {
-    <span class="hljs-keyword">var</span> name = features[i].properties.name;
-    userData.push({
-      <span class="hljs-string">"name"</span>: name,
-      <span class="hljs-string">"value"</span>: <span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random()*<span class="hljs-number">1000</span>)
-    });
+<span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> G2.Chart({
+  id: <span class="hljs-string">'c1'</span>,
+  width: <span class="hljs-number">800</span>,
+  height: <span class="hljs-number">500</span>
+});
+
+chart.source(userData);
+chart.coord(<span class="hljs-string">'map'</span>, {
+  projection: <span class="hljs-string">'albers'</span>,
+  basic: [<span class="hljs-number">110</span>, <span class="hljs-number">0</span>, <span class="hljs-number">25</span>, <span class="hljs-number">47</span>], <span class="hljs-comment">// 指定投影方法的基本参数，[λ0, φ0, φ1, φ2] 分别表示中央经度、坐标起始纬度、第一标准纬度、第二标准纬度</span>
+  max: [<span class="hljs-number">16.573</span>, <span class="hljs-number">-13.613</span>], <span class="hljs-comment">// 指定投影后最大的坐标点</span>
+  min: [<span class="hljs-number">-27.187</span>, <span class="hljs-number">-49.739</span>] <span class="hljs-comment">// 指定投影后最小的坐标点</span>
+});
+chart.axis(<span class="hljs-literal">false</span>);
+chart.legend(<span class="hljs-literal">false</span>);
+chart.polygon().position(Stat.map.region(<span class="hljs-string">'name'</span>, mapData)).tooltip(<span class="hljs-string">'name*value'</span>).color(<span class="hljs-string">'name'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">val</span>)</span>{
+  <span class="hljs-keyword">if</span>(val === <span class="hljs-string">'China'</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'red'</span>;
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'#000'</span>;
   }
-
-  <span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> G2.Chart({
-    id: <span class="hljs-string">'c1'</span>,
-    width: <span class="hljs-number">800</span>,
-    height: <span class="hljs-number">500</span>
-  });
-
-  chart.source(userData);
-  chart.coord(<span class="hljs-string">'map'</span>, {
-    projection: <span class="hljs-string">'albers'</span>,
-    basic: [<span class="hljs-number">110</span>, <span class="hljs-number">0</span>, <span class="hljs-number">25</span>, <span class="hljs-number">47</span>], <span class="hljs-comment">// 指定投影方法的基本参数，[λ0, φ0, φ1, φ2] 分别表示中央经度、坐标起始纬度、第一标准纬度、第二标准纬度</span>
-    max: [<span class="hljs-number">16.573</span>, <span class="hljs-number">-13.613</span>], <span class="hljs-comment">// 指定投影后最大的坐标点</span>
-    min: [<span class="hljs-number">-27.187</span>, <span class="hljs-number">-49.739</span>] <span class="hljs-comment">// 指定投影后最小的坐标点</span>
-  });
-  chart.axis(<span class="hljs-literal">false</span>);
-  chart.legend(<span class="hljs-literal">false</span>);
-  chart.polygon().position(Stat.map.region(<span class="hljs-string">'name'</span>, mapData)).tooltip(<span class="hljs-string">'name*value'</span>).color(<span class="hljs-string">'name'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">val</span>)</span>{
-    <span class="hljs-keyword">if</span>(val === <span class="hljs-string">'China'</span>) {
-      <span class="hljs-keyword">return</span> <span class="hljs-string">'red'</span>;
-    } <span class="hljs-keyword">else</span> {
-      <span class="hljs-keyword">return</span> <span class="hljs-string">'#000'</span>;
-    }
-  });
-  chart.render();
-});</code></pre></div>
+});
+chart.render();</code></pre></div>
             </div>
           </div>
         
