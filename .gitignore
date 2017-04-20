@@ -5,3 +5,4 @@ www/
 coverage/
 __site/
 npm-debug.log
+.DS_Store
