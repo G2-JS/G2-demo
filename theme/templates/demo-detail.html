@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{%- block content %}
+{%- set type = post.meta.type %}
+<div class="body-content demo-detail">
+<div class="demo-title clearfix">
+  <h2 class="title">
+    <a href="{{content_url('')}}/index.html#{{type}}">
+      <span class="parent-title">{{type}} / </span>
+      <span class="title" id="J_chartTitle">{{post.meta.title}}</span>
+    </a>
+  </h2>
+</div>
+<div class="doc-content demo-doc">
+  <div class="doc-inner">
+    <div class="chart-demo">
+      <div id="c1"></div>
+    </div>
+    <div class="wrapper">
+      <div class="code-panel pull-left">
+        <div class="tabs">
+          <div class="tab" >
+            <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+            <label for="tab-1" class="tab-label">源码</label>
+            <div class="tab-content">
+              <textarea id='codeA' name='codeA'>
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>{{post.title}}</title>
+      <link rel="stylesheet" type="text/css" href="{{static_url('doc.css')}}" />
+      <!--如果不需要jquery ajax 则可以不引入-->
+      <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+      <!-- 引入 G2 脚本 -->
+
+      {%- include "script.html" %}
+    </head>
+    <body>
+      <div id="c1"></div>
+      <!-- G2 code start -->
+      {{post.html}}
+      <!-- G2 code end -->
+    </body>
+  </html>
+              </textarea>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{%- include "script.html" %}
+{{post.html}}
+
+<script src="{{static_url('codemirror-compressed.js')}}"></script>
+<script src="{{static_url('demo-detail.js')}}"></script>
+{%- endblock %}

@@ -1,0 +1,122 @@
+body {
+  background-color: #fff;
+  color: #3A4956;
+  font-family: 'Helvetica Neue','Helvetica',tahoma,'Hiragino Sans GB','PingFang SC','STHeitiSC-Light','Microsoft YaHei', Arial, sans-serif;
+  font-size: 14px;
+}
+
+.body-content {
+  position: relative;
+  width: 1440px;
+  padding: 25px 200px;
+  margin: 0 auto;
+
+  .chart-container {
+    margin: 0 auto;
+  }
+}
+
+.tutorial-body-content, .api-body-content {
+  .doc-content {
+    width: 1040px;
+    margin: 0 auto;
+  }
+
+  .doc-inner {
+    width: 1040px;
+    padding: 0 120px;
+  }
+}
+
+.api-body-content {
+  h1 {
+    font-size: 20px;
+    color: #31485D;
+    margin-bottom: 24px;
+  }
+
+  h3 {
+    background-color: #FBFBFB;
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+
+  h4 {
+    border-left: 2px solid #35b5b0;
+    padding-left: 8px;
+    line-height: 1.5;
+  }
+  .guide-text {
+    position: relative;
+    font-size: 12px;
+    padding-left: 10px;
+    margin-left: 10px;
+    color: #999;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      font-size: 18px;
+      font-weight: normal;
+      color: #31485D;
+      content: '|';
+    }
+  }
+}
+
+#toTop {
+  display: none;
+  position: fixed;
+  _position: absolute;
+  right: 60px;
+  bottom: 100px;
+  _bottom: "auto";
+  cursor: pointer;
+  color: #E4E4E4;
+
+  .icon-to-top {
+    font-size: 30px;
+  }
+}
+
+.highlight {
+  border: 1px solid #E8E8E8;
+  margin: 8px 0px 16px 0px;
+  border-radius: 5px;
+  padding: 0 2px;
+}
+
+@media (max-width: 1750px){
+  .body-content.demo-body {
+    & + .nav-menu {
+      left: 86%!important;
+    }
+  }
+}
+
+@media (max-width: 1450px){
+  .body-content {
+    & + .nav-menu {
+      left: 1140px!important;
+      width: 150px!important;
+    }
+
+    &.demo-body {
+      & + .nav-menu {
+        left: 1280px!important;
+        width: auto!important;
+      }
+    }
+  }
+}
+
+@media (max-width: 1360px){
+  .body-content {
+    &.demo-body {
+      & + .nav-menu {
+        left: 20px!important;
+        width: auto!important;
+      }
+    }
+  }
+}

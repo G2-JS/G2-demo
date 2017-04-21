@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  //  remove tap highlight color for mobile safari
+}
+*:before, *:after {
+  box-sizing: border-box;
+}
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background-color: #f3f3f3;
+  color: #999;
+  font-family: "Helvetica Neue", "Hiragino Sans GB", "Segoe UI", Tahoma, Arial, "Microsoft Yahei", STHeiti, sans-serif;
+  font-size: 14px;
+}
+// unify the setting of elements's margin and padding for browsers
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+}
+// Reset fonts for relevant elements
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+ul, ol {
+  list-style: none;
+}
+// Remove the clear button of a text input control in IE10+
+input::-ms-clear, input::-ms-reveal {
+  display: none;
+}
+
+a {
+  color: @linkColor;
+  text-decoration: none;
+  transition: color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), border 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  &:hover {
+    color: @linkHoverColor;
+  }
+
+  &:active {
+    color: @linkActiveColor;
+  }
+}
+
+table {
+  width: 100%;
+  margin: 25px 0;
+
+  td, th {
+    padding: 10px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #e4e4e4;
+  }
+
+  th {
+    background-color: #f3f3f3;
+  }
+}
+::-webkit-scrollbar {
+  display: none;
+}

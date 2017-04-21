@@ -14,48 +14,19 @@
     "index": "./index"
   },
   "scripts": {
-    "compile": "rm -rf lib && babel src --out-dir lib && lessc src/index.less lib/index.css",
-    "build": "atool-build",
-    "lint": "eslint --ext .js src",
-    "test": "atool-test",
-    "doc": "atool-doc",
-    "doc-build": "atool-doc --build",
-    "gh-pages": "atool-doc --build && gh-pages -d __site"
+    "dev": "npm run start",
+    "build": "npm run clean && nico build && site build",
+    "start": "lessc ./static/less/index.less ./static/style.css && npm run clean && nico server --watch",
+    "clean": "rm -rf _site",
+    "less": "lessc static/less/index.less > static/dpl.css",    
+    "gh-pages": "nico build && site build && gh-pages -d __site"
   },
   "dependencies": {
   },
   "devDependencies": {
-    "atool-build": "~0.8.0",
-    "atool-doc": "~0.5.0",
-    "atool-test": "^0.4.5",
-    "babel-cli": "~6.6.4",
-    "babel-core": "~6.7.4",
-    "babel-eslint": "~6.0.2",
-    "babel-plugin-add-module-exports": "~0.1.2",
-    "babel-preset-es2015": "~6.6.0",
-    "babel-preset-react": "~6.5.0",
-    "babel-preset-stage-0": "~6.5.0",
-    "dora": "0.3.x",
     "gh-pages": "^0.11.0",
-    "less": "~2.6.0",
-    "pre-commit": "^1.1.2",
-    "eslint": "^2.5.3",
-    "eslint-config-airbnb": "^6.2.0",
-    "g2": "^2.0.0",
-    "jquery": "~2.1.4"
+    "nico-jsx": "~0.5.3",
+    "internal-ip": "^1.0.1"
   },
-  "babel": {
-    "presets": [
-      "es2015",
-      "react",
-      "stage-0"
-    ],
-    "plugins": [
-      "add-module-exports"
-    ]
-  },
-  "pre-commit": [
-    "lint"
-  ],
   "license": "MIT"
 }
