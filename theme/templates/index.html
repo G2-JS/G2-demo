@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="body-content demo-body">
+  <div class="doc-content demo-doc">
+    <div class="doc-inner">
+    {%- set types = resource.pages|getDemoTypes(post.filepath) %}
+    {%- for type in types %}
+      <h2 id="{{type}}">{{type}}</h2>
+      {%- set pages = resource.pages|getDemoPages(post.filepath,type) %}
+      {%- set typeId = type|trim() %}
+      <ul class="demo-detail-list clearfix" id="J_{{typeId}}">
+      {%- for page in pages %}
+        <li>
+          <a href="{{content_url('')}}/{{page.filepath.replace('.md','.html')}}">
+            {%- set name = page.filepath.replace('demo/','').replace('.md','.png') %}
+            <img class="lazy" data-original="{{static_url('images')}}/{{name}}" width="316px" height="167px" />
+            <div class="des">{{page.title}}</div>
+          </a>
+        </li>
+      {%- endfor %}
+      </ul>
+    {%- endfor %}
+    {{post.html}}
+    </div>
+  </div>
+</div>
+
+<div class="nav-menu hide" id="J_navMenu"></div>
+<script type="text/javascript" src="{{static_url('jquery.lazyload.js')}}"></script>
+<script type="text/javascript">
+  $(function() {
+    $("img.lazy").lazyload();
+  });
+</script>
+{% endblock %}
+{% block footer %}
+  <div id="J_indexFooter" class="invisible">
+    {%- include "footer.html" %}
+  </div>
+{% endblock footer %}

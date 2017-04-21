@@ -1,0 +1,12 @@
+.com{color:#93a1a1}
+.lit{color:#04B5FF}
+.pun,.opn,.clo{color:#93a1a1}
+.fun{color:#dc322f}
+.str,.atv{color:#F93D26}
+.kwd,.linenums .tag{color:#2B940B}
+.typ,.atn,.dec,.var{color:#8434E6}
+.pln{color:#808080}
+.prettyprint{padding:8px;background-color:transparent;}
+.prettyprint.linenums{-webkit-box-shadow:inset 40px 0 0 #fff,inset 41px 0 0 #ececf0;-moz-box-shadow:inset 40px 0 0 #fff,inset 41px 0 0 #ececf0;box-shadow:inset 40px 0 0 #fff,inset 41px 0 0 #ececf0}
+ol.linenums{margin:0 0 0 38px;padding-left:0;margin-bottom:0;}
+ol.linenums li{padding-left:12px;color:#bebec5;line-height:24px;text-shadow:0 1px 0 #fff}

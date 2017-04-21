@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>G2 - The Grammar Of Graphics </title>
+  <meta name="keywords" content="G2, The Grammar of Graphics, 图形语法,图表绘制引擎,图表库,可视化,数据可视化,AntV,Data Visualization,visualization,visualisation, antd, ant, ant design">
+  <meta name="description" content="G2(The Grammar Of Graphics) 是一个由纯 javascript 编写、强大的语义化图表生成工具，它提供了一整套图形语法，可以让用户通过简单的语法搭建出无数种图表，并且集成了大量的统计工具，支持多种坐标系绘制，可以让用户自由得定制图表，是为大数据时代而准备的强大的可视化工具。">
+  <link rel="icon" href="https://os.alipayobjects.com/rmsportal/VuIJNnUTtJpfuej.png" type="image/x-icon">
+  <link rel="shortcut icon" href="https://os.alipayobjects.com/rmsportal/PBJkVCMxFjrRGEl.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../../static/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../static/codemirror.css" />
+  <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+</head>
+<body><header id="header">
+  
+</header>
+ 
+  <div class="main-container clearfix">
+<div class="body-content demo-detail">
+<div class="demo-title clearfix">
+  <h2 class="title">
+    <a href="../../index.html#雷达图">
+      <span class="parent-title">雷达图 / </span>
+      <span class="title" id="J_chartTitle">雷达图(多维对比)</span>
+    </a>
+  </h2>
+</div>
+<div class="doc-content demo-doc">
+  <div class="doc-inner">
+    <div class="chart-demo">
+      <div id="c1"></div>
+    </div>
+    <div class="wrapper">
+      <div class="code-panel pull-left">
+        <div class="tabs">
+          <div class="tab" >
+            <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+            <label for="tab-1" class="tab-label">源码</label>
+            <div class="tab-content">
+              <textarea id='codeA' name='codeA'>
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>雷达图(多维对比)</title>
+      <link rel="stylesheet" type="text/css" href="../../static/doc.css" />
+      <!--如果不需要jquery ajax 则可以不引入-->
+      <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+      <!-- 引入 G2 脚本 --><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+    </head>
+    <body>
+      <div id="c1"></div>
+      <!-- G2 code start -->
+      <script>
+  var data = [
+    {item: "创新", value: 3.9, level: 3},
+    {item: "商业成熟度", value: 4.4, level: 3},
+    {item: "创新与成熟因素", value: 4.1, level: 3},
+    {item: "市场大小", value: 6.9, level: 2},
+    {item: "技术准备", value: 3.5, level: 2},
+    {item: "金融市场发展", value: 4.3, level: 2},
+    {item: "劳动市场效率", value: 4.6, level: 2},
+    {item: "商品市场效率", value: 4.4, level: 2},
+    {item: "高等教育和训练", value: 4.4, level: 2},
+    {item: "效率增强器", value: 4.7, level: 2},
+    {item: "健康和基础教育", value: 6.1, level: 1},
+    {item: "宏观经济环境", value: 6.4, level: 1},
+    {item: "设施", value:4.7, level: 1},
+    {item: "机构", value: 4.2, level: 1},
+    {item: "基本要求", value: 5.3, level: 1}
+  ];
+
+  var chart = new G2.Chart({
+    id: 'c1',
+    width: 1000,
+    height: 500
+  });
+
+  chart.source(data, {
+    'value': {
+      min: 0,
+      max: 10,
+      tickCount: 10
+    }
+  });
+  chart.coord('polar', {radius: 0.8});
+  chart.axis('value',{ // 设置坐标系栅格样式
+    grid: {
+      type: 'polygon', //圆形栅格，可以改成
+    }
+  });
+  chart.axis('item', { // 设置坐标系栅格样式
+    line: null
+  });
+  chart.line().position('item*value').color('#F15A24').label('value').size(2);
+  chart.point().position('item*value').color('level',['#FCDC21', '#FF931E', '#ED1C24']).shape('circle');
+  chart.render();
+</script>
+
+      <!-- G2 code end -->
+    </body>
+  </html>
+              </textarea>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+<script>
+  var data = [
+    {item: "创新", value: 3.9, level: 3},
+    {item: "商业成熟度", value: 4.4, level: 3},
+    {item: "创新与成熟因素", value: 4.1, level: 3},
+    {item: "市场大小", value: 6.9, level: 2},
+    {item: "技术准备", value: 3.5, level: 2},
+    {item: "金融市场发展", value: 4.3, level: 2},
+    {item: "劳动市场效率", value: 4.6, level: 2},
+    {item: "商品市场效率", value: 4.4, level: 2},
+    {item: "高等教育和训练", value: 4.4, level: 2},
+    {item: "效率增强器", value: 4.7, level: 2},
+    {item: "健康和基础教育", value: 6.1, level: 1},
+    {item: "宏观经济环境", value: 6.4, level: 1},
+    {item: "设施", value:4.7, level: 1},
+    {item: "机构", value: 4.2, level: 1},
+    {item: "基本要求", value: 5.3, level: 1}
+  ];
+
+  var chart = new G2.Chart({
+    id: 'c1',
+    width: 1000,
+    height: 500
+  });
+
+  chart.source(data, {
+    'value': {
+      min: 0,
+      max: 10,
+      tickCount: 10
+    }
+  });
+  chart.coord('polar', {radius: 0.8});
+  chart.axis('value',{ // 设置坐标系栅格样式
+    grid: {
+      type: 'polygon', //圆形栅格，可以改成
+    }
+  });
+  chart.axis('item', { // 设置坐标系栅格样式
+    line: null
+  });
+  chart.line().position('item*value').color('#F15A24').label('value').size(2);
+  chart.point().position('item*value').color('level',['#FCDC21', '#FF931E', '#ED1C24']).shape('circle');
+  chart.render();
+</script>
+
+
+<script src="../../static/codemirror-compressed.js"></script>
+<script src="../../static/demo-detail.js"></script>
+
+  </div>
+  
+ 
+</body>
+</html>

@@ -1,0 +1,170 @@
+.doc-nav {
+  float: left;
+  margin-left: -40px;
+
+  p.title {
+    font-size: 18px;
+    font-weight: normal;
+    color: #31485D;
+    margin-bottom: 17px;
+    font-weight: bold;
+  }
+
+  ul.nav-list li {
+    font-size: 14px;
+    margin-bottom: 10px;
+
+    a {
+      color: @menuLinkColor;
+    }
+
+    &.active a {
+      color: @linkColor;
+      font-weight: bold;
+    }
+  }
+}
+
+.nav-float {
+  position: fixed!important;
+  top: 85px!important;
+}
+
+.doc-content {
+  margin-left: 110px;
+}
+
+.chart-demo{
+  min-height: 500px;
+}
+
+.doc-inner {
+  width: 800px;
+
+  h2 {
+    font-size: 20px;
+    color: #31485D;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  h3 {
+    font-size: 18px;
+    color: #31485D;
+    margin: 24px 0;
+
+    .icon-new {
+      font-size: 24px;
+      color: #F93D26;
+      font-weight: normal;
+      margin-left: 14px;
+      line-height: 18px;
+    }
+  }
+
+  h4 {
+    margin-bottom: 24px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 2;
+    color: #3A4956;
+    margin-bottom: 14px;
+    letter-spacing: 0.2px;
+  }
+
+  ol, ul {
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    padding-left: 20px;
+    color: #3A4956;
+    margin-bottom: 24px;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+  ul li {
+    list-style: disc;
+    line-height: 2;
+  }
+  ol li {
+    list-style: decimal;
+    line-height: 2;
+  }
+}
+
+.body-content{
+  & + .nav-menu {
+    position: absolute;
+    left: 79%;
+    top: 345px;
+    width: auto;
+    border-left: 1px solid #e8e8e8;
+    // border-radius: 4px;
+    padding: 20px;
+    text-align: left;
+    background-color: #fff;
+    -webkit-transition: display .85s ease;
+    -moz-transition: display .85s ease;
+    transition: display .85s ease;
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    li a {
+      color: @menuLinkColor;
+      font-size: 14px;
+    }
+
+    li.active a {
+      color: @linkColor;
+      font-weight: bold;
+    }
+
+    li a.sub-menu {
+      padding-left: 10px;
+    }
+    &.sidebar {
+      li a {
+        color: @linkColor;
+      }
+
+      li.active a {
+        color: #313132;
+      }
+    }
+  }
+  &.tutorial-body-content, &.api-body-content {
+    & + .nav-menu {
+      border: none;
+      border-left: 1px solid #e8e8e8;
+      padding-top: 0;
+    }
+  }
+}
+
+.body-content.demo-body {
+  & + .nav-menu {
+    position: absolute;
+    left: 80%;
+    top: 423px;
+    text-align: left;
+    padding: 0 20px;
+
+    li a {
+      font-size: 12px;
+      color: @menuLinkColor;
+    }
+
+    li.active a {
+      color: @linkColor;
+      font-size: 14px;
+    }
+  }
+}

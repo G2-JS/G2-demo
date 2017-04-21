@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>G2 - The Grammar Of Graphics </title>
+  <meta name="keywords" content="G2, The Grammar of Graphics, 图形语法,图表绘制引擎,图表库,可视化,数据可视化,AntV,Data Visualization,visualization,visualisation, antd, ant, ant design">
+  <meta name="description" content="G2(The Grammar Of Graphics) 是一个由纯 javascript 编写、强大的语义化图表生成工具，它提供了一整套图形语法，可以让用户通过简单的语法搭建出无数种图表，并且集成了大量的统计工具，支持多种坐标系绘制，可以让用户自由得定制图表，是为大数据时代而准备的强大的可视化工具。">
+  <link rel="icon" href="https://os.alipayobjects.com/rmsportal/VuIJNnUTtJpfuej.png" type="image/x-icon">
+  <link rel="shortcut icon" href="https://os.alipayobjects.com/rmsportal/PBJkVCMxFjrRGEl.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../../static/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../static/codemirror.css" />
+  <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+</head>
+<body><header id="header">
+  
+</header>
+ 
+  <div class="main-container clearfix">
+<div class="body-content demo-detail">
+<div class="demo-title clearfix">
+  <h2 class="title">
+    <a href="../../index.html#柱状图">
+      <span class="parent-title">柱状图 / </span>
+      <span class="title" id="J_chartTitle">人口金字塔图</span>
+    </a>
+  </h2>
+</div>
+<div class="doc-content demo-doc">
+  <div class="doc-inner">
+    <div class="chart-demo">
+      <div id="c1"></div>
+    </div>
+    <div class="wrapper">
+      <div class="code-panel pull-left">
+        <div class="tabs">
+          <div class="tab" >
+            <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+            <label for="tab-1" class="tab-label">源码</label>
+            <div class="tab-content">
+              <textarea id='codeA' name='codeA'>
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>人口金字塔图</title>
+      <link rel="stylesheet" type="text/css" href="../../static/doc.css" />
+      <!--如果不需要jquery ajax 则可以不引入-->
+      <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+      <!-- 引入 G2 脚本 --><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+    </head>
+    <body>
+      <div id="c1"></div>
+      <!-- G2 code start -->
+      <script src="https://g.alicdn.com/bui/??seajs/2.3.0/sea.js"></script>
+<script src="https://g.alicdn.com/bui/bui/1.1.17/config.js"></script>
+<link href="https://g.alicdn.com/bui/bui/1.1.21/css/bs3/bui.css" rel="stylesheet">
+<style>
+  .bui-slider{
+    margin-left: 70px;
+  }
+  .span-value{
+    position: relative;
+    top: 25px;
+    left: -10px;
+    color: #999;
+  }
+</style>
+<script>
+BUI.use('bui/slider',function (Slider) {
+  var Stat = G2.Stat;
+  var defaultYear = 2010;
+  var Frame = G2.Frame;
+  var totalData;
+  var Util = G2.Util;
+  var chart = new G2.Chart({
+    id: 'c1',
+    width: 1000,
+    height: 450,
+    animate: false,
+    plotCfg: {
+      margin: [20, 100, 80]
+    }
+  });
+
+  var defs = {
+    'age': {
+      ticks: ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100']
+    },
+    'total_percentage':{ 
+      formatter: function(value){
+        return Math.abs(value).toFixed(2) + '%';
+      }
+    },
+    'gender': {type: 'cat',values: ['男','女']}
+  };
+
+  var slider = new Slider.Slider({
+    render : '#c1',
+    width: 840,
+    min : 2000, 
+    step: 1,  //滑动最小 100
+    max : 2014,
+    handleTpl: '<span><span id="v1" class="span-value">2010</span></span>',
+    value: defaultYear // 默认日期
+  });
+  slider.render();
+  slider.on('change',function(ev){
+    var value = ev.value;
+    var data = findData(value,totalData);
+    $('#v1').html(value);
+    chart.changeData(data);
+  });
+
+  function findData(year,people){
+    var rst = [];
+    var male = [];
+    var tmp = findByYear(year,people.male.values);
+    var female = findByYear(year,people.female.values);
+    Util.each(tmp,function(obj){
+      var tmpObj = Util.mix({},obj);
+      tmpObj['total_percentage'] *= -1; // 变成负数
+      male.push(tmpObj);
+    });
+    return Frame.combinArray('gender',male,female);
+  }
+
+  function findByYear (year,data) {
+    var rst = [];
+    for (var i = 0; i < data.length; i ++) {
+      var obj = data[i];
+      if (new Date(obj.date * 1000).getFullYear() === year) {
+        rst = obj.age_groups;
+      }
+    }
+    return rst;
+  }
+
+  $.getJSON('../../static/data/pyramid.json',function (people) {
+      totalData = people;
+      var data = findData(defaultYear,people);
+      chart.source(data,defs);
+      chart.axis('age', {
+        titleOffset: 65 
+      });
+      chart.coord().transpose();
+      chart.interval().position('age*total_percentage')
+            .color('gender',['rgb(113,192,235)','rgb(246,170,203)'])
+            .size(4);
+
+      chart.render();
+  });
+});
+
+</script>
+
+      <!-- G2 code end -->
+    </body>
+  </html>
+              </textarea>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+<script src="https://g.alicdn.com/bui/??seajs/2.3.0/sea.js"></script>
+<script src="https://g.alicdn.com/bui/bui/1.1.17/config.js"></script>
+<link href="https://g.alicdn.com/bui/bui/1.1.21/css/bs3/bui.css" rel="stylesheet">
+<style>
+  .bui-slider{
+    margin-left: 70px;
+  }
+  .span-value{
+    position: relative;
+    top: 25px;
+    left: -10px;
+    color: #999;
+  }
+</style>
+<script>
+BUI.use('bui/slider',function (Slider) {
+  var Stat = G2.Stat;
+  var defaultYear = 2010;
+  var Frame = G2.Frame;
+  var totalData;
+  var Util = G2.Util;
+  var chart = new G2.Chart({
+    id: 'c1',
+    width: 1000,
+    height: 450,
+    animate: false,
+    plotCfg: {
+      margin: [20, 100, 80]
+    }
+  });
+
+  var defs = {
+    'age': {
+      ticks: ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100']
+    },
+    'total_percentage':{ 
+      formatter: function(value){
+        return Math.abs(value).toFixed(2) + '%';
+      }
+    },
+    'gender': {type: 'cat',values: ['男','女']}
+  };
+
+  var slider = new Slider.Slider({
+    render : '#c1',
+    width: 840,
+    min : 2000, 
+    step: 1,  //滑动最小 100
+    max : 2014,
+    handleTpl: '<span><span id="v1" class="span-value">2010</span></span>',
+    value: defaultYear // 默认日期
+  });
+  slider.render();
+  slider.on('change',function(ev){
+    var value = ev.value;
+    var data = findData(value,totalData);
+    $('#v1').html(value);
+    chart.changeData(data);
+  });
+
+  function findData(year,people){
+    var rst = [];
+    var male = [];
+    var tmp = findByYear(year,people.male.values);
+    var female = findByYear(year,people.female.values);
+    Util.each(tmp,function(obj){
+      var tmpObj = Util.mix({},obj);
+      tmpObj['total_percentage'] *= -1; // 变成负数
+      male.push(tmpObj);
+    });
+    return Frame.combinArray('gender',male,female);
+  }
+
+  function findByYear (year,data) {
+    var rst = [];
+    for (var i = 0; i < data.length; i ++) {
+      var obj = data[i];
+      if (new Date(obj.date * 1000).getFullYear() === year) {
+        rst = obj.age_groups;
+      }
+    }
+    return rst;
+  }
+
+  $.getJSON('../../static/data/pyramid.json',function (people) {
+      totalData = people;
+      var data = findData(defaultYear,people);
+      chart.source(data,defs);
+      chart.axis('age', {
+        titleOffset: 65 
+      });
+      chart.coord().transpose();
+      chart.interval().position('age*total_percentage')
+            .color('gender',['rgb(113,192,235)','rgb(246,170,203)'])
+            .size(4);
+
+      chart.render();
+  });
+});
+
+</script>
+
+
+<script src="../../static/codemirror-compressed.js"></script>
+<script src="../../static/demo-detail.js"></script>
+
+  </div>
+  
+ 
+</body>
+</html>

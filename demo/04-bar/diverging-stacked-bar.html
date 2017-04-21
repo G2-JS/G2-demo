@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>G2 - The Grammar Of Graphics </title>
+  <meta name="keywords" content="G2, The Grammar of Graphics, 图形语法,图表绘制引擎,图表库,可视化,数据可视化,AntV,Data Visualization,visualization,visualisation, antd, ant, ant design">
+  <meta name="description" content="G2(The Grammar Of Graphics) 是一个由纯 javascript 编写、强大的语义化图表生成工具，它提供了一整套图形语法，可以让用户通过简单的语法搭建出无数种图表，并且集成了大量的统计工具，支持多种坐标系绘制，可以让用户自由得定制图表，是为大数据时代而准备的强大的可视化工具。">
+  <link rel="icon" href="https://os.alipayobjects.com/rmsportal/VuIJNnUTtJpfuej.png" type="image/x-icon">
+  <link rel="shortcut icon" href="https://os.alipayobjects.com/rmsportal/PBJkVCMxFjrRGEl.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../../static/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../static/codemirror.css" />
+  <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+</head>
+<body><header id="header">
+  
+</header>
+ 
+  <div class="main-container clearfix">
+<div class="body-content demo-detail">
+<div class="demo-title clearfix">
+  <h2 class="title">
+    <a href="../../index.html#柱状图">
+      <span class="parent-title">柱状图 / </span>
+      <span class="title" id="J_chartTitle">Diverging stacked bar</span>
+    </a>
+  </h2>
+</div>
+<div class="doc-content demo-doc">
+  <div class="doc-inner">
+    <div class="chart-demo">
+      <div id="c1"></div>
+    </div>
+    <div class="wrapper">
+      <div class="code-panel pull-left">
+        <div class="tabs">
+          <div class="tab" >
+            <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+            <label for="tab-1" class="tab-label">源码</label>
+            <div class="tab-content">
+              <textarea id='codeA' name='codeA'>
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Diverging stacked bar</title>
+      <link rel="stylesheet" type="text/css" href="../../static/doc.css" />
+      <!--如果不需要jquery ajax 则可以不引入-->
+      <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+      <!-- 引入 G2 脚本 --><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+    </head>
+    <body>
+      <div id="c1"></div>
+      <!-- G2 code start -->
+      <script>
+var data = [{"group":"All Survey Responses","type":"All Survey Responses","total":565,"Strongly Agree":50.1,"Agree":40.7,"No Opinion":4.8,"Disagree":3.7,"Strongly Disagree":0.7},{"group":"Employment sector","type":"Academic(nonstudent)","total":253,"Strongly Agree":64.0,"Agree":30.8,"No Opinion":3.2,"Disagree":2.0,"Strongly Disagree":0.0},{"group":"Employment sector","type":"Business and industry","total":176,"Strongly Agree":40.6,"Agree":50.0,"No Opinion":2.8,"Disagree":6.3,"Strongly Disagree":0.0},{"group":"Employment sector","type":"Federal, state, and local government","total":71,"Strongly Agree":38.0,"Agree":47.9,"No Opinion":7.0,"Disagree":4.2,"Strongly Disagree":2.8},{"group":"Employment sector","type":"Private consultant/self-employed","total":28,"Strongly Agree":39.3,"Agree":53.6,"No Opinion":7.1,"Disagree":0.0,"Strongly Disagree":0.0},{"group":"Employment sector","type":"Other (Including retired, student, not employed, etc.)","total":34,"Strongly Agree":29.4,"Agree":44.1,"No Opinion":14.7,"Disagree":5.9,"Strongly Disagree":5.9},{"group":"Race","type":"White","total":400,"Strongly Agree":50.0,"Agree":41.8,"No Opinion":4.5,"Disagree":2.8,"Strongly Disagree":1.0},{"group":"Race","type":"Asian","total":122,"Strongly Agree":53.3,"Agree":40.2,"No Opinion":3.3,"Disagree":3.3,"Strongly Disagree":0.0},{"group":"Race","type":"Black or African American","total":10,"Strongly Agree":40.0,"Agree":30.0,"No Opinion":20.0,"Disagree":10.0,"Strongly Disagree":0.0},{"group":"Race","type":"Other","total":17,"Strongly Agree":47.1,"Agree":35.3,"No Opinion":5.9,"Disagree":11.8,"Strongly Disagree":0.7},{"group":"Education","type":"Associate's and Bachelor's","total":175,"Strongly Agree":37.1,"Agree":49.1,"No Opinion":5.7,"Disagree":6.9,"Strongly Disagree":1.1},{"group":"Education","type":"Master's and Above","total":388,"Strongly Agree":55.9,"Agree":36.9,"No Opinion":4.4,"Disagree":2.3,"Strongly Disagree":0.5},{"group":"Gender","type":"Male","total":356,"Strongly Agree":50.6,"Agree":41,"No Opinion":4.2,"Disagree":3.4,"Strongly Disagree":0.8},{"group":"Gender","type":"Female","total":200,"Strongly Agree":51.0,"Agree":39.0,"No Opinion":6.0,"Disagree":3.5,"Strongly Disagree":0.5}];
+
+var Frame = G2.Frame;
+var frame = new Frame(data);
+var stronglyArr = frame.colArray('Strongly Disagree');
+var disagreeArr = frame.colArray('Disagree');
+for(var i = 0,l = stronglyArr.length; i < l; i++) {
+  stronglyArr[i] = stronglyArr[i] * (-1);
+  disagreeArr[i] = disagreeArr[i] * (-1);
+}
+frame.colReplace('Strongly Disagree', stronglyArr);
+frame.colReplace('Disagree', disagreeArr);
+frame = Frame.combinColumns(frame, ['Disagree', 'Strongly Disagree', 'No Opinion', 'Agree','Strongly Agree'], 'value', 'opinion', ['group', 'type']);
+
+var colorMap = {
+  "Strongly Agree": '#3561A7',
+  "Agree": '#80B2D3',
+  "No Opinion": '#D9F0F6',
+  "Disagree": '#EC7743',
+  "Strongly Disagree": '#CB2920',
+}
+
+var chart = new G2.Chart({
+  id : 'c1',
+  width : 1000,
+  height : 500,
+  plotCfg: {
+     margin: [60, 60, 60, 300]
+  }
+});
+
+chart.source(frame, {
+  value: {
+    tickInterval: 10
+  }
+});
+chart.axis('type',{
+  title: null
+});
+chart.axis('value',{
+  position: 'right',
+  title: null,
+  tickLine: null,
+  formatter: function(val) {
+    return val + '%';
+  }
+});
+chart.legend({
+  position: 'bottom'
+});
+chart.coord().transpose();
+chart.intervalStack().position('type*value').color('opinion', function(opinion) {
+  return colorMap[opinion];
+});
+
+chart.render();
+</script>
+
+      <!-- G2 code end -->
+    </body>
+  </html>
+              </textarea>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+<script>
+var data = [{"group":"All Survey Responses","type":"All Survey Responses","total":565,"Strongly Agree":50.1,"Agree":40.7,"No Opinion":4.8,"Disagree":3.7,"Strongly Disagree":0.7},{"group":"Employment sector","type":"Academic(nonstudent)","total":253,"Strongly Agree":64.0,"Agree":30.8,"No Opinion":3.2,"Disagree":2.0,"Strongly Disagree":0.0},{"group":"Employment sector","type":"Business and industry","total":176,"Strongly Agree":40.6,"Agree":50.0,"No Opinion":2.8,"Disagree":6.3,"Strongly Disagree":0.0},{"group":"Employment sector","type":"Federal, state, and local government","total":71,"Strongly Agree":38.0,"Agree":47.9,"No Opinion":7.0,"Disagree":4.2,"Strongly Disagree":2.8},{"group":"Employment sector","type":"Private consultant/self-employed","total":28,"Strongly Agree":39.3,"Agree":53.6,"No Opinion":7.1,"Disagree":0.0,"Strongly Disagree":0.0},{"group":"Employment sector","type":"Other (Including retired, student, not employed, etc.)","total":34,"Strongly Agree":29.4,"Agree":44.1,"No Opinion":14.7,"Disagree":5.9,"Strongly Disagree":5.9},{"group":"Race","type":"White","total":400,"Strongly Agree":50.0,"Agree":41.8,"No Opinion":4.5,"Disagree":2.8,"Strongly Disagree":1.0},{"group":"Race","type":"Asian","total":122,"Strongly Agree":53.3,"Agree":40.2,"No Opinion":3.3,"Disagree":3.3,"Strongly Disagree":0.0},{"group":"Race","type":"Black or African American","total":10,"Strongly Agree":40.0,"Agree":30.0,"No Opinion":20.0,"Disagree":10.0,"Strongly Disagree":0.0},{"group":"Race","type":"Other","total":17,"Strongly Agree":47.1,"Agree":35.3,"No Opinion":5.9,"Disagree":11.8,"Strongly Disagree":0.7},{"group":"Education","type":"Associate's and Bachelor's","total":175,"Strongly Agree":37.1,"Agree":49.1,"No Opinion":5.7,"Disagree":6.9,"Strongly Disagree":1.1},{"group":"Education","type":"Master's and Above","total":388,"Strongly Agree":55.9,"Agree":36.9,"No Opinion":4.4,"Disagree":2.3,"Strongly Disagree":0.5},{"group":"Gender","type":"Male","total":356,"Strongly Agree":50.6,"Agree":41,"No Opinion":4.2,"Disagree":3.4,"Strongly Disagree":0.8},{"group":"Gender","type":"Female","total":200,"Strongly Agree":51.0,"Agree":39.0,"No Opinion":6.0,"Disagree":3.5,"Strongly Disagree":0.5}];
+
+var Frame = G2.Frame;
+var frame = new Frame(data);
+var stronglyArr = frame.colArray('Strongly Disagree');
+var disagreeArr = frame.colArray('Disagree');
+for(var i = 0,l = stronglyArr.length; i < l; i++) {
+  stronglyArr[i] = stronglyArr[i] * (-1);
+  disagreeArr[i] = disagreeArr[i] * (-1);
+}
+frame.colReplace('Strongly Disagree', stronglyArr);
+frame.colReplace('Disagree', disagreeArr);
+frame = Frame.combinColumns(frame, ['Disagree', 'Strongly Disagree', 'No Opinion', 'Agree','Strongly Agree'], 'value', 'opinion', ['group', 'type']);
+
+var colorMap = {
+  "Strongly Agree": '#3561A7',
+  "Agree": '#80B2D3',
+  "No Opinion": '#D9F0F6',
+  "Disagree": '#EC7743',
+  "Strongly Disagree": '#CB2920',
+}
+
+var chart = new G2.Chart({
+  id : 'c1',
+  width : 1000,
+  height : 500,
+  plotCfg: {
+     margin: [60, 60, 60, 300]
+  }
+});
+
+chart.source(frame, {
+  value: {
+    tickInterval: 10
+  }
+});
+chart.axis('type',{
+  title: null
+});
+chart.axis('value',{
+  position: 'right',
+  title: null,
+  tickLine: null,
+  formatter: function(val) {
+    return val + '%';
+  }
+});
+chart.legend({
+  position: 'bottom'
+});
+chart.coord().transpose();
+chart.intervalStack().position('type*value').color('opinion', function(opinion) {
+  return colorMap[opinion];
+});
+
+chart.render();
+</script>
+
+
+<script src="../../static/codemirror-compressed.js"></script>
+<script src="../../static/demo-detail.js"></script>
+
+  </div>
+  
+ 
+</body>
+</html>

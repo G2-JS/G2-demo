@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>G2 - The Grammar Of Graphics </title>
+  <meta name="keywords" content="G2, The Grammar of Graphics, 图形语法,图表绘制引擎,图表库,可视化,数据可视化,AntV,Data Visualization,visualization,visualisation, antd, ant, ant design">
+  <meta name="description" content="G2(The Grammar Of Graphics) 是一个由纯 javascript 编写、强大的语义化图表生成工具，它提供了一整套图形语法，可以让用户通过简单的语法搭建出无数种图表，并且集成了大量的统计工具，支持多种坐标系绘制，可以让用户自由得定制图表，是为大数据时代而准备的强大的可视化工具。">
+  <link rel="icon" href="https://os.alipayobjects.com/rmsportal/VuIJNnUTtJpfuej.png" type="image/x-icon">
+  <link rel="shortcut icon" href="https://os.alipayobjects.com/rmsportal/PBJkVCMxFjrRGEl.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../../static/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../static/codemirror.css" />
+  <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+</head>
+<body><header id="header">
+  
+</header>
+ 
+  <div class="main-container clearfix">
+<div class="body-content demo-detail">
+<div class="demo-title clearfix">
+  <h2 class="title">
+    <a href="../../index.html#点图">
+      <span class="parent-title">点图 / </span>
+      <span class="title" id="J_chartTitle">时间序列散点图</span>
+    </a>
+  </h2>
+</div>
+<div class="doc-content demo-doc">
+  <div class="doc-inner">
+    <div class="chart-demo">
+      <div id="c1"></div>
+    </div>
+    <div class="wrapper">
+      <div class="code-panel pull-left">
+        <div class="tabs">
+          <div class="tab" >
+            <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+            <label for="tab-1" class="tab-label">源码</label>
+            <div class="tab-content">
+              <textarea id='codeA' name='codeA'>
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>时间序列散点图</title>
+      <link rel="stylesheet" type="text/css" href="../../static/doc.css" />
+      <!--如果不需要jquery ajax 则可以不引入-->
+      <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+      <!-- 引入 G2 脚本 --><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+    </head>
+    <body>
+      <div id="c1"></div>
+      <!-- G2 code start -->
+      <style>
+  .ac-tooltip{
+    position:absolute;
+    visibility:hidden;
+    border : 1px solid #efefef;
+    border-radius: 3px;
+    background-color: white;
+    opacity: .85;
+    padding: 8px;
+    font-size: 12px;
+    transition: top 200ms,left 200ms;
+    -moz-transition:  top 200ms,left 200ms;  /* Firefox 4 */
+    -webkit-transition:  top 200ms,left 200ms; /* Safari 和 Chrome */
+    -o-transition:  top 200ms,left 200ms;
+  }
+  .ac-tooltip .ac-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .ac-tooltip li{
+    line-height:  22px; 
+  }
+</style>
+
+
+<script>
+
+G2.Global.activeShape.point = {
+  stroke: 'blue',
+  lineWidth: 3
+}; // 自定义鼠标 hover 气泡上的样式主题
+$.getJSON('../../static/data/scatter1.json',function (data) {
+  var chart = new G2.Chart({
+    id: 'c1',
+    width: 1000,
+    height: 500
+  });
+  for(var i=0;i<data.length;i++) {
+    var item = data[i];
+    var value = item.exp_amo;
+    item.exp_amo = value * 1;
+  }
+  chart.source(data, {
+    exp_dat: {
+      type: 'time',
+      mask: 'm/yy',
+      tickCount: 14
+    },
+    exp_amo : {
+      type: 'log',
+      ticks: [225, 1000000 ,2000000 , 4000000, 6000000]
+    }
+  });
+  chart.legend(false);
+  chart.tooltip(true, {
+    title: null,
+    custom: true, // 使用自定义的 tooltip
+  });
+  chart.axis('exp_dat', {
+    title: null,
+    tickLine: null,
+    titleOffset: 50,
+    labels: {
+      label: {
+        fontSize: '14'
+      }
+    }
+  });
+  chart.axis('exp_amo', {
+    tickLine: null,
+    line: null,
+    title: null,
+    grid: {
+      line: {
+        'stroke-dasharray': [0, 0],
+        stroke: '#999'
+      }
+    },
+    formatter: function(val) {
+      var formatted;
+      if (val == 225) {
+        formatted = 0;
+      } else {
+        formatted = val / 1000000;  
+      }
+
+      return '$' + formatted + 'M';
+    } 
+  });
+  chart.point().position('exp_dat*exp_amo').size('exp_amo', 10, 1).opacity('exp_amo').shape('circle').tooltip('exp_dat*can_nam*spe_nam*exp_amo');
+  chart.render();
+});
+</script>
+
+      <!-- G2 code end -->
+    </body>
+  </html>
+              </textarea>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+<style>
+  .ac-tooltip{
+    position:absolute;
+    visibility:hidden;
+    border : 1px solid #efefef;
+    border-radius: 3px;
+    background-color: white;
+    opacity: .85;
+    padding: 8px;
+    font-size: 12px;
+    transition: top 200ms,left 200ms;
+    -moz-transition:  top 200ms,left 200ms;  /* Firefox 4 */
+    -webkit-transition:  top 200ms,left 200ms; /* Safari 和 Chrome */
+    -o-transition:  top 200ms,left 200ms;
+  }
+  .ac-tooltip .ac-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .ac-tooltip li{
+    line-height:  22px; 
+  }
+</style>
+
+
+<script>
+
+G2.Global.activeShape.point = {
+  stroke: 'blue',
+  lineWidth: 3
+}; // 自定义鼠标 hover 气泡上的样式主题
+$.getJSON('../../static/data/scatter1.json',function (data) {
+  var chart = new G2.Chart({
+    id: 'c1',
+    width: 1000,
+    height: 500
+  });
+  for(var i=0;i<data.length;i++) {
+    var item = data[i];
+    var value = item.exp_amo;
+    item.exp_amo = value * 1;
+  }
+  chart.source(data, {
+    exp_dat: {
+      type: 'time',
+      mask: 'm/yy',
+      tickCount: 14
+    },
+    exp_amo : {
+      type: 'log',
+      ticks: [225, 1000000 ,2000000 , 4000000, 6000000]
+    }
+  });
+  chart.legend(false);
+  chart.tooltip(true, {
+    title: null,
+    custom: true, // 使用自定义的 tooltip
+  });
+  chart.axis('exp_dat', {
+    title: null,
+    tickLine: null,
+    titleOffset: 50,
+    labels: {
+      label: {
+        fontSize: '14'
+      }
+    }
+  });
+  chart.axis('exp_amo', {
+    tickLine: null,
+    line: null,
+    title: null,
+    grid: {
+      line: {
+        'stroke-dasharray': [0, 0],
+        stroke: '#999'
+      }
+    },
+    formatter: function(val) {
+      var formatted;
+      if (val == 225) {
+        formatted = 0;
+      } else {
+        formatted = val / 1000000;  
+      }
+
+      return '$' + formatted + 'M';
+    } 
+  });
+  chart.point().position('exp_dat*exp_amo').size('exp_amo', 10, 1).opacity('exp_amo').shape('circle').tooltip('exp_dat*can_nam*spe_nam*exp_amo');
+  chart.render();
+});
+</script>
+
+
+<script src="../../static/codemirror-compressed.js"></script>
+<script src="../../static/demo-detail.js"></script>
+
+  </div>
+  
+ 
+</body>
+</html>

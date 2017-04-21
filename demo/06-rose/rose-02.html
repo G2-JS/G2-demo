@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>G2 - The Grammar Of Graphics </title>
+  <meta name="keywords" content="G2, The Grammar of Graphics, 图形语法,图表绘制引擎,图表库,可视化,数据可视化,AntV,Data Visualization,visualization,visualisation, antd, ant, ant design">
+  <meta name="description" content="G2(The Grammar Of Graphics) 是一个由纯 javascript 编写、强大的语义化图表生成工具，它提供了一整套图形语法，可以让用户通过简单的语法搭建出无数种图表，并且集成了大量的统计工具，支持多种坐标系绘制，可以让用户自由得定制图表，是为大数据时代而准备的强大的可视化工具。">
+  <link rel="icon" href="https://os.alipayobjects.com/rmsportal/VuIJNnUTtJpfuej.png" type="image/x-icon">
+  <link rel="shortcut icon" href="https://os.alipayobjects.com/rmsportal/PBJkVCMxFjrRGEl.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../../static/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../static/codemirror.css" />
+  <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+</head>
+<body><header id="header">
+  
+</header>
+ 
+  <div class="main-container clearfix">
+<div class="body-content demo-detail">
+<div class="demo-title clearfix">
+  <h2 class="title">
+    <a href="../../index.html#南丁格尔玫瑰图">
+      <span class="parent-title">南丁格尔玫瑰图 / </span>
+      <span class="title" id="J_chartTitle">各国消费对比</span>
+    </a>
+  </h2>
+</div>
+<div class="doc-content demo-doc">
+  <div class="doc-inner">
+    <div class="chart-demo">
+      <div id="c1"></div>
+    </div>
+    <div class="wrapper">
+      <div class="code-panel pull-left">
+        <div class="tabs">
+          <div class="tab" >
+            <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+            <label for="tab-1" class="tab-label">源码</label>
+            <div class="tab-content">
+              <textarea id='codeA' name='codeA'>
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>各国消费对比</title>
+      <link rel="stylesheet" type="text/css" href="../../static/doc.css" />
+      <!--如果不需要jquery ajax 则可以不引入-->
+      <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+      <!-- 引入 G2 脚本 --><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+    </head>
+    <body>
+      <div id="c1"></div>
+      <!-- G2 code start -->
+      <script>
+var data = [{country:'中国',cost:96},{country:'德国',cost:121},{country:'美国',cost:100},{country:'日本',cost:111},{country:'韩国',cost:102},{country:'法国',cost:124},{country:'意大利',cost:123},{country:'荷兰',cost:111},{country:'比利时',cost:123},{country:'英国',cost:109},{country:'加拿大',cost:115},{country:'俄罗斯',cost:99},{country:'墨西哥',cost:91},{country:'印度',cost:87},{country:'瑞士',cost:125},{country:'澳大利亚',cost:130},{country:'西班牙',cost:109},{country:'巴西',cost:123},{country:'泰国',cost:91},{country:'印尼',cost:83},{country:'波兰',cost:101},{country:'瑞典',cost:116},{country:'奥地利',cost:111},{country:'捷克',cost:107}];
+
+var chart = new G2.Chart({
+  id: 'c1',
+  width : 1000,
+  height : 500,
+  plotCfg: {
+    margin: [20, 80, 100, 80]
+  }
+});
+
+chart.source(data, {
+  'cost': {
+    min: 0
+  }
+});
+chart.coord('polar');
+chart.axis('cost', {
+  labels: null
+});
+chart.axis('country', {
+  gridAlign: 'middle',
+  labels: {
+    label: {
+      textAlign: 'center' // 设置坐标轴 label 的文本对齐方向
+    }
+  }
+});
+chart.legend('country', {
+  position: 'bottom',
+  itemWrap: true // 图例换行，将该参数设置为 true, 默认为 false，不换行。
+});
+chart.interval().position('country*cost')
+  .color('country','rgb(252,143,72)-rgb(255,215,135)')
+  .label('cost',{offset: -15,label: {textAlign: 'center', fontWeight: 'bold'}})
+  .style({
+    lineWidth: 1,
+    stroke: '#fff'
+  });
+chart.render();
+</script>
+
+      <!-- G2 code end -->
+    </body>
+  </html>
+              </textarea>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+<script>
+var data = [{country:'中国',cost:96},{country:'德国',cost:121},{country:'美国',cost:100},{country:'日本',cost:111},{country:'韩国',cost:102},{country:'法国',cost:124},{country:'意大利',cost:123},{country:'荷兰',cost:111},{country:'比利时',cost:123},{country:'英国',cost:109},{country:'加拿大',cost:115},{country:'俄罗斯',cost:99},{country:'墨西哥',cost:91},{country:'印度',cost:87},{country:'瑞士',cost:125},{country:'澳大利亚',cost:130},{country:'西班牙',cost:109},{country:'巴西',cost:123},{country:'泰国',cost:91},{country:'印尼',cost:83},{country:'波兰',cost:101},{country:'瑞典',cost:116},{country:'奥地利',cost:111},{country:'捷克',cost:107}];
+
+var chart = new G2.Chart({
+  id: 'c1',
+  width : 1000,
+  height : 500,
+  plotCfg: {
+    margin: [20, 80, 100, 80]
+  }
+});
+
+chart.source(data, {
+  'cost': {
+    min: 0
+  }
+});
+chart.coord('polar');
+chart.axis('cost', {
+  labels: null
+});
+chart.axis('country', {
+  gridAlign: 'middle',
+  labels: {
+    label: {
+      textAlign: 'center' // 设置坐标轴 label 的文本对齐方向
+    }
+  }
+});
+chart.legend('country', {
+  position: 'bottom',
+  itemWrap: true // 图例换行，将该参数设置为 true, 默认为 false，不换行。
+});
+chart.interval().position('country*cost')
+  .color('country','rgb(252,143,72)-rgb(255,215,135)')
+  .label('cost',{offset: -15,label: {textAlign: 'center', fontWeight: 'bold'}})
+  .style({
+    lineWidth: 1,
+    stroke: '#fff'
+  });
+chart.render();
+</script>
+
+
+<script src="../../static/codemirror-compressed.js"></script>
+<script src="../../static/demo-detail.js"></script>
+
+  </div>
+  
+ 
+</body>
+</html>

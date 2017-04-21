@@ -1,0 +1,33 @@
+{
+  "name": "Component-name",
+  "version": "0.0.1",
+  "description": "Best Practice Of Developing Component With Ant-Tool",
+  "homepage": "http://",
+  "author": "pigcan <jiangjay818@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": "issues url",
+  "main": "./lib/index",
+  "entry": {
+    "index": "./index"
+  },
+  "scripts": {
+    "dev": "npm run start",
+    "build": "npm run clean && nico build && site build",
+    "start": "lessc ./static/less/index.less ./static/style.css && npm run clean && nico server --watch",
+    "clean": "rm -rf _site",
+    "less": "lessc static/less/index.less > static/dpl.css",
+    "gh-pages": "nico build && site build && gh-pages -d _site"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@alipay/site": "^1.8.2",
+    "gh-pages": "^0.11.0",
+    "internal-ip": "^1.0.1",
+    "nico-jsx": "~0.5.3",
+    "pre-commit": "^1.2.2"
+  },
+  "license": "MIT"
+}

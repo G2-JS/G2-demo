@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>G2 - The Grammar Of Graphics </title>
+  <meta name="keywords" content="G2, The Grammar of Graphics, 图形语法,图表绘制引擎,图表库,可视化,数据可视化,AntV,Data Visualization,visualization,visualisation, antd, ant, ant design">
+  <meta name="description" content="G2(The Grammar Of Graphics) 是一个由纯 javascript 编写、强大的语义化图表生成工具，它提供了一整套图形语法，可以让用户通过简单的语法搭建出无数种图表，并且集成了大量的统计工具，支持多种坐标系绘制，可以让用户自由得定制图表，是为大数据时代而准备的强大的可视化工具。">
+  <link rel="icon" href="https://os.alipayobjects.com/rmsportal/VuIJNnUTtJpfuej.png" type="image/x-icon">
+  <link rel="shortcut icon" href="https://os.alipayobjects.com/rmsportal/PBJkVCMxFjrRGEl.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../../static/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../static/codemirror.css" />
+  <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+</head>
+<body><header id="header">
+  
+</header>
+ 
+  <div class="main-container clearfix">
+<div class="body-content demo-detail">
+<div class="demo-title clearfix">
+  <h2 class="title">
+    <a href="../../index.html#其他图表">
+      <span class="parent-title">其他图表 / </span>
+      <span class="title" id="J_chartTitle">表格内图表</span>
+    </a>
+  </h2>
+</div>
+<div class="doc-content demo-doc">
+  <div class="doc-inner">
+    <div class="chart-demo">
+      <div id="c1"></div>
+    </div>
+    <div class="wrapper">
+      <div class="code-panel pull-left">
+        <div class="tabs">
+          <div class="tab" >
+            <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+            <label for="tab-1" class="tab-label">源码</label>
+            <div class="tab-content">
+              <textarea id='codeA' name='codeA'>
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>表格内图表</title>
+      <link rel="stylesheet" type="text/css" href="../../static/doc.css" />
+      <!--如果不需要jquery ajax 则可以不引入-->
+      <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+      <!-- 引入 G2 脚本 --><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+    </head>
+    <body>
+      <div id="c1"></div>
+      <!-- G2 code start -->
+      <style>
+  .table{
+    border: 1px solid #cdcdcd;
+  }
+
+  .table td{
+    padding: 4px 10px;
+    border-left: 1px solid #cdcdcd;
+    border-top: 1px solid #cdcdcd;
+  }
+  .table  .chart-td{
+    padding: 0;
+  }
+
+  #c1{
+    position: relative;
+  }
+
+  .chart-marker{
+    position: absolute;
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 5px;
+    border: 2px solid #db4c3c;
+    z-index: 10;
+    background-color: #fff;
+
+  }
+
+  .crossLine{
+    border-left: 1px solid #db4c3c;
+    position: absolute;
+    display: none;
+    top: 34px;/*表头的高度*/
+  }
+</style>
+
+<script>
+var container = $('#c1');
+var tableEl = $('<table class="table"><thead><td width="200">name</td><td>chart</td><td width="300" >time/value</td></thead><tbody></tbody></table>').appendTo('#c1');
+var tbodyEl = tableEl.find('tbody');
+var crossEl = $('<div class="crossLine"></div>').appendTo('#c1');
+var charts = []; // 缓存所有的图表
+
+// 创建行
+function addRow(obj,index){
+  var chartId = 'ch' + index;
+  var str = '<tr><td>'+obj.name+'</td><td id="'+chartId+'" class="chart-td"></td><td> </td></tr>';
+  $(str).appendTo(tbodyEl);
+  var chart = createChart(chartId,obj.subData);
+  charts.push(chart);
+}
+// 创建图表
+function createChart(id,data) {
+  var chart = new G2.Chart({
+    id: id,
+    width: 400,
+    height: 80,
+    animate: false,
+    plotCfg: {
+      margin: 0
+    }
+  });
+  var defs = {
+    'timestamp': {type: 'time',mask: 'yy-mm-dd HH:MM:ss'},
+    'value': {nice: false}
+  };
+
+  chart.source(data,defs);
+  chart.axis(false); // 隐藏坐标轴
+  chart.tooltip(false);// 不显示坐标轴，自己实现坐标轴功能
+
+  chart.area().position('timestamp*value').color('#db4c3c');
+
+  chart.render();
+  return chart;
+}
+
+// 根据鼠标移动的位置设置当前点的x,y信息
+function setChartActive (chart,point) {
+  var tipItems = chart.getTooltipItems(point); // 获取当前点的信息
+  if (tipItems.length) {
+    var item = tipItems[0]; //由于只有一条线
+    var chartId = chart.get('id');
+    $('#' + chartId).next('td').text(item.title + '/' + item.value + 'ms');
+    showMarkerPoint(chart,item.point);
+  }
+}
+
+// 获取点的相对位置
+function getOffset(chartId,point) {
+  var chartEl = $('#' + chartId);
+  var chartOffset = chartEl.offset();
+  var containerOffset = container.offset();
+  var offset = {
+    x: chartOffset.left - containerOffset.left - 4.5, // 半径 4.5
+    y: chartOffset.top - containerOffset.top - 4.5
+  };
+
+  offset.x = offset.x + point.x;
+  offset.y = offset.y + point.y;
+  return offset;
+}
+
+// 显示数据对应的点
+function showMarkerPoint (chart,point) {
+  var chartId = chart.get('id');
+  var pointId =  chartId + 'point';
+  var offset = getOffset(chartId,point);
+  var marker = $('#' + pointId);
+  if (!marker.length) {
+    marker = $('<span id="'+pointId+'" class="chart-marker"></span>').appendTo(container);
+  };
+  marker.css({left: offset.x,top: offset.y}); // 设置位置
+  marker.show();
+}
+
+// 显示贯穿所有表的线
+function showCrossLine (chart,point) {
+  var tipItems = chart.getTooltipItems(point); // 获取当前点的信息
+  if (tipItems.length) { 
+    var offset = getOffset(chart.get('id'),point);
+    crossEl.css({
+      left: offset.x + 4.5 // 圆的半径
+    });
+    crossEl.height(tbodyEl.height());
+    crossEl.show();
+  }
+}
+
+// 激活指定的点，显示tooltip和贯穿的线,点是相对于画布的点
+function activePoint(point) {
+  for(var i = 0; i < charts.length; i++) {
+    var chart = charts[i];
+    setChartActive(chart,point);
+  }
+  showCrossLine(charts[0],point);
+}
+
+// 委托鼠标事件，在画布上移动时触发
+$('#c1').delegate('canvas','mousemove',function(ev){
+  //var target = ev.target;
+  var point = {
+    x: ev.offsetX,
+    y: ev.offsetY
+  };
+  activePoint(point);
+});
+
+$.getJSON('../../static/data/table-area.json',function (data) {
+  for (var i = 0; i < data.length; i++) {
+    var obj = data[i];
+    addRow(obj,i);
+  }
+
+  activePoint({ // 设置默认的点
+    x: 50,
+    y: 50
+  });
+
+});
+</script>
+
+      <!-- G2 code end -->
+    </body>
+  </html>
+              </textarea>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+<style>
+  .table{
+    border: 1px solid #cdcdcd;
+  }
+
+  .table td{
+    padding: 4px 10px;
+    border-left: 1px solid #cdcdcd;
+    border-top: 1px solid #cdcdcd;
+  }
+  .table  .chart-td{
+    padding: 0;
+  }
+
+  #c1{
+    position: relative;
+  }
+
+  .chart-marker{
+    position: absolute;
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 5px;
+    border: 2px solid #db4c3c;
+    z-index: 10;
+    background-color: #fff;
+
+  }
+
+  .crossLine{
+    border-left: 1px solid #db4c3c;
+    position: absolute;
+    display: none;
+    top: 34px;/*表头的高度*/
+  }
+</style>
+
+<script>
+var container = $('#c1');
+var tableEl = $('<table class="table"><thead><td width="200">name</td><td>chart</td><td width="300" >time/value</td></thead><tbody></tbody></table>').appendTo('#c1');
+var tbodyEl = tableEl.find('tbody');
+var crossEl = $('<div class="crossLine"></div>').appendTo('#c1');
+var charts = []; // 缓存所有的图表
+
+// 创建行
+function addRow(obj,index){
+  var chartId = 'ch' + index;
+  var str = '<tr><td>'+obj.name+'</td><td id="'+chartId+'" class="chart-td"></td><td> </td></tr>';
+  $(str).appendTo(tbodyEl);
+  var chart = createChart(chartId,obj.subData);
+  charts.push(chart);
+}
+// 创建图表
+function createChart(id,data) {
+  var chart = new G2.Chart({
+    id: id,
+    width: 400,
+    height: 80,
+    animate: false,
+    plotCfg: {
+      margin: 0
+    }
+  });
+  var defs = {
+    'timestamp': {type: 'time',mask: 'yy-mm-dd HH:MM:ss'},
+    'value': {nice: false}
+  };
+
+  chart.source(data,defs);
+  chart.axis(false); // 隐藏坐标轴
+  chart.tooltip(false);// 不显示坐标轴，自己实现坐标轴功能
+
+  chart.area().position('timestamp*value').color('#db4c3c');
+
+  chart.render();
+  return chart;
+}
+
+// 根据鼠标移动的位置设置当前点的x,y信息
+function setChartActive (chart,point) {
+  var tipItems = chart.getTooltipItems(point); // 获取当前点的信息
+  if (tipItems.length) {
+    var item = tipItems[0]; //由于只有一条线
+    var chartId = chart.get('id');
+    $('#' + chartId).next('td').text(item.title + '/' + item.value + 'ms');
+    showMarkerPoint(chart,item.point);
+  }
+}
+
+// 获取点的相对位置
+function getOffset(chartId,point) {
+  var chartEl = $('#' + chartId);
+  var chartOffset = chartEl.offset();
+  var containerOffset = container.offset();
+  var offset = {
+    x: chartOffset.left - containerOffset.left - 4.5, // 半径 4.5
+    y: chartOffset.top - containerOffset.top - 4.5
+  };
+
+  offset.x = offset.x + point.x;
+  offset.y = offset.y + point.y;
+  return offset;
+}
+
+// 显示数据对应的点
+function showMarkerPoint (chart,point) {
+  var chartId = chart.get('id');
+  var pointId =  chartId + 'point';
+  var offset = getOffset(chartId,point);
+  var marker = $('#' + pointId);
+  if (!marker.length) {
+    marker = $('<span id="'+pointId+'" class="chart-marker"></span>').appendTo(container);
+  };
+  marker.css({left: offset.x,top: offset.y}); // 设置位置
+  marker.show();
+}
+
+// 显示贯穿所有表的线
+function showCrossLine (chart,point) {
+  var tipItems = chart.getTooltipItems(point); // 获取当前点的信息
+  if (tipItems.length) { 
+    var offset = getOffset(chart.get('id'),point);
+    crossEl.css({
+      left: offset.x + 4.5 // 圆的半径
+    });
+    crossEl.height(tbodyEl.height());
+    crossEl.show();
+  }
+}
+
+// 激活指定的点，显示tooltip和贯穿的线,点是相对于画布的点
+function activePoint(point) {
+  for(var i = 0; i < charts.length; i++) {
+    var chart = charts[i];
+    setChartActive(chart,point);
+  }
+  showCrossLine(charts[0],point);
+}
+
+// 委托鼠标事件，在画布上移动时触发
+$('#c1').delegate('canvas','mousemove',function(ev){
+  //var target = ev.target;
+  var point = {
+    x: ev.offsetX,
+    y: ev.offsetY
+  };
+  activePoint(point);
+});
+
+$.getJSON('../../static/data/table-area.json',function (data) {
+  for (var i = 0; i < data.length; i++) {
+    var obj = data[i];
+    addRow(obj,i);
+  }
+
+  activePoint({ // 设置默认的点
+    x: 50,
+    y: 50
+  });
+
+});
+</script>
+
+
+<script src="../../static/codemirror-compressed.js"></script>
+<script src="../../static/demo-detail.js"></script>
+
+  </div>
+  
+ 
+</body>
+</html>

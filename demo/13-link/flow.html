@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>G2 - The Grammar Of Graphics </title>
+  <meta name="keywords" content="G2, The Grammar of Graphics, 图形语法,图表绘制引擎,图表库,可视化,数据可视化,AntV,Data Visualization,visualization,visualisation, antd, ant, ant design">
+  <meta name="description" content="G2(The Grammar Of Graphics) 是一个由纯 javascript 编写、强大的语义化图表生成工具，它提供了一整套图形语法，可以让用户通过简单的语法搭建出无数种图表，并且集成了大量的统计工具，支持多种坐标系绘制，可以让用户自由得定制图表，是为大数据时代而准备的强大的可视化工具。">
+  <link rel="icon" href="https://os.alipayobjects.com/rmsportal/VuIJNnUTtJpfuej.png" type="image/x-icon">
+  <link rel="shortcut icon" href="https://os.alipayobjects.com/rmsportal/PBJkVCMxFjrRGEl.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../../static/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../static/codemirror.css" />
+  <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+</head>
+<body><header id="header">
+  
+</header>
+ 
+  <div class="main-container clearfix">
+<div class="body-content demo-detail">
+<div class="demo-title clearfix">
+  <h2 class="title">
+    <a href="../../index.html#关系图">
+      <span class="parent-title">关系图 / </span>
+      <span class="title" id="J_chartTitle">流程图</span>
+    </a>
+  </h2>
+</div>
+<div class="doc-content demo-doc">
+  <div class="doc-inner">
+    <div class="chart-demo">
+      <div id="c1"></div>
+    </div>
+    <div class="wrapper">
+      <div class="code-panel pull-left">
+        <div class="tabs">
+          <div class="tab" >
+            <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+            <label for="tab-1" class="tab-label">源码</label>
+            <div class="tab-content">
+              <textarea id='codeA' name='codeA'>
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>流程图</title>
+      <link rel="stylesheet" type="text/css" href="../../static/doc.css" />
+      <!--如果不需要jquery ajax 则可以不引入-->
+      <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+      <!-- 引入 G2 脚本 --><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+    </head>
+    <body>
+      <div id="c1"></div>
+      <!-- G2 code start -->
+      <script>
+
+  // 定义流程图的各种图形
+  // 起始点、结束点、流程节点、条件节点
+
+  // 自定义start 的图形
+  G2.Shape.registShape('point', 'start', {
+    drawShape: function(cfg, group) {
+      var x = cfg.x;
+      var y = cfg.y;
+      group.addShape('circle', { // 由于开始的点设置了透明度，所以会显示连接线
+        attrs: {
+          x: x,
+          y: y,
+          r: 15,
+          fill: '#fff'
+        }
+      });
+      var shape = group.addShape('circle', {
+        attrs: {
+          x: x,
+          y: y,
+          r: 10,
+          fill: 'black',
+          fillOpacity: 0.6,
+          stroke: 'black'
+        }
+      });
+      return shape;
+    }
+  });
+
+  // 自定义action的图形
+  G2.Shape.registShape('point', 'action', {
+    drawShape: function(cfg, group) {
+      var x = cfg.x;
+      var y = cfg.y;
+      var width = 60;
+      var height = 30;
+      var shape = group.addShape('rect', {
+        attrs: {
+          x: x - width / 2,
+          y: y - height / 2,
+          width: width,
+          height: height,
+          fill: '#fff',
+          stroke: 'black'
+        }
+      });
+      return shape;
+    }
+  });
+
+  function combine(Command, x, y) {
+    return Command + ' ' + x + ' ' + y;
+  }
+
+  // 自定义condition 的图形
+  G2.Shape.registShape('point', 'condition', {
+    drawShape: function(cfg, group) {
+      var x = cfg.x;
+      var y = cfg.y;
+      var width = 50;
+      var height = 50;
+      var path = '';
+      path += combine('M', x, y - height / 2);
+      path += combine('L', x - width / 2, y);
+      path += combine('L', x, y + height / 2);
+      path += combine('L', x + width / 2, y);
+      path += 'z';
+      var shape = group.addShape('path', {
+        attrs: {
+          path: path,
+          fill: '#fff',
+          stroke: 'black' // 可以直接设置颜色 cfg.color，也可以使用映射
+        }
+      });
+      return shape;
+    }
+  });
+
+  // 自定义end 的图形
+  G2.Shape.registShape('point', 'end', {
+    drawShape: function(cfg, group) {
+      var x = cfg.x;
+      var y = cfg.y;
+
+      group.addShape('circle', {
+        attrs: {
+          x: x,
+          y: y,
+          r: 15,
+          fill: '#fff',
+          stroke: 'black'
+        }
+      });
+
+      var shape = group.addShape('circle', {
+        attrs: {
+          x: x,
+          y: y,
+          r: 10,
+          fill: 'black',
+          fillOpacity: 0.6,
+          stroke: 'black'
+        }
+      });
+      return shape;
+    }
+  });
+
+  var nodes = [// 节点信息：类别、ID，位置 x,y
+    {id: '0',name: '',type: 'start',x: 50,y: 10},
+    {id: '1',name: '步骤一',type: 'action',x: 50,y: 20},
+    {id: '2',name: '步骤二',type: 'action',x: 50,y: 30},
+    {id: '3',name: '条件',type: 'condition',x: 50,y: 40},
+    {id: '4.1',name: '分步骤一',type: 'action',x: 40,y: 50},
+    {id: '4.2',name: '分步骤二',type: 'action',x: 60,y: 50},
+    {id: '5',name: '汇总',type: 'action',x: 50,y: 60},
+    {id: '6',name: '',type: 'end',x: 50,y: 70}
+  ];
+  var edges = [
+    {source: '0', target: '1'},
+    {source: '1', target: '2'},
+    {source: '2', target: '3'},
+    {source: '3', target: '4.1'},
+    {source: '3', target: '4.2'},
+    {source: '4.1', target: '5'},
+    {source: '4.2', target: '5'},
+    {source: '5', target: '6'}
+  ];
+
+  var Stat = G2.Stat;
+  var chart = new G2.Chart({
+    id: 'c1',
+    width: 1000,
+    height: 500,
+    plotCfg: {
+      margin: [0,0]
+    }
+  });
+  // 不显示title
+  chart.tooltip({
+    title: null
+  }); 
+  // x,y的范围是0-100
+  // 因为边的统计函数生成的数据范围默认是0-1，所以需要设置范围是 0-100 统一起点、边的数据范围
+  var defs = {
+    x: {min: 0,max:100},
+    y: {min: 0, max:100},
+    '..x': {min: 0,max:100},
+    '..y': {min: 0,max:100}
+  };
+  // 首先绘制 edges，点要在边的上面
+  // 创建单独的视图
+  var edgeView = chart.createView();
+  edgeView.source(edges, defs);
+  edgeView.coord().reflect(); // 从上到下
+  edgeView.axis(false);
+  edgeView.tooltip(false);
+  // Stat.link 方法会生成 ..x, ..y的字段类型，数值范围是 0-1
+  edgeView.edge()
+       .position(Stat.link('source*target',nodes))
+       .color('#ccc');
+
+  // 创建节点视图
+  var nodeView = chart.createView();
+  nodeView.coord().reflect(); // 从上到下
+  nodeView.axis(false);
+
+  nodeView.source(nodes, defs);
+  nodeView.point().position('x*y').color('steelblue')
+    .shape('type', function(val) {
+      return val;
+    })
+    .label('name', {
+      offset: 0,
+      labelEmit: true
+    })
+  .tooltip('name');
+  chart.render();
+</script>
+      <!-- G2 code end -->
+    </body>
+  </html>
+              </textarea>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+<script>
+
+  // 定义流程图的各种图形
+  // 起始点、结束点、流程节点、条件节点
+
+  // 自定义start 的图形
+  G2.Shape.registShape('point', 'start', {
+    drawShape: function(cfg, group) {
+      var x = cfg.x;
+      var y = cfg.y;
+      group.addShape('circle', { // 由于开始的点设置了透明度，所以会显示连接线
+        attrs: {
+          x: x,
+          y: y,
+          r: 15,
+          fill: '#fff'
+        }
+      });
+      var shape = group.addShape('circle', {
+        attrs: {
+          x: x,
+          y: y,
+          r: 10,
+          fill: 'black',
+          fillOpacity: 0.6,
+          stroke: 'black'
+        }
+      });
+      return shape;
+    }
+  });
+
+  // 自定义action的图形
+  G2.Shape.registShape('point', 'action', {
+    drawShape: function(cfg, group) {
+      var x = cfg.x;
+      var y = cfg.y;
+      var width = 60;
+      var height = 30;
+      var shape = group.addShape('rect', {
+        attrs: {
+          x: x - width / 2,
+          y: y - height / 2,
+          width: width,
+          height: height,
+          fill: '#fff',
+          stroke: 'black'
+        }
+      });
+      return shape;
+    }
+  });
+
+  function combine(Command, x, y) {
+    return Command + ' ' + x + ' ' + y;
+  }
+
+  // 自定义condition 的图形
+  G2.Shape.registShape('point', 'condition', {
+    drawShape: function(cfg, group) {
+      var x = cfg.x;
+      var y = cfg.y;
+      var width = 50;
+      var height = 50;
+      var path = '';
+      path += combine('M', x, y - height / 2);
+      path += combine('L', x - width / 2, y);
+      path += combine('L', x, y + height / 2);
+      path += combine('L', x + width / 2, y);
+      path += 'z';
+      var shape = group.addShape('path', {
+        attrs: {
+          path: path,
+          fill: '#fff',
+          stroke: 'black' // 可以直接设置颜色 cfg.color，也可以使用映射
+        }
+      });
+      return shape;
+    }
+  });
+
+  // 自定义end 的图形
+  G2.Shape.registShape('point', 'end', {
+    drawShape: function(cfg, group) {
+      var x = cfg.x;
+      var y = cfg.y;
+
+      group.addShape('circle', {
+        attrs: {
+          x: x,
+          y: y,
+          r: 15,
+          fill: '#fff',
+          stroke: 'black'
+        }
+      });
+
+      var shape = group.addShape('circle', {
+        attrs: {
+          x: x,
+          y: y,
+          r: 10,
+          fill: 'black',
+          fillOpacity: 0.6,
+          stroke: 'black'
+        }
+      });
+      return shape;
+    }
+  });
+
+  var nodes = [// 节点信息：类别、ID，位置 x,y
+    {id: '0',name: '',type: 'start',x: 50,y: 10},
+    {id: '1',name: '步骤一',type: 'action',x: 50,y: 20},
+    {id: '2',name: '步骤二',type: 'action',x: 50,y: 30},
+    {id: '3',name: '条件',type: 'condition',x: 50,y: 40},
+    {id: '4.1',name: '分步骤一',type: 'action',x: 40,y: 50},
+    {id: '4.2',name: '分步骤二',type: 'action',x: 60,y: 50},
+    {id: '5',name: '汇总',type: 'action',x: 50,y: 60},
+    {id: '6',name: '',type: 'end',x: 50,y: 70}
+  ];
+  var edges = [
+    {source: '0', target: '1'},
+    {source: '1', target: '2'},
+    {source: '2', target: '3'},
+    {source: '3', target: '4.1'},
+    {source: '3', target: '4.2'},
+    {source: '4.1', target: '5'},
+    {source: '4.2', target: '5'},
+    {source: '5', target: '6'}
+  ];
+
+  var Stat = G2.Stat;
+  var chart = new G2.Chart({
+    id: 'c1',
+    width: 1000,
+    height: 500,
+    plotCfg: {
+      margin: [0,0]
+    }
+  });
+  // 不显示title
+  chart.tooltip({
+    title: null
+  }); 
+  // x,y的范围是0-100
+  // 因为边的统计函数生成的数据范围默认是0-1，所以需要设置范围是 0-100 统一起点、边的数据范围
+  var defs = {
+    x: {min: 0,max:100},
+    y: {min: 0, max:100},
+    '..x': {min: 0,max:100},
+    '..y': {min: 0,max:100}
+  };
+  // 首先绘制 edges，点要在边的上面
+  // 创建单独的视图
+  var edgeView = chart.createView();
+  edgeView.source(edges, defs);
+  edgeView.coord().reflect(); // 从上到下
+  edgeView.axis(false);
+  edgeView.tooltip(false);
+  // Stat.link 方法会生成 ..x, ..y的字段类型，数值范围是 0-1
+  edgeView.edge()
+       .position(Stat.link('source*target',nodes))
+       .color('#ccc');
+
+  // 创建节点视图
+  var nodeView = chart.createView();
+  nodeView.coord().reflect(); // 从上到下
+  nodeView.axis(false);
+
+  nodeView.source(nodes, defs);
+  nodeView.point().position('x*y').color('steelblue')
+    .shape('type', function(val) {
+      return val;
+    })
+    .label('name', {
+      offset: 0,
+      labelEmit: true
+    })
+  .tooltip('name');
+  chart.render();
+</script>
+
+<script src="../../static/codemirror-compressed.js"></script>
+<script src="../../static/demo-detail.js"></script>
+
+  </div>
+  
+ 
+</body>
+</html>

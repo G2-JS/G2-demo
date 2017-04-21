@@ -1,0 +1,1396 @@
+{
+  "pages": {
+    "demo/01-point/bubble-a.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/bubble-a-00c8e9c28ae775c26f9d500e83bfd8ce.html"
+    },
+    "demo/01-point/bubble-a": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/bubble-a-00c8e9c28ae775c26f9d500e83bfd8ce.html"
+    },
+    "demo/01-point/bubble-b.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/bubble-b-20741aa5339371c2640e5b2dc7ad9988.html"
+    },
+    "demo/01-point/bubble-b": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/bubble-b-20741aa5339371c2640e5b2dc7ad9988.html"
+    },
+    "demo/01-point/bubble-c.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/bubble-c-e894d31c530236b973f9cbb2709565fd.html"
+    },
+    "demo/01-point/bubble-c": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/bubble-c-e894d31c530236b973f9cbb2709565fd.html"
+    },
+    "demo/01-point/jitter.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/jitter-76dc5a4ab791f41727ea04f1d2935104.html"
+    },
+    "demo/01-point/jitter": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/jitter-76dc5a4ab791f41727ea04f1d2935104.html"
+    },
+    "demo/01-point/one-bin.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/one-bin-214973a6633205fd5331286fe2bc2dca.html"
+    },
+    "demo/01-point/one-bin": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/one-bin-214973a6633205fd5331286fe2bc2dca.html"
+    },
+    "demo/01-point/one-dodge1.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/one-dodge1-ade9f5fab5a4af6aab75fb0b00a1e335.html"
+    },
+    "demo/01-point/one-dodge1": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/one-dodge1-ade9f5fab5a4af6aab75fb0b00a1e335.html"
+    },
+    "demo/01-point/one-jitter.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/one-jitter-305c09568eca6f3ca26b45125e0d7227.html"
+    },
+    "demo/01-point/one-jitter": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/one-jitter-305c09568eca6f3ca26b45125e0d7227.html"
+    },
+    "demo/01-point/one-stack.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/one-stack-9835c7c8c12065cc04fa0ec258a6afaf.html"
+    },
+    "demo/01-point/one-stack": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/one-stack-9835c7c8c12065cc04fa0ec258a6afaf.html"
+    },
+    "demo/01-point/point-dodge.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/point-dodge-6da6ce4d9613774a434d82fc9ac3a411.html"
+    },
+    "demo/01-point/point-dodge": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/point-dodge-6da6ce4d9613774a434d82fc9ac3a411.html"
+    },
+    "demo/01-point/point-image.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/point-image-d8880e2e0c1448c33252d5a517e60709.html"
+    },
+    "demo/01-point/point-image": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/point-image-d8880e2e0c1448c33252d5a517e60709.html"
+    },
+    "demo/01-point/point-jitter3.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/point-jitter3-dbe2f6c233fd9652137a78e485dbac6b.html"
+    },
+    "demo/01-point/point-jitter3": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/point-jitter3-dbe2f6c233fd9652137a78e485dbac6b.html"
+    },
+    "demo/01-point/punch-card.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/punch-card-99d248dfef81818ddd2e3a159fd0660b.html"
+    },
+    "demo/01-point/punch-card": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/punch-card-99d248dfef81818ddd2e3a159fd0660b.html"
+    },
+    "demo/01-point/scatter-a.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/scatter-a-303fadae0db5c237c2e38998101a4166.html"
+    },
+    "demo/01-point/scatter-a": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/scatter-a-303fadae0db5c237c2e38998101a4166.html"
+    },
+    "demo/01-point/scatter-b.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/scatter-b-70dff8131db2cc3860c3344f5c3d9810.html"
+    },
+    "demo/01-point/scatter-b": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/scatter-b-70dff8131db2cc3860c3344f5c3d9810.html"
+    },
+    "demo/01-point/scatter-c.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/scatter-c-ce203df6ea32d9ae9cef4b24fea9f61e.html"
+    },
+    "demo/01-point/scatter-c": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/scatter-c-ce203df6ea32d9ae9cef4b24fea9f61e.html"
+    },
+    "demo/01-point/scatter-matrix.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/scatter-matrix-be95b3a9f901a2fb2258bcb26e10c627.html"
+    },
+    "demo/01-point/scatter-matrix": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/scatter-matrix-be95b3a9f901a2fb2258bcb26e10c627.html"
+    },
+    "demo/01-point/two-jitter.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/two-jitter-e691405df5d6e3664f8003814cd4724a.html"
+    },
+    "demo/01-point/two-jitter": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/01-point/two-jitter-e691405df5d6e3664f8003814cd4724a.html"
+    },
+    "demo/02-line/dynamic.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/dynamic-e44ffb7d1e5949dc74ae5dfcdbbed261.html"
+    },
+    "demo/02-line/dynamic": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/dynamic-e44ffb7d1e5949dc74ae5dfcdbbed261.html"
+    },
+    "demo/02-line/line-01.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/line-01-a5b362d07f63582f860f6ff26b688810.html"
+    },
+    "demo/02-line/line-01": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/line-01-a5b362d07f63582f860f6ff26b688810.html"
+    },
+    "demo/02-line/line-02.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/line-02-49e931bb302b3e821184ccba5e74a518.html"
+    },
+    "demo/02-line/line-02": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/line-02-49e931bb302b3e821184ccba5e74a518.html"
+    },
+    "demo/02-line/line-03.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/line-03-31772cf4ca6fa7cfdd03c4fed26a56ea.html"
+    },
+    "demo/02-line/line-03": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/line-03-31772cf4ca6fa7cfdd03c4fed26a56ea.html"
+    },
+    "demo/02-line/line-dot.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/line-dot-3af5c16e7318b40ad705043dbd94a1ad.html"
+    },
+    "demo/02-line/line-dot": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/line-dot-3af5c16e7318b40ad705043dbd94a1ad.html"
+    },
+    "demo/02-line/line-kagi.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/line-kagi-7d89a2f78cfa53f9caed692ee224b9f6.html"
+    },
+    "demo/02-line/line-kagi": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/line-kagi-7d89a2f78cfa53f9caed692ee224b9f6.html"
+    },
+    "demo/02-line/line-null.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/line-null-4c5dd54e0df7c5e953c52b53913bd7c5.html"
+    },
+    "demo/02-line/line-null": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/line-null-4c5dd54e0df7c5e953c52b53913bd7c5.html"
+    },
+    "demo/02-line/line-smooth.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/line-smooth-efda010bb71f073782602cf8a4546873.html"
+    },
+    "demo/02-line/line-smooth": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/line-smooth-efda010bb71f073782602cf8a4546873.html"
+    },
+    "demo/02-line/line-with-dot.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/line-with-dot-9c4f966111dd611993005c7bd9cf2fe7.html"
+    },
+    "demo/02-line/line-with-dot": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/line-with-dot-9c4f966111dd611993005c7bd9cf2fe7.html"
+    },
+    "demo/02-line/path.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/path-1774bdd79e93babf039dfa497d251594.html"
+    },
+    "demo/02-line/path": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/path-1774bdd79e93babf039dfa497d251594.html"
+    },
+    "demo/02-line/radar-line.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/radar-line-36d55efd1da5792853497a4f235d2b06.html"
+    },
+    "demo/02-line/radar-line": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/radar-line-36d55efd1da5792853497a4f235d2b06.html"
+    },
+    "demo/02-line/redial-line.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/redial-line-abebcabbb461c145316897c566d3f4ef.html"
+    },
+    "demo/02-line/redial-line": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/redial-line-abebcabbb461c145316897c566d3f4ef.html"
+    },
+    "demo/02-line/simple-line.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/simple-line-cfc3d0f4e391e03e25987651556c9e9a.html"
+    },
+    "demo/02-line/simple-line": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/simple-line-cfc3d0f4e391e03e25987651556c9e9a.html"
+    },
+    "demo/02-line/sparklines.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/sparklines-99b2013336f27314a1cc5f05a40e0240.html"
+    },
+    "demo/02-line/sparklines": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/sparklines-99b2013336f27314a1cc5f05a40e0240.html"
+    },
+    "demo/02-line/step-line.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/step-line-c36dbc1f00b4e10b6f0aded7d9ffa4b6.html"
+    },
+    "demo/02-line/step-line": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/02-line/step-line-c36dbc1f00b4e10b6f0aded7d9ffa4b6.html"
+    },
+    "demo/03-area/area-gradient.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/area-gradient-15e3b7d9f8cf301ea1b5db4ce11c24f0.html"
+    },
+    "demo/03-area/area-gradient": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/area-gradient-15e3b7d9f8cf301ea1b5db4ce11c24f0.html"
+    },
+    "demo/03-area/area-null.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/area-null-26133507c6fe98fbceaeb3bde77efcbc.html"
+    },
+    "demo/03-area/area-null": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/area-null-26133507c6fe98fbceaeb3bde77efcbc.html"
+    },
+    "demo/03-area/area-percent.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/area-percent-0c4982c29a50bce2500108dc8beb60c5.html"
+    },
+    "demo/03-area/area-percent": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/area-percent-0c4982c29a50bce2500108dc8beb60c5.html"
+    },
+    "demo/03-area/area-range-line.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/area-range-line-167b967c237390382f50b759eebf76e5.html"
+    },
+    "demo/03-area/area-range-line": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/area-range-line-167b967c237390382f50b759eebf76e5.html"
+    },
+    "demo/03-area/area-range.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/area-range-b05d8c85d445a184b30e5f6ce3f1e7e2.html"
+    },
+    "demo/03-area/area-range": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/area-range-b05d8c85d445a184b30e5f6ce3f1e7e2.html"
+    },
+    "demo/03-area/area-smooth.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/area-smooth-661456e02569a53ec536eca15d861e8f.html"
+    },
+    "demo/03-area/area-smooth": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/area-smooth-661456e02569a53ec536eca15d861e8f.html"
+    },
+    "demo/03-area/area-stack.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/area-stack-dde40411546e53a6b833ad7d76a2afb9.html"
+    },
+    "demo/03-area/area-stack": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/area-stack-dde40411546e53a6b833ad7d76a2afb9.html"
+    },
+    "demo/03-area/area-with-negative.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/area-with-negative-6e61bb131d537b269acd094a48ed5a17.html"
+    },
+    "demo/03-area/area-with-negative": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/area-with-negative-6e61bb131d537b269acd094a48ed5a17.html"
+    },
+    "demo/03-area/area.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/area-b5852a4268ec6a6de362ce6b2c0e047c.html"
+    },
+    "demo/03-area/area": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/area-b5852a4268ec6a6de362ce6b2c0e047c.html"
+    },
+    "demo/03-area/streamgraph.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/streamgraph-e36318fd5bb4884cf11158fa80283bd4.html"
+    },
+    "demo/03-area/streamgraph": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/03-area/streamgraph-e36318fd5bb4884cf11158fa80283bd4.html"
+    },
+    "demo/04-bar/bar-negative.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/bar-negative-0f2b478c178b8997bb81b8e55f53772f.html"
+    },
+    "demo/04-bar/bar-negative": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/bar-negative-0f2b478c178b8997bb81b8e55f53772f.html"
+    },
+    "demo/04-bar/bar.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/bar-7f33631be764e6f147b703cfa9d5d483.html"
+    },
+    "demo/04-bar/bar": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/bar-7f33631be764e6f147b703cfa9d5d483.html"
+    },
+    "demo/04-bar/clustered-stacked-bar.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/clustered-stacked-bar-ca5eb8cd9a36ac7055115efdb3e7dc78.html"
+    },
+    "demo/04-bar/clustered-stacked-bar": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/clustered-stacked-bar-ca5eb8cd9a36ac7055115efdb3e7dc78.html"
+    },
+    "demo/04-bar/column-bullet.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/column-bullet-9db47a52c3dc954943947a5d9c77bdac.html"
+    },
+    "demo/04-bar/column-bullet": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/column-bullet-9db47a52c3dc954943947a5d9c77bdac.html"
+    },
+    "demo/04-bar/column-helix.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/column-helix-30120a5dedd1541dc476b2b7915e4e7a.html"
+    },
+    "demo/04-bar/column-helix": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/column-helix-30120a5dedd1541dc476b2b7915e4e7a.html"
+    },
+    "demo/04-bar/column-line.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/column-line-72cb515b08f0cc9feabf226fc1098f05.html"
+    },
+    "demo/04-bar/column-line": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/column-line-72cb515b08f0cc9feabf226fc1098f05.html"
+    },
+    "demo/04-bar/diverging-stacked-bar.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/diverging-stacked-bar-37d4295acedc03288b47038ef3e30363.html"
+    },
+    "demo/04-bar/diverging-stacked-bar": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/diverging-stacked-bar-37d4295acedc03288b47038ef3e30363.html"
+    },
+    "demo/04-bar/error.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/error-05c458122edca9e9c251111c42b7f524.html"
+    },
+    "demo/04-bar/error": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/error-05c458122edca9e9c251111c42b7f524.html"
+    },
+    "demo/04-bar/h-bar.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/h-bar-f208a73db96b35d767583ec62b488c1c.html"
+    },
+    "demo/04-bar/h-bar": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/h-bar-f208a73db96b35d767583ec62b488c1c.html"
+    },
+    "demo/04-bar/image-top-bar.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/image-top-bar-06285381ae9385d461ed5d2a74fd752b.html"
+    },
+    "demo/04-bar/image-top-bar": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/image-top-bar-06285381ae9385d461ed5d2a74fd752b.html"
+    },
+    "demo/04-bar/range-bar.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/range-bar-02aaaf0381008503447ca018fc7077d7.html"
+    },
+    "demo/04-bar/range-bar": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/range-bar-02aaaf0381008503447ca018fc7077d7.html"
+    },
+    "demo/04-bar/stacked-bar.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/stacked-bar-c21b1bfa6c2078dd498e2003ea82207c.html"
+    },
+    "demo/04-bar/stacked-bar": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/stacked-bar-c21b1bfa6c2078dd498e2003ea82207c.html"
+    },
+    "demo/04-bar/waterfall-chart.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/waterfall-chart-46b551bab83a8127b0b4c557948d3269.html"
+    },
+    "demo/04-bar/waterfall-chart": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/04-bar/waterfall-chart-46b551bab83a8127b0b4c557948d3269.html"
+    },
+    "demo/05-pie/donut.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/05-pie/donut-8e4b5cadcd16d81a7ceca26801664ee5.html"
+    },
+    "demo/05-pie/donut": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/05-pie/donut-8e4b5cadcd16d81a7ceca26801664ee5.html"
+    },
+    "demo/05-pie/pie-nest.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/05-pie/pie-nest-4a4b8ec8cb508431311f995cf6aab912.html"
+    },
+    "demo/05-pie/pie-nest": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/05-pie/pie-nest-4a4b8ec8cb508431311f995cf6aab912.html"
+    },
+    "demo/05-pie/pie.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/05-pie/pie-ac6b3fcb66032bc9e103651221a3292e.html"
+    },
+    "demo/05-pie/pie": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/05-pie/pie-ac6b3fcb66032bc9e103651221a3292e.html"
+    },
+    "demo/06-rose/rose-01.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/06-rose/rose-01-da3267d13421349a0e5107edbc424355.html"
+    },
+    "demo/06-rose/rose-01": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/06-rose/rose-01-da3267d13421349a0e5107edbc424355.html"
+    },
+    "demo/06-rose/rose-02.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/06-rose/rose-02-7e0e8fb5f22985799d6c66818d92d7c7.html"
+    },
+    "demo/06-rose/rose-02": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/06-rose/rose-02-7e0e8fb5f22985799d6c66818d92d7c7.html"
+    },
+    "demo/06-rose/rose-03.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/06-rose/rose-03-7049811dde466b281f5eca80d1e70dde.html"
+    },
+    "demo/06-rose/rose-03": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/06-rose/rose-03-7049811dde466b281f5eca80d1e70dde.html"
+    },
+    "demo/07-k/k-chart-01.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/07-k/k-chart-01-37662ab6a3235dc12949c8260af79b8a.html"
+    },
+    "demo/07-k/k-chart-01": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/07-k/k-chart-01-37662ab6a3235dc12949c8260af79b8a.html"
+    },
+    "demo/07-k/k-chart-02.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/07-k/k-chart-02-821b07995e5d59d4c97bf8fa97dd8641.html"
+    },
+    "demo/07-k/k-chart-02": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/07-k/k-chart-02-821b07995e5d59d4c97bf8fa97dd8641.html"
+    },
+    "demo/07-k/k-chart-03.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/07-k/k-chart-03-791cdf0c63bd3ad813f5a71b554c379b.html"
+    },
+    "demo/07-k/k-chart-03": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/07-k/k-chart-03-791cdf0c63bd3ad813f5a71b554c379b.html"
+    },
+    "demo/08-funnel/funnel-compare.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/08-funnel/funnel-compare-4bd524764ca4d18e107b5f241ce9ab55.html"
+    },
+    "demo/08-funnel/funnel-compare": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/08-funnel/funnel-compare-4bd524764ca4d18e107b5f241ce9ab55.html"
+    },
+    "demo/08-funnel/funnel-mirror.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/08-funnel/funnel-mirror-104e7b4f1bec2dbe94f0f69480dc571d.html"
+    },
+    "demo/08-funnel/funnel-mirror": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/08-funnel/funnel-mirror-104e7b4f1bec2dbe94f0f69480dc571d.html"
+    },
+    "demo/08-funnel/funnel.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/08-funnel/funnel-d9ac41b49866ff78cff32030ad6df3c2.html"
+    },
+    "demo/08-funnel/funnel": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/08-funnel/funnel-d9ac41b49866ff78cff32030ad6df3c2.html"
+    },
+    "demo/08-funnel/pyramid.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/08-funnel/pyramid-77dfc934f54cabb1634d9791d455a256.html"
+    },
+    "demo/08-funnel/pyramid": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/08-funnel/pyramid-77dfc934f54cabb1634d9791d455a256.html"
+    },
+    "demo/09-heatmap/heatmap-01.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/09-heatmap/heatmap-01-473c3c1afa427203bb852ccfc202b05a.html"
+    },
+    "demo/09-heatmap/heatmap-01": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/09-heatmap/heatmap-01-473c3c1afa427203bb852ccfc202b05a.html"
+    },
+    "demo/09-heatmap/heatmap-02.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/09-heatmap/heatmap-02-b957f0f49c23baa011bfeda40c1e682a.html"
+    },
+    "demo/09-heatmap/heatmap-02": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/09-heatmap/heatmap-02-b957f0f49c23baa011bfeda40c1e682a.html"
+    },
+    "demo/09-heatmap/heatmap-03.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/09-heatmap/heatmap-03-8d91a3e1c7fd30c75125b9668d71dc40.html"
+    },
+    "demo/09-heatmap/heatmap-03": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/09-heatmap/heatmap-03-8d91a3e1c7fd30c75125b9668d71dc40.html"
+    },
+    "demo/09-heatmap/heatmap-canvas.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/09-heatmap/heatmap-canvas-27f16dcb6b269d528aaf72f3b1ad224c.html"
+    },
+    "demo/09-heatmap/heatmap-canvas": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/09-heatmap/heatmap-canvas-27f16dcb6b269d528aaf72f3b1ad224c.html"
+    },
+    "demo/09-heatmap/image.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/09-heatmap/image-0c153700e632c9190d4ede23c398e909.html"
+    },
+    "demo/09-heatmap/image": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/09-heatmap/image-0c153700e632c9190d4ede23c398e909.html"
+    },
+    "demo/09-heatmap/stock-calendar.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/09-heatmap/stock-calendar-32cef616cfe1463d4586117495f7be2c.html"
+    },
+    "demo/09-heatmap/stock-calendar": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/09-heatmap/stock-calendar-32cef616cfe1463d4586117495f7be2c.html"
+    },
+    "demo/09-heatmap/test-case.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/09-heatmap/test-case-10abc4beac1e8ac6334183c708b535a5.html"
+    },
+    "demo/09-heatmap/test-case": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/09-heatmap/test-case-10abc4beac1e8ac6334183c708b535a5.html"
+    },
+    "demo/10-map/china.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/10-map/china-8947714572b11cb4b92194eeebe4125f.html"
+    },
+    "demo/10-map/china": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/10-map/china-8947714572b11cb4b92194eeebe4125f.html"
+    },
+    "demo/10-map/choropleth-map.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/10-map/choropleth-map-4a02cc06544f7fdd24fa391edf6981da.html"
+    },
+    "demo/10-map/choropleth-map": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/10-map/choropleth-map-4a02cc06544f7fdd24fa391edf6981da.html"
+    },
+    "demo/10-map/map-bubble.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/10-map/map-bubble-8dc3eae825ae354ef6fbf17b64936f25.html"
+    },
+    "demo/10-map/map-bubble": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/10-map/map-bubble-8dc3eae825ae354ef6fbf17b64936f25.html"
+    },
+    "demo/10-map/map-projection.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/10-map/map-projection-f0ce4ddb310edac7a56570d8c10da9f8.html"
+    },
+    "demo/10-map/map-projection": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/10-map/map-projection-f0ce4ddb310edac7a56570d8c10da9f8.html"
+    },
+    "demo/10-map/map-with-heatmap.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/10-map/map-with-heatmap-422846923a87357f45f3b04db13c9427.html"
+    },
+    "demo/10-map/map-with-heatmap": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/10-map/map-with-heatmap-422846923a87357f45f3b04db13c9427.html"
+    },
+    "demo/10-map/wind-map.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/10-map/wind-map-d9e87021114d60a93be0c1223a0b0a3f.html"
+    },
+    "demo/10-map/wind-map": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/10-map/wind-map-d9e87021114d60a93be0c1223a0b0a3f.html"
+    },
+    "demo/10-map/world-albers.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/10-map/world-albers-89ddbc945fcc76fa7aa2999f34c372ca.html"
+    },
+    "demo/10-map/world-albers": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/10-map/world-albers-89ddbc945fcc76fa7aa2999f34c372ca.html"
+    },
+    "demo/10-map/world-map.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/10-map/world-map-075af58512eadab83c269257f3cd81c3.html"
+    },
+    "demo/10-map/world-map": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/10-map/world-map-075af58512eadab83c269257f3cd81c3.html"
+    },
+    "demo/11-treemap/clickable-treemap.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/11-treemap/clickable-treemap-1aa7ef7462689da5e03e6bf899673cd7.html"
+    },
+    "demo/11-treemap/clickable-treemap": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/11-treemap/clickable-treemap-1aa7ef7462689da5e03e6bf899673cd7.html"
+    },
+    "demo/11-treemap/polar-slice-dice.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/11-treemap/polar-slice-dice-163200e889445a3f66d1eefc744e75fc.html"
+    },
+    "demo/11-treemap/polar-slice-dice": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/11-treemap/polar-slice-dice-163200e889445a3f66d1eefc744e75fc.html"
+    },
+    "demo/11-treemap/polar-slice-transpose.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/11-treemap/polar-slice-transpose-4d492f1fa01d110931a59abc83439db2.html"
+    },
+    "demo/11-treemap/polar-slice-transpose": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/11-treemap/polar-slice-transpose-4d492f1fa01d110931a59abc83439db2.html"
+    },
+    "demo/11-treemap/polar-treemap.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/11-treemap/polar-treemap-469b584a4493acb8d45828ea519c69e9.html"
+    },
+    "demo/11-treemap/polar-treemap": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/11-treemap/polar-treemap-469b584a4493acb8d45828ea519c69e9.html"
+    },
+    "demo/11-treemap/sunburst-chart.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/11-treemap/sunburst-chart-45498cb7849c1d583713a67c87839440.html"
+    },
+    "demo/11-treemap/sunburst-chart": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/11-treemap/sunburst-chart-45498cb7849c1d583713a67c87839440.html"
+    },
+    "demo/11-treemap/treemap.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/11-treemap/treemap-2315595923f9cf06b670a00d7981ceb8.html"
+    },
+    "demo/11-treemap/treemap": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/11-treemap/treemap-2315595923f9cf06b670a00d7981ceb8.html"
+    },
+    "demo/12-dashboards/clock.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/12-dashboards/clock-25d87f19669f981a4631062f322b2b7f.html"
+    },
+    "demo/12-dashboards/clock": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/12-dashboards/clock-25d87f19669f981a4631062f322b2b7f.html"
+    },
+    "demo/12-dashboards/dashboard.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/12-dashboards/dashboard-9f469e8be77d85079bd54e69439a2542.html"
+    },
+    "demo/12-dashboards/dashboard": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/12-dashboards/dashboard-9f469e8be77d85079bd54e69439a2542.html"
+    },
+    "demo/13-link/department.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/13-link/department-8570b617358d65f6b13b2c2ddfc9dd5f.html"
+    },
+    "demo/13-link/department": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/13-link/department-8570b617358d65f6b13b2c2ddfc9dd5f.html"
+    },
+    "demo/13-link/flow.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/13-link/flow-321959328476ca166eda59e6bde36232.html"
+    },
+    "demo/13-link/flow": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/13-link/flow-321959328476ca166eda59e6bde36232.html"
+    },
+    "demo/13-link/tree-cascade.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/13-link/tree-cascade-3ee7cae9e1cd021f9b639873d703ddee.html"
+    },
+    "demo/13-link/tree-cascade": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/13-link/tree-cascade-3ee7cae9e1cd021f9b639873d703ddee.html"
+    },
+    "demo/13-link/tree-circle.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/13-link/tree-circle-8cd43be1e20d195d553fba5c8f5295c0.html"
+    },
+    "demo/13-link/tree-circle": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/13-link/tree-circle-8cd43be1e20d195d553fba5c8f5295c0.html"
+    },
+    "demo/13-link/tree.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/13-link/tree-8e1cd9a4cb01479eaedbddc1a8ced512.html"
+    },
+    "demo/13-link/tree": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/13-link/tree-8e1cd9a4cb01479eaedbddc1a8ced512.html"
+    },
+    "demo/14-radar/radar-line.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/14-radar/radar-line-3fc6b0240210e4b145d7dd74bd038ada.html"
+    },
+    "demo/14-radar/radar-line": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/14-radar/radar-line-3fc6b0240210e4b145d7dd74bd038ada.html"
+    },
+    "demo/14-radar/radar-multiple.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/14-radar/radar-multiple-d44f9cf88d388c8c445e59349102313f.html"
+    },
+    "demo/14-radar/radar-multiple": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/14-radar/radar-multiple-d44f9cf88d388c8c445e59349102313f.html"
+    },
+    "demo/14-radar/radar-stacked-percent-area.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/14-radar/radar-stacked-percent-area-1bc64e55b2c5f12dd4cd04eec67acafe.html"
+    },
+    "demo/14-radar/radar-stacked-percent-area": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/14-radar/radar-stacked-percent-area-1bc64e55b2c5f12dd4cd04eec67acafe.html"
+    },
+    "demo/14-radar/radar.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/14-radar/radar-1c9fe5e745de056b32fd47da05c6c1bf.html"
+    },
+    "demo/14-radar/radar": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/14-radar/radar-1c9fe5e745de056b32fd47da05c6c1bf.html"
+    },
+    "demo/15-box/boxplot-01.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/15-box/boxplot-01-2058bfdd107d3f149f7651cd761b46c4.html"
+    },
+    "demo/15-box/boxplot-01": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/15-box/boxplot-01-2058bfdd107d3f149f7651cd761b46c4.html"
+    },
+    "demo/15-box/boxplot-02.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/15-box/boxplot-02-62e8ad78a9a9d25f2e88b553c8cf470a.html"
+    },
+    "demo/15-box/boxplot-02": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/15-box/boxplot-02-62e8ad78a9a9d25f2e88b553c8cf470a.html"
+    },
+    "demo/15-box/boxplot-03.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/15-box/boxplot-03-6b4b5f0bf4e4075409a273969ef82d3d.html"
+    },
+    "demo/15-box/boxplot-03": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/15-box/boxplot-03-6b4b5f0bf4e4075409a273969ef82d3d.html"
+    },
+    "demo/16-polar/aster-plot.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/16-polar/aster-plot-91cfaac276513080baaeb90486c20133.html"
+    },
+    "demo/16-polar/aster-plot": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/16-polar/aster-plot-91cfaac276513080baaeb90486c20133.html"
+    },
+    "demo/16-polar/corona.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/16-polar/corona-743bb99b6d1ac95ec87e78d12e2b993a.html"
+    },
+    "demo/16-polar/corona": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/16-polar/corona-743bb99b6d1ac95ec87e78d12e2b993a.html"
+    },
+    "demo/16-polar/pizza.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/16-polar/pizza-f5953deb0b24d9c5200cf3ec324ef0a6.html"
+    },
+    "demo/16-polar/pizza": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/16-polar/pizza-f5953deb0b24d9c5200cf3ec324ef0a6.html"
+    },
+    "demo/16-polar/polar-box.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/16-polar/polar-box-def2a5b9c153c36713c663f416bc1779.html"
+    },
+    "demo/16-polar/polar-box": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/16-polar/polar-box-def2a5b9c153c36713c663f416bc1779.html"
+    },
+    "demo/16-polar/polar-heatmap.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/16-polar/polar-heatmap-01eb6166f5d4ffe34653b02f7b468e7f.html"
+    },
+    "demo/16-polar/polar-heatmap": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/16-polar/polar-heatmap-01eb6166f5d4ffe34653b02f7b468e7f.html"
+    },
+    "demo/16-polar/polar-interval.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/16-polar/polar-interval-2aa3910f50717aadb92699e64a566b2f.html"
+    },
+    "demo/16-polar/polar-interval": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/16-polar/polar-interval-2aa3910f50717aadb92699e64a566b2f.html"
+    },
+    "demo/16-polar/polar-line.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/16-polar/polar-line-26c195f71155be6de00e97e065c6288a.html"
+    },
+    "demo/16-polar/polar-line": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/16-polar/polar-line-26c195f71155be6de00e97e065c6288a.html"
+    },
+    "demo/16-polar/radial-bar.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/16-polar/radial-bar-e6ffd3f97eafea4c273b7e4dcea3390c.html"
+    },
+    "demo/16-polar/radial-bar": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/16-polar/radial-bar-e6ffd3f97eafea4c273b7e4dcea3390c.html"
+    },
+    "demo/16-polar/wind-rose.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/16-polar/wind-rose-c2c4760c7eced79185f8af62d94ffea8.html"
+    },
+    "demo/16-polar/wind-rose": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/16-polar/wind-rose-c2c4760c7eced79185f8af62d94ffea8.html"
+    },
+    "demo/17-other/chart-event.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/chart-event-3bac4db2a72c7d827de26186c5f72758.html"
+    },
+    "demo/17-other/chart-event": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/chart-event-3bac4db2a72c7d827de26186c5f72758.html"
+    },
+    "demo/17-other/cloud.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/cloud-7d0c1cc82c5ed8feb1f1d904981b8e70.html"
+    },
+    "demo/17-other/cloud": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/cloud-7d0c1cc82c5ed8feb1f1d904981b8e70.html"
+    },
+    "demo/17-other/contour.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/contour-5897e2c4b5522695e0f0248c1eea65ce.html"
+    },
+    "demo/17-other/contour": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/contour-5897e2c4b5522695e0f0248c1eea65ce.html"
+    },
+    "demo/17-other/distributioncurve.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/distributioncurve-2a185ee48756480416d18bb0f82a5e7e.html"
+    },
+    "demo/17-other/distributioncurve": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/distributioncurve-2a185ee48756480416d18bb0f82a5e7e.html"
+    },
+    "demo/17-other/double-axis.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/double-axis-7b18238277dfcf25a0563a02e89a9ba1.html"
+    },
+    "demo/17-other/double-axis": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/double-axis-7b18238277dfcf25a0563a02e89a9ba1.html"
+    },
+    "demo/17-other/histogram.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/histogram-e5e148593d8cb7ec374f824a51e06307.html"
+    },
+    "demo/17-other/histogram": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/histogram-e5e148593d8cb7ec374f824a51e06307.html"
+    },
+    "demo/17-other/hot-hex.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/hot-hex-3103cd01c5e15a07b81f12f198b96948.html"
+    },
+    "demo/17-other/hot-hex": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/hot-hex-3103cd01c5e15a07b81f12f198b96948.html"
+    },
+    "demo/17-other/hot-rect.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/hot-rect-170590e90bc192f03cf0acc81de3c308.html"
+    },
+    "demo/17-other/hot-rect": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/hot-rect-170590e90bc192f03cf0acc81de3c308.html"
+    },
+    "demo/17-other/imagecloud.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/imagecloud-db5cc5258e1548456bf87a4c3e00c800.html"
+    },
+    "demo/17-other/imagecloud": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/imagecloud-db5cc5258e1548456bf87a4c3e00c800.html"
+    },
+    "demo/17-other/pareto-chart.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/pareto-chart-ddb360c5bf4043fe15d4fad97e77caa5.html"
+    },
+    "demo/17-other/pareto-chart": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/pareto-chart-ddb360c5bf4043fe15d4fad97e77caa5.html"
+    },
+    "demo/17-other/regressioncurve.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/regressioncurve-ef04b9bb3116f78581efd982b0adbbe0.html"
+    },
+    "demo/17-other/regressioncurve": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/regressioncurve-ef04b9bb3116f78581efd982b0adbbe0.html"
+    },
+    "demo/17-other/stem-leaf.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/stem-leaf-427549a5f031d1775c3b523824195f8b.html"
+    },
+    "demo/17-other/stem-leaf": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/stem-leaf-427549a5f031d1775c3b523824195f8b.html"
+    },
+    "demo/17-other/table-area.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/table-area-e52f7a2d09ee2b8ff94f14abb39ded15.html"
+    },
+    "demo/17-other/table-area": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/17-other/table-area-e52f7a2d09ee2b8ff94f14abb39ded15.html"
+    },
+    "demo/18-facet/circle.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/18-facet/circle-d810ff9667dac5250ddc41b00b4dd7dd.html"
+    },
+    "demo/18-facet/circle": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/18-facet/circle-d810ff9667dac5250ddc41b00b4dd7dd.html"
+    },
+    "demo/18-facet/column.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/18-facet/column-e407a6484e8b69ac1197e5ddb2efbbf2.html"
+    },
+    "demo/18-facet/column": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/18-facet/column-e407a6484e8b69ac1197e5ddb2efbbf2.html"
+    },
+    "demo/18-facet/mirror-transpose.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/18-facet/mirror-transpose-6d80b961a3ccd38c8098b90df94b7fbd.html"
+    },
+    "demo/18-facet/mirror-transpose": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/18-facet/mirror-transpose-6d80b961a3ccd38c8098b90df94b7fbd.html"
+    },
+    "demo/18-facet/mirror.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/18-facet/mirror-26ada58bd283d4595dd5ed79a9e26c56.html"
+    },
+    "demo/18-facet/mirror": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/18-facet/mirror-26ada58bd283d4595dd5ed79a9e26c56.html"
+    },
+    "demo/18-facet/rect.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/18-facet/rect-c433d0b4debfcec1de04cde7db89c6e7.html"
+    },
+    "demo/18-facet/rect": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/18-facet/rect-c433d0b4debfcec1de04cde7db89c6e7.html"
+    },
+    "demo/18-facet/row.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/18-facet/row-152a18e4bb90a14328674609f250a701.html"
+    },
+    "demo/18-facet/row": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/18-facet/row-152a18e4bb90a14328674609f250a701.html"
+    },
+    "demo/18-facet/tree-column.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/18-facet/tree-column-9a751395740c950ae5d4f8be8fb81dae.html"
+    },
+    "demo/18-facet/tree-column": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/18-facet/tree-column-9a751395740c950ae5d4f8be8fb81dae.html"
+    },
+    "demo/18-facet/tree-m.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/18-facet/tree-m-d3b08f5d90df948a5d938b2a51fc94fa.html"
+    },
+    "demo/18-facet/tree-m": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/18-facet/tree-m-d3b08f5d90df948a5d938b2a51fc94fa.html"
+    },
+    "demo/pics.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/pics-b625680606ba35fd57ef6e958ea7bb81.html"
+    },
+    "demo/pics": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/demo/pics-b625680606ba35fd57ef6e958ea7bb81.html"
+    },
+    "history.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/history-c79a69bc5d7eec5f95dac0cbdcf53dac.html"
+    },
+    "history": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/history-c79a69bc5d7eec5f95dac0cbdcf53dac.html"
+    },
+    "index.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/index-d59266ce3ac24558e9862b6b33970ccb.html"
+    },
+    "index": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/index-d59266ce3ac24558e9862b6b33970ccb.html"
+    },
+    "static/data/2014-usa-population.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/2014-usa-population-861ee0c83450d57305bf793c12766e27.json"
+    },
+    "static/data/Dow-johns.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/Dow-johns-37245074bf9628b237b67bfee53dc4bd.json"
+    },
+    "static/data/Iris-flower.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/Iris-flower-3a8bef9d689b4e090c42943b926d5183.json"
+    },
+    "static/data/USA.geo.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/USA.geo-73770fb0fe11061e09e079b2b6f569bc.json"
+    },
+    "static/data/airport.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/airport-97d0263427bdb93feda4afdb9d7b2605.json"
+    },
+    "static/data/avg-temp.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/avg-temp-8fded863f315060bc7f23076b69a3fdc.json"
+    },
+    "static/data/babynames.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/babynames-51fc537b4dd5dbcf06fa837492b3f39a.json"
+    },
+    "static/data/bubble.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/bubble-1cf29902e8ae0117c4c029df29602b74.json"
+    },
+    "static/data/candleSticks.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/candleSticks-a7efb65028f0c4b4ed54ec56d8a507d3.json"
+    },
+    "static/data/car.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/car-5e82fa7cdface0eca3e723907afbe5ab.json"
+    },
+    "static/data/china-pm.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/china-pm-e7abb65df0dd17cb0ca15ce41219ba76.json"
+    },
+    "static/data/china-vertical.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/china-vertical-f65e2caee19d62d9bd1a245468286b65.json"
+    },
+    "static/data/china.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/china-dff6129bc242a9150ab8555a8ba7331a.json"
+    },
+    "static/data/d3-module.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/d3-module-86ed70d31c7b44e0fae70165ca7a52db.json"
+    },
+    "static/data/diamond.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/diamond-4f1a68a82884eb361b3ae76baaacfaa3.json"
+    },
+    "static/data/dv-grades.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/dv-grades-193958144c713dc1aae7b35d166b917f.json"
+    },
+    "static/data/flights-airport.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/flights-airport-81e3bb5005c8ebd5e5bdcf98027076ae.json"
+    },
+    "static/data/g2pv.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/g2pv-cec055ef4d3c0691906f551049310ecd.json"
+    },
+    "static/data/heatmap-temperature.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/heatmap-temperature-a39dfaf0dfb707be49eeb11c159e31b0.json"
+    },
+    "static/data/hz-aqi.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/hz-aqi-c8f5ddce50796569a827e2e8e56bd5b1.json"
+    },
+    "static/data/iris_flower_data.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/iris_flower_data-86baf478b8b955216d67b850206ed614.json"
+    },
+    "static/data/kagi.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/kagi-2076e9fa2c1809382ae0c7f99a2fdf4a.json"
+    },
+    "static/data/miserables.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/miserables-581202db269bc84ac327bc5984d67924.json"
+    },
+    "static/data/mobile.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/mobile-71d38158b31c1d6784dc6fe4a70f3e2f.json"
+    },
+    "static/data/mobileCandleSticks.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/mobileCandleSticks-dec9ee291d4056f29453c4b7af58b989.json"
+    },
+    "static/data/page-views.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/page-views-eaf6884a06b81843f986130ba09b396f.json"
+    },
+    "static/data/peking-aqi.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/peking-aqi-60719515892a2d130242e31c9f461e59.json"
+    },
+    "static/data/polar-heatmap.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/polar-heatmap-d08d7cbd553755c9286b4ef3cc49381b.json"
+    },
+    "static/data/populationsByage.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/populationsByage-a85a5d97f960fd9c48d51d2bd5d0f273.json"
+    },
+    "static/data/pyramid.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/pyramid-4d610bd0d4f87d98857df1cb66504900.json"
+    },
+    "static/data/rain-flow.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/rain-flow-1591e5743b2d04e5e554920630545d1f.json"
+    },
+    "static/data/scatter.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/scatter-57532f0786e6840ed1f8e7cfa3399e28.json"
+    },
+    "static/data/scatter1.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/scatter1-e30f3b2cf7717fa686e2de6f8d106a10.json"
+    },
+    "static/data/stock-03.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/stock-03-162f3b5755e1e2264a365d5f9c628fa4.json"
+    },
+    "static/data/stock-calendar.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/stock-calendar-3df5ce2bf34ecbcf9fb23b0d7e53b5a9.json"
+    },
+    "static/data/stock-data.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/stock-data-a7746296bd2dabfccf341bd49c56ae8a.json"
+    },
+    "static/data/table-area.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/table-area-107a5eff5dd14f8dbdce8e4e772c050e.json"
+    },
+    "static/data/temp.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/temp-addb8d59b6b37aaee1a6895cf269dff9.json"
+    },
+    "static/data/top2000.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/top2000-03e9a961dbaab10619eb2457c7a4c8d6.json"
+    },
+    "static/data/wheel.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/wheel-5583e6363344160c95999fdffcd5792e.json"
+    },
+    "static/data/world.geo.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/static/data/world.geo-18c98446bcdf7a864af865f4b97267a8.json"
+    },
+    "static/images/01-point/bubble-a.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/01-point/bubble-a-601c27f544a529fc18dff56bd0cb0e9d.png"
+    },
+    "static/images/01-point/bubble-b.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/01-point/bubble-b-bd447babd647063da49a68bc5c8df90a.png"
+    },
+    "static/images/01-point/bubble-c.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/01-point/bubble-c-2378cbc9ab3b97c6ae267c6c970e4f1b.png"
+    },
+    "static/images/01-point/jitter.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/01-point/jitter-df866ec83e75c8f29a459d61a8381150.png"
+    },
+    "static/images/01-point/one-bin.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/01-point/one-bin-dc3a2cbcb015b478724d05539c2a0676.png"
+    },
+    "static/images/01-point/one-dodge1.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/01-point/one-dodge1-a85bcca6dc549c74cc9caed8973fdb66.png"
+    },
+    "static/images/01-point/one-jitter.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/01-point/one-jitter-6650e891f91984dbac1a4afde3bafd09.png"
+    },
+    "static/images/01-point/one-stack.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/01-point/one-stack-997d54ac4b5b57e2cfc971286369b0b5.png"
+    },
+    "static/images/01-point/point-dodge.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/01-point/point-dodge-6b387ec6ecd7a78c8526953c89f448e9.png"
+    },
+    "static/images/01-point/point-image.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/01-point/point-image-6cc02d991847eb524f0f639426669cf4.png"
+    },
+    "static/images/01-point/point-jitter3.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/01-point/point-jitter3-c9050e3861a05f37e7d332f7513058fb.png"
+    },
+    "static/images/01-point/punch-card.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/01-point/punch-card-79f69a016b1a437ae6b3737e3eab9770.png"
+    },
+    "static/images/01-point/scatter-a.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/01-point/scatter-a-cd5c9181aff6ac922338e3f3c37cbfc1.png"
+    },
+    "static/images/01-point/scatter-b.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/01-point/scatter-b-fe52f731501d196d4d7c094f807d53c2.png"
+    },
+    "static/images/01-point/scatter-c.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/01-point/scatter-c-9bc690b5e81bffdc1d40ec4e7715ba32.png"
+    },
+    "static/images/01-point/scatter-matrix.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/01-point/scatter-matrix-b86e766d2e4482558f4e67215d852447.png"
+    },
+    "static/images/01-point/two-jitter.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/01-point/two-jitter-4f203ee28ad17d6392540e712819f472.png"
+    },
+    "static/images/02-line/dynamic.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/02-line/dynamic-64e4b2dd7f01f76923cb6342272a0531.png"
+    },
+    "static/images/02-line/line-01.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/02-line/line-01-6d59f4ea4181a76853d1122ed67c5a53.png"
+    },
+    "static/images/02-line/line-02.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/02-line/line-02-c81083ca91476eb8e15bc25ec78a3f51.png"
+    },
+    "static/images/02-line/line-03.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/02-line/line-03-248287e19f1919b2488bb7042b3cae71.png"
+    },
+    "static/images/02-line/line-dot.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/02-line/line-dot-bd174d957f501f806146f09ac21cf684.png"
+    },
+    "static/images/02-line/line-kagi.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/02-line/line-kagi-d68dca2b926ea4145d10f4f8802d2271.png"
+    },
+    "static/images/02-line/line-null.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/02-line/line-null-5ac91889652364668f42433416c26064.png"
+    },
+    "static/images/02-line/line-smooth.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/02-line/line-smooth-0fa2f635eea5623957524051b9b795c8.png"
+    },
+    "static/images/02-line/line-with-dot.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/02-line/line-with-dot-f2f8f7e3240686a38d9730cded1898e1.png"
+    },
+    "static/images/02-line/path.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/02-line/path-7cbeafa54af55279d692f9c0a5dd9238.png"
+    },
+    "static/images/02-line/redial-line.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/02-line/redial-line-8c4144eb614e0635869798c7408861a0.png"
+    },
+    "static/images/02-line/simple-line.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/02-line/simple-line-645f798efa53be793cbaecc92a82152d.png"
+    },
+    "static/images/02-line/sparklines.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/02-line/sparklines-df3df7bc10f0d56ab0e7456828fcbc94.png"
+    },
+    "static/images/02-line/step-line.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/02-line/step-line-b659cfe74b448fa0e6e73cffd107f05a.png"
+    },
+    "static/images/03-area/area-gradient.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/03-area/area-gradient-d38973df7734f58bfc883012d1b9c516.png"
+    },
+    "static/images/03-area/area-null.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/03-area/area-null-9dd780e8ec1259158da89958a57e90fe.png"
+    },
+    "static/images/03-area/area-percent.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/03-area/area-percent-348067faba3dac3c8891db8fb71fe4ac.png"
+    },
+    "static/images/03-area/area-range-line.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/03-area/area-range-line-48465d544fffa757ea4337cae8ecf0ff.png"
+    },
+    "static/images/03-area/area-range.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/03-area/area-range-acb2b6defe71658081450103d65edcd0.png"
+    },
+    "static/images/03-area/area-smooth.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/03-area/area-smooth-4c8c4c78fab58e7cbeab951f90e065a0.png"
+    },
+    "static/images/03-area/area-stack.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/03-area/area-stack-ae28232345f8293e5081b79f5aa2a71c.png"
+    },
+    "static/images/03-area/area-with-negative.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/03-area/area-with-negative-bda12a546559b45d1ed87eecbffc0834.png"
+    },
+    "static/images/03-area/area.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/03-area/area-137c3a38510351a2e1517aa27368d37c.png"
+    },
+    "static/images/03-area/streamgraph.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/03-area/streamgraph-31afad49c8d044eb4f850b011d5380e1.png"
+    },
+    "static/images/04-bar/bar-negative.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/04-bar/bar-negative-43cfb7fdeff4135e2f6e26a7f45cb2a8.png"
+    },
+    "static/images/04-bar/bar.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/04-bar/bar-19a905881e045e7f51591c5c29de0509.png"
+    },
+    "static/images/04-bar/clustered-stacked-bar.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/04-bar/clustered-stacked-bar-7f4c32bc759774f19a786966f7bda341.png"
+    },
+    "static/images/04-bar/column-bullet.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/04-bar/column-bullet-06e3da91018407b23f8a3fb7308c3979.png"
+    },
+    "static/images/04-bar/column-helix.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/04-bar/column-helix-8340794ec87dbc31f307f2ab90ec9a29.png"
+    },
+    "static/images/04-bar/column-line.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/04-bar/column-line-8826860e75be291abfab12fbbe29feba.png"
+    },
+    "static/images/04-bar/diverging-stacked-bar.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/04-bar/diverging-stacked-bar-eab48c22737f13b61bd14d49cb62c1c3.png"
+    },
+    "static/images/04-bar/error.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/04-bar/error-39a54b1a87d32cb2526f879b5a17413c.png"
+    },
+    "static/images/04-bar/h-bar.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/04-bar/h-bar-9bc36955d00d2f7336579dfcb59f353b.png"
+    },
+    "static/images/04-bar/image-top-bar.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/04-bar/image-top-bar-0fc865150bed0f5024cf28b85d63c89e.png"
+    },
+    "static/images/04-bar/range-bar.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/04-bar/range-bar-72b2df0ed5997c3f23a02d87b4aea775.png"
+    },
+    "static/images/04-bar/stacked-bar.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/04-bar/stacked-bar-47e86bd9758720346fff930c524a9304.png"
+    },
+    "static/images/04-bar/waterfall-chart.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/04-bar/waterfall-chart-80fe2aa157e5b19c3c12f43439636c66.png"
+    },
+    "static/images/05-pie/donut.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/05-pie/donut-990498cd11e3526df682aebc778d0d92.png"
+    },
+    "static/images/05-pie/pie-nest.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/05-pie/pie-nest-96f6ed5ff8766a8b84acc59129014b3e.png"
+    },
+    "static/images/05-pie/pie.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/05-pie/pie-39b03f6f61d9eae6cc7b5aecc605121a.png"
+    },
+    "static/images/06-rose/rose-01.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/06-rose/rose-01-548f88233dd4a2ca4e91d0b5796ed718.png"
+    },
+    "static/images/06-rose/rose-02.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/06-rose/rose-02-798eac99add5bf9c71acf350776a8ca2.png"
+    },
+    "static/images/06-rose/rose-03.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/06-rose/rose-03-e3b206af81af8b129446799142179387.png"
+    },
+    "static/images/07-k/k-chart-01.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/07-k/k-chart-01-258cff2b415b4a7f105141aae58b3206.png"
+    },
+    "static/images/07-k/k-chart-02.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/07-k/k-chart-02-e30ab519fcac271dfa7ea81b5934114b.png"
+    },
+    "static/images/07-k/k-chart-03.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/07-k/k-chart-03-6cfc38994c020630304740683081b230.png"
+    },
+    "static/images/08-funnel/funnel-compare.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/08-funnel/funnel-compare-f6c6baf7711f7db9d955327843127d00.png"
+    },
+    "static/images/08-funnel/funnel-mirror.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/08-funnel/funnel-mirror-3af6afec4f6e496e81dd6e7dca1f6119.png"
+    },
+    "static/images/08-funnel/funnel.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/08-funnel/funnel-154351e11048054576437f62e3e44aab.png"
+    },
+    "static/images/08-funnel/pyramid.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/08-funnel/pyramid-ed394abca7d4bb6a18b9ee2d11ab13cf.png"
+    },
+    "static/images/09-heatmap/heatmap-01.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/09-heatmap/heatmap-01-07cde779599c8b8466e096af1345da5a.png"
+    },
+    "static/images/09-heatmap/heatmap-02.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/09-heatmap/heatmap-02-3060575574eddcec2ec8b668d90816d4.png"
+    },
+    "static/images/09-heatmap/heatmap-03.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/09-heatmap/heatmap-03-27a3cbfedc08b34ed1cd338253ee0a66.png"
+    },
+    "static/images/09-heatmap/heatmap-canvas.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/09-heatmap/heatmap-canvas-8b5e95d85842f016d0d71725c1f7e3d8.png"
+    },
+    "static/images/09-heatmap/image.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/09-heatmap/image-6e0ce64f2e51ac6a2ab5d6b84343716c.png"
+    },
+    "static/images/09-heatmap/stock-calendar.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/09-heatmap/stock-calendar-e8d1ad3b9703b56b32ad7d2e041e4773.png"
+    },
+    "static/images/09-heatmap/test-case.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/09-heatmap/test-case-370d388152d6e2139561319c8dc222f6.png"
+    },
+    "static/images/10-map/china.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/10-map/china-5cb8d9744b66d9d0a5050f602e20cd77.png"
+    },
+    "static/images/10-map/choropleth-map.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/10-map/choropleth-map-d438acf5187a64ff287637a8016b2f44.png"
+    },
+    "static/images/10-map/map-bubble.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/10-map/map-bubble-3232076175893cf09fc7f1b85ebf9863.png"
+    },
+    "static/images/10-map/map-projection.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/10-map/map-projection-ba7abdbcdacf72d80272b6b58d9b8b00.png"
+    },
+    "static/images/10-map/map-with-heatmap.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/10-map/map-with-heatmap-3ce337aca7c211191a790ea4168ad9c0.png"
+    },
+    "static/images/10-map/wind-map.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/10-map/wind-map-dce4a820190ae6c6b454f1007b825c4d.png"
+    },
+    "static/images/10-map/world-albers.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/10-map/world-albers-df1c49630c8e60fdd3cecdbff2705e0f.png"
+    },
+    "static/images/10-map/world-map.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/10-map/world-map-0eb78d75d0450eb17eb45081e46bc1bd.png"
+    },
+    "static/images/11-treemap/clickable-treemap.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/11-treemap/clickable-treemap-38c9817f50032d4346ec00bb6915c7cc.png"
+    },
+    "static/images/11-treemap/polar-slice-dice.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/11-treemap/polar-slice-dice-1e52c5632d2cc4a81a2d9b5bba5b5693.png"
+    },
+    "static/images/11-treemap/polar-slice-transpose.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/11-treemap/polar-slice-transpose-6d93b145dcd04bc5ed5a7dbc87664353.png"
+    },
+    "static/images/11-treemap/polar-treemap.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/11-treemap/polar-treemap-8fe34df6f6097b300f3520e781d27bb9.png"
+    },
+    "static/images/11-treemap/sunburst-chart.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/11-treemap/sunburst-chart-6b19b646121dafb1f4c7190fa6bab15f.png"
+    },
+    "static/images/11-treemap/treemap.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/11-treemap/treemap-67a9a2f400bc446c9d798cf4c31174cb.png"
+    },
+    "static/images/12-dashboards/clock.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/12-dashboards/clock-fa1a1789b1c29305cc718fb24df68fdc.png"
+    },
+    "static/images/12-dashboards/dashboard.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/12-dashboards/dashboard-1184f93dcf6ef489eb659748c5368f35.png"
+    },
+    "static/images/13-link/department.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/13-link/department-453e926072dda58f2858e018ed095cac.png"
+    },
+    "static/images/13-link/flow.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/13-link/flow-10d2b49252988419194d03bd240ccf90.png"
+    },
+    "static/images/13-link/tree-cascade.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/13-link/tree-cascade-65b7df9f25269735817fcb563737b41e.png"
+    },
+    "static/images/13-link/tree-circle.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/13-link/tree-circle-936da23e40cd7b5ae69b24803431b64a.png"
+    },
+    "static/images/13-link/tree.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/13-link/tree-f2ca016b70bf7901eb9b35d1b5c1d402.png"
+    },
+    "static/images/14-radar/radar-line.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/14-radar/radar-line-e6d0c1e092d3b030dbebbf9aab64844b.png"
+    },
+    "static/images/14-radar/radar-multiple.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/14-radar/radar-multiple-56c163b74c6dd039d7fe1bc0f35149f4.png"
+    },
+    "static/images/14-radar/radar-stacked-percent-area.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/14-radar/radar-stacked-percent-area-9d68aef91283e835cf6044d60e220844.png"
+    },
+    "static/images/14-radar/radar.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/14-radar/radar-d87edc4e047a37a69ae76dd38d41bc6e.png"
+    },
+    "static/images/15-box/boxplot-01.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/15-box/boxplot-01-ddbd89629b7194985b777f145b996f2c.png"
+    },
+    "static/images/15-box/boxplot-02.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/15-box/boxplot-02-e57e07b426e7349840870bddf09d073d.png"
+    },
+    "static/images/15-box/boxplot-03.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/15-box/boxplot-03-b749898772f2bbb3de98e805b1aaf5b1.png"
+    },
+    "static/images/16-polar/aster-plot.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/16-polar/aster-plot-835030b2b83235f2919b26dc207f90d7.png"
+    },
+    "static/images/16-polar/corona.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/16-polar/corona-f228204e8bb7a69dbefda98ec9ed7b16.png"
+    },
+    "static/images/16-polar/pizza.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/16-polar/pizza-12cfe06a0389954a735c4ab0ac503f9a.png"
+    },
+    "static/images/16-polar/polar-box.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/16-polar/polar-box-5883aed6dbc4c32d56600912ac7a23a1.png"
+    },
+    "static/images/16-polar/polar-heatmap.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/16-polar/polar-heatmap-d747be407704cc5a6db82f05fbcfcc87.png"
+    },
+    "static/images/16-polar/polar-interval.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/16-polar/polar-interval-41af5d38f986fc20a68fccd065833367.png"
+    },
+    "static/images/16-polar/polar-line.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/16-polar/polar-line-4c797147b250a16e3d0d9a713d1a8932.png"
+    },
+    "static/images/16-polar/radial-bar.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/16-polar/radial-bar-3dcbbf8415d94c86072bd638873d27c3.png"
+    },
+    "static/images/16-polar/wind-rose.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/16-polar/wind-rose-39589a25ec06d783a221e7638aaa4e1b.png"
+    },
+    "static/images/17-other/chart-event.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/17-other/chart-event-f152c12a175ff9ac30a4737559023eed.png"
+    },
+    "static/images/17-other/cloud.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/17-other/cloud-b40fd602d91db55efb73fdae0d3131e9.png"
+    },
+    "static/images/17-other/contour.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/17-other/contour-c86abecdca6572b64b6fe99cfb76545e.png"
+    },
+    "static/images/17-other/distributioncurve.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/17-other/distributioncurve-6bd82c534253d299a186f3a911949c6d.png"
+    },
+    "static/images/17-other/double-axis.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/17-other/double-axis-1f6a4b2c4c63291b5f4b2030466cda97.png"
+    },
+    "static/images/17-other/histogram.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/17-other/histogram-7917d2352aafab0482f062edd843005b.png"
+    },
+    "static/images/17-other/hot-hex.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/17-other/hot-hex-c2e6a8c0114e57215b312ddd8a62f0a4.png"
+    },
+    "static/images/17-other/hot-rect.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/17-other/hot-rect-6f553e2ac87ee14a5a18d85a572752a1.png"
+    },
+    "static/images/17-other/imageCloud.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/17-other/imageCloud-ec366ecb40dddd942bf705fb4e05ee52.png"
+    },
+    "static/images/17-other/pareto-chart.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/17-other/pareto-chart-3a31038095757c5c851e9502257dd4e7.png"
+    },
+    "static/images/17-other/regressioncurve.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/17-other/regressioncurve-45b65b0382d74298cc13d2ccbe43c727.png"
+    },
+    "static/images/17-other/stem-leaf.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/17-other/stem-leaf-14d8c3464ec44de9296ca181717a1cc3.png"
+    },
+    "static/images/17-other/table-area.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/17-other/table-area-998774fa4a5da7e223685cdc3f09f654.png"
+    },
+    "static/images/18-facet/circle.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/18-facet/circle-c34ad9046bb512b41b34a9a407a23161.png"
+    },
+    "static/images/18-facet/column.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/18-facet/column-36de6d990b47becc44316f05a34ab826.png"
+    },
+    "static/images/18-facet/mirror-transpose.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/18-facet/mirror-transpose-663f9c214d3cd93580985cc93843b111.png"
+    },
+    "static/images/18-facet/mirror.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/18-facet/mirror-fc7f15496dcb7da43ded14223ae54376.png"
+    },
+    "static/images/18-facet/rect.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/18-facet/rect-92055673d71dc6a45adac15c53edfe91.png"
+    },
+    "static/images/18-facet/row.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/18-facet/row-6abf5599506c7594bbdaf163ea4c078d.png"
+    },
+    "static/images/18-facet/tree-column.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/18-facet/tree-column-eea593b88567aa1f07aaba070356bb33.png"
+    },
+    "static/images/18-facet/tree-m.png": {
+      "redirect": "https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/s_dev/dev/Component-name/static/images/18-facet/tree-m-74abdf2668706a089b293d06d120a674.png"
+    },
+    "theme/phantomData.json": {
+      "data": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/theme/phantomData-800317119665fb986e62b5e51f47e09c.json"
+    },
+    "theme/templates/demo-detail.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/theme/templates/demo-detail-a08bbd9480e0403fe789e5774c9ca496.html"
+    },
+    "theme/templates/demo-detail": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/theme/templates/demo-detail-a08bbd9480e0403fe789e5774c9ca496.html"
+    },
+    "theme/templates/demo-list.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/theme/templates/demo-list-80951ade6efef21d36e39d52670d53c1.html"
+    },
+    "theme/templates/demo-list": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/theme/templates/demo-list-80951ade6efef21d36e39d52670d53c1.html"
+    },
+    "theme/templates/footer.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/theme/templates/footer-522dc6e0502dfbe1783035a4320f7d00.html"
+    },
+    "theme/templates/footer": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/theme/templates/footer-522dc6e0502dfbe1783035a4320f7d00.html"
+    },
+    "theme/templates/header.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/theme/templates/header-a4a8ac6890b76cdf58bc8b99f82e7d7e.html"
+    },
+    "theme/templates/header": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/theme/templates/header-a4a8ac6890b76cdf58bc8b99f82e7d7e.html"
+    },
+    "theme/templates/index.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/theme/templates/index-9b37a14a351e566fcff122c8c6d9069e.html"
+    },
+    "theme/templates/index": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/theme/templates/index-9b37a14a351e566fcff122c8c6d9069e.html"
+    },
+    "theme/templates/": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/theme/templates/index-9b37a14a351e566fcff122c8c6d9069e.html"
+    },
+    "theme/templates/layout.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/theme/templates/layout-d3be431975dde4b38ce6f5c6e058bc95.html"
+    },
+    "theme/templates/layout": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/theme/templates/layout-d3be431975dde4b38ce6f5c6e058bc95.html"
+    },
+    "theme/templates/phantom.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/theme/templates/phantom-01ee1b102fd93604f025a209c092bb90.html"
+    },
+    "theme/templates/phantom": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/theme/templates/phantom-01ee1b102fd93604f025a209c092bb90.html"
+    },
+    "theme/templates/script.html": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/theme/templates/script-050a9ea91a6337ed0876df1300d6d237.html"
+    },
+    "theme/templates/script": {
+      "template": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay-internal.aliyun-inc.com/s_dev/dev/Component-name/theme/templates/script-050a9ea91a6337ed0876df1300d6d237.html"
+    }
+  },
+  "domain": [
+    "render-dev.site.alipay.net"
+  ]
+}

@@ -1,0 +1,50 @@
+.banner {
+  width: 100%;
+  min-width: 1440px;
+  height: 320px;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  background-color: @bannerBg;
+
+  .banner-inner {
+    margin: 0 auto;
+    padding-top: 125px;
+    width: 1040px;
+    height: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+
+  h1 {
+    font-size: 38px;
+    font-weight: normal;
+  }
+
+  p.intro {
+    max-width: 360px;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  &.download .banner-inner {
+    background-image: url(https://os.alipayobjects.com/rmsportal/jksghDZQLiWUzul.svg);
+  }
+
+  &.about .banner-inner{
+    background-image: url(https://os.alipayobjects.com/rmsportal/QngGnUlnfUdHiTv.svg);
+    width: 995px;
+  }
+
+  &.tutorial .banner-inner {
+    background-image: url(https://os.alipayobjects.com/rmsportal/dMhJnQDAFfxGNKz.svg);
+  }
+
+  &.api .banner-inner {
+    background-image: url(https://os.alipayobjects.com/rmsportal/RsVFyqNWfRdOCzy.svg);
+  }
+
+  &.demo-detail .banner-inner {
+    background-image: url(https://os.alipayobjects.com/rmsportal/ZJfgypZgKRFmMAI.svg);
+  }
+}

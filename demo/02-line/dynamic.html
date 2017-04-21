@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>G2 - The Grammar Of Graphics </title>
+  <meta name="keywords" content="G2, The Grammar of Graphics, 图形语法,图表绘制引擎,图表库,可视化,数据可视化,AntV,Data Visualization,visualization,visualisation, antd, ant, ant design">
+  <meta name="description" content="G2(The Grammar Of Graphics) 是一个由纯 javascript 编写、强大的语义化图表生成工具，它提供了一整套图形语法，可以让用户通过简单的语法搭建出无数种图表，并且集成了大量的统计工具，支持多种坐标系绘制，可以让用户自由得定制图表，是为大数据时代而准备的强大的可视化工具。">
+  <link rel="icon" href="https://os.alipayobjects.com/rmsportal/VuIJNnUTtJpfuej.png" type="image/x-icon">
+  <link rel="shortcut icon" href="https://os.alipayobjects.com/rmsportal/PBJkVCMxFjrRGEl.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../../static/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../static/codemirror.css" />
+  <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+</head>
+<body><header id="header">
+  
+</header>
+ 
+  <div class="main-container clearfix">
+<div class="body-content demo-detail">
+<div class="demo-title clearfix">
+  <h2 class="title">
+    <a href="../../index.html#线图">
+      <span class="parent-title">线图 / </span>
+      <span class="title" id="J_chartTitle">动态线</span>
+    </a>
+  </h2>
+</div>
+<div class="doc-content demo-doc">
+  <div class="doc-inner">
+    <div class="chart-demo">
+      <div id="c1"></div>
+    </div>
+    <div class="wrapper">
+      <div class="code-panel pull-left">
+        <div class="tabs">
+          <div class="tab" >
+            <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+            <label for="tab-1" class="tab-label">源码</label>
+            <div class="tab-content">
+              <textarea id='codeA' name='codeA'>
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>动态线</title>
+      <link rel="stylesheet" type="text/css" href="../../static/doc.css" />
+      <!--如果不需要jquery ajax 则可以不引入-->
+      <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+      <!-- 引入 G2 脚本 --><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+    </head>
+    <body>
+      <div id="c1"></div>
+      <!-- G2 code start -->
+      <script>
+
+  var data = [];
+
+  function addRecord(arr, time) {
+
+    var temperature1 = ~~(Math.random() * 5) + 22;
+    var temperature2 = ~~(Math.random() * 7) + 17;
+    if(data.length >= 200) {
+      data.shift();
+      data.shift();
+    }
+    data.push({time: time, temperature: temperature1, type: '记录1'});
+    data.push({time: time, temperature: temperature2, type: '记录2'});
+  }
+
+  var begin = new Date().getTime() -  10 * 1000;
+  for (var i = 0; i < 10; i++) {
+    addRecord(data, begin + i * 1000);
+  };
+
+  var chart = new G2.Chart({
+    id: 'c1',
+    forceFit: true,
+    height: 450
+  });
+  chart.source(data, {
+    time: {
+      alias: '时间',
+      type: 'time',
+      mask: 'MM:ss',
+      tickCount:10,
+      nice: false
+    },
+    temperature: {
+      alias: '平均温度(°C)',
+      min: 10,
+      max: 35
+    },
+    type:{
+      type:'cat'
+    }
+  });
+  chart.line().position('time*temperature').color('type',['#ff7f0e','#2ca02c']).shape('smooth').size(2);
+  chart.render();
+
+
+  setInterval(function(){
+    var time = new Date().getTime();
+    addRecord(data, time);
+    chart.changeData(data);
+  },1000);
+
+</script>
+      <!-- G2 code end -->
+    </body>
+  </html>
+              </textarea>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+<script>
+
+  var data = [];
+
+  function addRecord(arr, time) {
+
+    var temperature1 = ~~(Math.random() * 5) + 22;
+    var temperature2 = ~~(Math.random() * 7) + 17;
+    if(data.length >= 200) {
+      data.shift();
+      data.shift();
+    }
+    data.push({time: time, temperature: temperature1, type: '记录1'});
+    data.push({time: time, temperature: temperature2, type: '记录2'});
+  }
+
+  var begin = new Date().getTime() -  10 * 1000;
+  for (var i = 0; i < 10; i++) {
+    addRecord(data, begin + i * 1000);
+  };
+
+  var chart = new G2.Chart({
+    id: 'c1',
+    forceFit: true,
+    height: 450
+  });
+  chart.source(data, {
+    time: {
+      alias: '时间',
+      type: 'time',
+      mask: 'MM:ss',
+      tickCount:10,
+      nice: false
+    },
+    temperature: {
+      alias: '平均温度(°C)',
+      min: 10,
+      max: 35
+    },
+    type:{
+      type:'cat'
+    }
+  });
+  chart.line().position('time*temperature').color('type',['#ff7f0e','#2ca02c']).shape('smooth').size(2);
+  chart.render();
+
+
+  setInterval(function(){
+    var time = new Date().getTime();
+    addRecord(data, time);
+    chart.changeData(data);
+  },1000);
+
+</script>
+
+<script src="../../static/codemirror-compressed.js"></script>
+<script src="../../static/demo-detail.js"></script>
+
+  </div>
+  
+ 
+</body>
+</html>

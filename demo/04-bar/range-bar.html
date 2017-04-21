@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>G2 - The Grammar Of Graphics </title>
+  <meta name="keywords" content="G2, The Grammar of Graphics, 图形语法,图表绘制引擎,图表库,可视化,数据可视化,AntV,Data Visualization,visualization,visualisation, antd, ant, ant design">
+  <meta name="description" content="G2(The Grammar Of Graphics) 是一个由纯 javascript 编写、强大的语义化图表生成工具，它提供了一整套图形语法，可以让用户通过简单的语法搭建出无数种图表，并且集成了大量的统计工具，支持多种坐标系绘制，可以让用户自由得定制图表，是为大数据时代而准备的强大的可视化工具。">
+  <link rel="icon" href="https://os.alipayobjects.com/rmsportal/VuIJNnUTtJpfuej.png" type="image/x-icon">
+  <link rel="shortcut icon" href="https://os.alipayobjects.com/rmsportal/PBJkVCMxFjrRGEl.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../../static/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../static/codemirror.css" />
+  <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+</head>
+<body><header id="header">
+  
+</header>
+ 
+  <div class="main-container clearfix">
+<div class="body-content demo-detail">
+<div class="demo-title clearfix">
+  <h2 class="title">
+    <a href="../../index.html#柱状图">
+      <span class="parent-title">柱状图 / </span>
+      <span class="title" id="J_chartTitle">有区间范围的条形图</span>
+    </a>
+  </h2>
+</div>
+<div class="doc-content demo-doc">
+  <div class="doc-inner">
+    <div class="chart-demo">
+      <div id="c1"></div>
+    </div>
+    <div class="wrapper">
+      <div class="code-panel pull-left">
+        <div class="tabs">
+          <div class="tab" >
+            <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+            <label for="tab-1" class="tab-label">源码</label>
+            <div class="tab-content">
+              <textarea id='codeA' name='codeA'>
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>有区间范围的条形图</title>
+      <link rel="stylesheet" type="text/css" href="../../static/doc.css" />
+      <!--如果不需要jquery ajax 则可以不引入-->
+      <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+      <!-- 引入 G2 脚本 --><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+    </head>
+    <body>
+      <div id="c1"></div>
+      <!-- G2 code start -->
+      <script>
+var data = [
+  {profession: '两年制副学士学位',highest: 110000,minimum: 23000,mean: 56636},
+  {profession: '执法与救火',highest: 120000,minimum: 18000,mean: 66625},
+  {profession: '教育学',highest: 125000,minimum: 24000,mean: 72536},
+  {profession: '心理学',highest: 130000,minimum: 22500,mean: 75256},
+  {profession: '计算机科学',highest: 131000,minimum: 23000,mean: 77031},
+  {profession: '医学与护理',highest: 132000,minimum: 23500,mean: 77791},
+  {profession: '农学',highest: 135000,minimum: 23200,mean: 78526},
+  {profession: '数学',highest: 137000,minimum: 23000,mean: 78526},
+  {profession: '物理与化学',highest: 130000,minimum: 30500,mean: 79975},
+  {profession: '哲学',highest: 140000,minimum: 22200,mean: 81911},
+  {profession: '建筑学',highest: 139000,minimum: 23000,mean: 83971},
+  {profession: '经管营销',highest: 138000,minimum: 23000,mean: 84572},
+  {profession: '工程学',highest: 145000,minimum: 32200,mean: 88037},
+  {profession: '人文科学',highest: 136000,minimum: 40000,mean: 84572},
+  {profession: '新闻学',highest: 148000,minimum: 33000,mean: 89064},
+  {profession: '生物学',highest: 147000,minimum: 34200,mean: 89869},
+  {profession: '传播学',highest: 149000,minimum: 34000,mean: 90735},
+  {profession: '社会学、政治学',highest: 148500,minimum: 35000,mean: 91704},
+  {profession: '经济学',highest: 146000,minimum: 37200,mean: 91923},
+  {profession: '视觉与表演艺术',highest: 148900,minimum: 40000,mean: 94381},
+  {profession: '历史系',highest: 155000,minimum: 38200,mean: 95900},
+  {profession: '英语',highest: 159000,minimum: 39000,mean: 99533}
+];
+
+var Frame = G2.Frame;
+var frame = new Frame(data); // 加工数据
+frame.addCol('range', function(obj) {
+  return [obj.minimum, obj.highest];
+});
+
+var chart = new G2.Chart({
+  id: 'c1',
+  width: 1000,
+  height: 500,
+  plotCfg: {
+    margin: [20, 80, 80, 150]
+  }
+});
+var defs = {
+  'range': {min: 0, max: 200000, alias: '收入范围'},
+  'mean': {min: 0, max: 200000, alias: '收入均值'}
+};
+
+chart.source(frame, defs);
+chart.axis('profession', {
+  title: null
+});
+chart.axis('mean', false);
+chart.coord().transpose();
+chart.interval().position('profession*range').size(12);
+chart.point().position('profession*mean').color('#fff')
+  .shape('circle')
+  .label('mean',{offset: 20,label: {fill: '#fff'}});
+chart.render();
+</script>
+
+      <!-- G2 code end -->
+    </body>
+  </html>
+              </textarea>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+<script>
+var data = [
+  {profession: '两年制副学士学位',highest: 110000,minimum: 23000,mean: 56636},
+  {profession: '执法与救火',highest: 120000,minimum: 18000,mean: 66625},
+  {profession: '教育学',highest: 125000,minimum: 24000,mean: 72536},
+  {profession: '心理学',highest: 130000,minimum: 22500,mean: 75256},
+  {profession: '计算机科学',highest: 131000,minimum: 23000,mean: 77031},
+  {profession: '医学与护理',highest: 132000,minimum: 23500,mean: 77791},
+  {profession: '农学',highest: 135000,minimum: 23200,mean: 78526},
+  {profession: '数学',highest: 137000,minimum: 23000,mean: 78526},
+  {profession: '物理与化学',highest: 130000,minimum: 30500,mean: 79975},
+  {profession: '哲学',highest: 140000,minimum: 22200,mean: 81911},
+  {profession: '建筑学',highest: 139000,minimum: 23000,mean: 83971},
+  {profession: '经管营销',highest: 138000,minimum: 23000,mean: 84572},
+  {profession: '工程学',highest: 145000,minimum: 32200,mean: 88037},
+  {profession: '人文科学',highest: 136000,minimum: 40000,mean: 84572},
+  {profession: '新闻学',highest: 148000,minimum: 33000,mean: 89064},
+  {profession: '生物学',highest: 147000,minimum: 34200,mean: 89869},
+  {profession: '传播学',highest: 149000,minimum: 34000,mean: 90735},
+  {profession: '社会学、政治学',highest: 148500,minimum: 35000,mean: 91704},
+  {profession: '经济学',highest: 146000,minimum: 37200,mean: 91923},
+  {profession: '视觉与表演艺术',highest: 148900,minimum: 40000,mean: 94381},
+  {profession: '历史系',highest: 155000,minimum: 38200,mean: 95900},
+  {profession: '英语',highest: 159000,minimum: 39000,mean: 99533}
+];
+
+var Frame = G2.Frame;
+var frame = new Frame(data); // 加工数据
+frame.addCol('range', function(obj) {
+  return [obj.minimum, obj.highest];
+});
+
+var chart = new G2.Chart({
+  id: 'c1',
+  width: 1000,
+  height: 500,
+  plotCfg: {
+    margin: [20, 80, 80, 150]
+  }
+});
+var defs = {
+  'range': {min: 0, max: 200000, alias: '收入范围'},
+  'mean': {min: 0, max: 200000, alias: '收入均值'}
+};
+
+chart.source(frame, defs);
+chart.axis('profession', {
+  title: null
+});
+chart.axis('mean', false);
+chart.coord().transpose();
+chart.interval().position('profession*range').size(12);
+chart.point().position('profession*mean').color('#fff')
+  .shape('circle')
+  .label('mean',{offset: 20,label: {fill: '#fff'}});
+chart.render();
+</script>
+
+
+<script src="../../static/codemirror-compressed.js"></script>
+<script src="../../static/demo-detail.js"></script>
+
+  </div>
+  
+ 
+</body>
+</html>

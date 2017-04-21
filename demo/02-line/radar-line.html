@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>G2 - The Grammar Of Graphics </title>
+  <meta name="keywords" content="G2, The Grammar of Graphics, 图形语法,图表绘制引擎,图表库,可视化,数据可视化,AntV,Data Visualization,visualization,visualisation, antd, ant, ant design">
+  <meta name="description" content="G2(The Grammar Of Graphics) 是一个由纯 javascript 编写、强大的语义化图表生成工具，它提供了一整套图形语法，可以让用户通过简单的语法搭建出无数种图表，并且集成了大量的统计工具，支持多种坐标系绘制，可以让用户自由得定制图表，是为大数据时代而准备的强大的可视化工具。">
+  <link rel="icon" href="https://os.alipayobjects.com/rmsportal/VuIJNnUTtJpfuej.png" type="image/x-icon">
+  <link rel="shortcut icon" href="https://os.alipayobjects.com/rmsportal/PBJkVCMxFjrRGEl.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../../static/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../static/codemirror.css" />
+  <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+</head>
+<body><header id="header">
+  
+</header>
+ 
+  <div class="main-container clearfix">
+    
+<div class="body-content demo-body">
+  <div class="doc-content demo-doc">
+    <div class="doc-inner">
+      <h2 id="点图">点图</h2>
+      <ul class="demo-detail-list clearfix" id="J_点图">
+        <li>
+          <a href="../../demo/01-point/scatter-a.html">
+            <img class="lazy" data-original="../../static/images/01-point/scatter-a.png" width="316px" height="167px" />
+            <div class="des">男女身高体重分布</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/01-point/scatter-b.html">
+            <img class="lazy" data-original="../../static/images/01-point/scatter-b.png" width="316px" height="167px" />
+            <div class="des">时间序列散点图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/01-point/scatter-c.html">
+            <img class="lazy" data-original="../../static/images/01-point/scatter-c.png" width="316px" height="167px" />
+            <div class="des">划分区域的多形状散点图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/01-point/one-dodge1.html">
+            <img class="lazy" data-original="../../static/images/01-point/one-dodge1.png" width="316px" height="167px" />
+            <div class="des">分组层叠点图（一维）</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/01-point/one-jitter.html">
+            <img class="lazy" data-original="../../static/images/01-point/one-jitter.png" width="316px" height="167px" />
+            <div class="des">扰动点图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/01-point/bubble-a.html">
+            <img class="lazy" data-original="../../static/images/01-point/bubble-a.png" width="316px" height="167px" />
+            <div class="des">气泡图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/01-point/one-bin.html">
+            <img class="lazy" data-original="../../static/images/01-point/one-bin.png" width="316px" height="167px" />
+            <div class="des">封箱层叠点图（一维）</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/01-point/point-image.html">
+            <img class="lazy" data-original="../../static/images/01-point/point-image.png" width="316px" height="167px" />
+            <div class="des">图片层叠点图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/01-point/one-stack.html">
+            <img class="lazy" data-original="../../static/images/01-point/one-stack.png" width="316px" height="167px" />
+            <div class="des">层叠点图（一维）</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/01-point/bubble-b.html">
+            <img class="lazy" data-original="../../static/images/01-point/bubble-b.png" width="316px" height="167px" />
+            <div class="des">各国脂肪和糖分摄入量对比</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/01-point/bubble-c.html">
+            <img class="lazy" data-original="../../static/images/01-point/bubble-c.png" width="316px" height="167px" />
+            <div class="des">自定义图片气泡图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/01-point/two-jitter.html">
+            <img class="lazy" data-original="../../static/images/01-point/two-jitter.png" width="316px" height="167px" />
+            <div class="des">分类-连续点图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/01-point/jitter.html">
+            <img class="lazy" data-original="../../static/images/01-point/jitter.png" width="316px" height="167px" />
+            <div class="des">扰动点图和箱型图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/01-point/point-jitter3.html">
+            <img class="lazy" data-original="../../static/images/01-point/point-jitter3.png" width="316px" height="167px" />
+            <div class="des">分类-连续点图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/01-point/point-dodge.html">
+            <img class="lazy" data-original="../../static/images/01-point/point-dodge.png" width="316px" height="167px" />
+            <div class="des">分组点图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/01-point/scatter-matrix.html">
+            <img class="lazy" data-original="../../static/images/01-point/scatter-matrix.png" width="316px" height="167px" />
+            <div class="des">散点矩阵</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/01-point/punch-card.html">
+            <img class="lazy" data-original="../../static/images/01-point/punch-card.png" width="316px" height="167px" />
+            <div class="des">Punch card</div>
+          </a>
+        </li>
+      </ul>
+      <h2 id="线图">线图</h2>
+      <ul class="demo-detail-list clearfix" id="J_线图">
+        <li>
+          <a href="../../demo/02-line/simple-line.html">
+            <img class="lazy" data-original="../../static/images/02-line/simple-line.png" width="316px" height="167px" />
+            <div class="des">简单线图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/02-line/line-01.html">
+            <img class="lazy" data-original="../../static/images/02-line/line-01.png" width="316px" height="167px" />
+            <div class="des">杭州市2010至2015年空气质量指数</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/02-line/line-02.html">
+            <img class="lazy" data-original="../../static/images/02-line/line-02.png" width="316px" height="167px" />
+            <div class="des">某城市某时间段雨量流量关系图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/02-line/line-03.html">
+            <img class="lazy" data-original="../../static/images/02-line/line-03.png" width="316px" height="167px" />
+            <div class="des">各城市温度对比</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/02-line/line-smooth.html">
+            <img class="lazy" data-original="../../static/images/02-line/line-smooth.png" width="316px" height="167px" />
+            <div class="des">光滑的折线图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/02-line/step-line.html">
+            <img class="lazy" data-original="../../static/images/02-line/step-line.png" width="316px" height="167px" />
+            <div class="des">Step-line chart</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/02-line/line-null.html">
+            <img class="lazy" data-original="../../static/images/02-line/line-null.png" width="316px" height="167px" />
+            <div class="des">断了的线图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/02-line/line-dot.html">
+            <img class="lazy" data-original="../../static/images/02-line/line-dot.png" width="316px" height="167px" />
+            <div class="des">点线图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/02-line/line-with-dot.html">
+            <img class="lazy" data-original="../../static/images/02-line/line-with-dot.png" width="316px" height="167px" />
+            <div class="des">线跟虚线混合</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/02-line/path.html">
+            <img class="lazy" data-original="../../static/images/02-line/path.png" width="316px" height="167px" />
+            <div class="des">路径图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/02-line/sparklines.html">
+            <img class="lazy" data-original="../../static/images/02-line/sparklines.png" width="316px" height="167px" />
+            <div class="des">Sparklines 趋势线</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/02-line/redial-line.html">
+            <img class="lazy" data-original="../../static/images/02-line/redial-line.png" width="316px" height="167px" />
+            <div class="des">Redial Line Chart</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/02-line/dynamic.html">
+            <img class="lazy" data-original="../../static/images/02-line/dynamic.png" width="316px" height="167px" />
+            <div class="des">动态线</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/02-line/line-kagi.html">
+            <img class="lazy" data-original="../../static/images/02-line/line-kagi.png" width="316px" height="167px" />
+            <div class="des">Kagi chart</div>
+          </a>
+        </li>
+      </ul>
+      <h2 id="区域图">区域图</h2>
+      <ul class="demo-detail-list clearfix" id="J_区域图">
+        <li>
+          <a href="../../demo/03-area/area-null.html">
+            <img class="lazy" data-original="../../static/images/03-area/area-null.png" width="316px" height="167px" />
+            <div class="des">区域图（存在空值）</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/03-area/area-gradient.html">
+            <img class="lazy" data-original="../../static/images/03-area/area-gradient.png" width="316px" height="167px" />
+            <div class="des">渐变区域图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/03-area/area-stack.html">
+            <img class="lazy" data-original="../../static/images/03-area/area-stack.png" width="316px" height="167px" />
+            <div class="des">层叠区域图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/03-area/area-percent.html">
+            <img class="lazy" data-original="../../static/images/03-area/area-percent.png" width="316px" height="167px" />
+            <div class="des">百分比层叠区域图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/03-area/area-range-line.html">
+            <img class="lazy" data-original="../../static/images/03-area/area-range-line.png" width="316px" height="167px" />
+            <div class="des">范围区域图与线图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/03-area/area-range.html">
+            <img class="lazy" data-original="../../static/images/03-area/area-range.png" width="316px" height="167px" />
+            <div class="des">范围区域图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/03-area/area-smooth.html">
+            <img class="lazy" data-original="../../static/images/03-area/area-smooth.png" width="316px" height="167px" />
+            <div class="des">平滑的区域图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/03-area/area-with-negative.html">
+            <img class="lazy" data-original="../../static/images/03-area/area-with-negative.png" width="316px" height="167px" />
+            <div class="des">存在负值的区域图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/03-area/area.html">
+            <img class="lazy" data-original="../../static/images/03-area/area.png" width="316px" height="167px" />
+            <div class="des">大规模区域图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/03-area/streamgraph.html">
+            <img class="lazy" data-original="../../static/images/03-area/streamgraph.png" width="316px" height="167px" />
+            <div class="des">streamgraph</div>
+          </a>
+        </li>
+      </ul>
+      <h2 id="柱状图">柱状图</h2>
+      <ul class="demo-detail-list clearfix" id="J_柱状图">
+        <li>
+          <a href="../../demo/04-bar/bar.html">
+            <img class="lazy" data-original="../../static/images/04-bar/bar.png" width="316px" height="167px" />
+            <div class="des">柱状图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/04-bar/h-bar.html">
+            <img class="lazy" data-original="../../static/images/04-bar/h-bar.png" width="316px" height="167px" />
+            <div class="des">横向柱状图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/04-bar/stacked-bar.html">
+            <img class="lazy" data-original="../../static/images/04-bar/stacked-bar.png" width="316px" height="167px" />
+            <div class="des">层叠柱状图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/04-bar/clustered-stacked-bar.html">
+            <img class="lazy" data-original="../../static/images/04-bar/clustered-stacked-bar.png" width="316px" height="167px" />
+            <div class="des">分组层叠柱状图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/04-bar/diverging-stacked-bar.html">
+            <img class="lazy" data-original="../../static/images/04-bar/diverging-stacked-bar.png" width="316px" height="167px" />
+            <div class="des">Diverging stacked bar</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/04-bar/column-line.html">
+            <img class="lazy" data-original="../../static/images/04-bar/column-line.png" width="316px" height="167px" />
+            <div class="des">空心的柱状图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/04-bar/range-bar.html">
+            <img class="lazy" data-original="../../static/images/04-bar/range-bar.png" width="316px" height="167px" />
+            <div class="des">有区间范围的条形图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/04-bar/bar-negative.html">
+            <img class="lazy" data-original="../../static/images/04-bar/bar-negative.png" width="316px" height="167px" />
+            <div class="des">人口金字塔图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/04-bar/error.html">
+            <img class="lazy" data-original="../../static/images/04-bar/error.png" width="316px" height="167px" />
+            <div class="des">钉形柱状图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/04-bar/column-bullet.html">
+            <img class="lazy" data-original="../../static/images/04-bar/column-bullet.png" width="316px" height="167px" />
+            <div class="des">子弹图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/04-bar/waterfall-chart.html">
+            <img class="lazy" data-original="../../static/images/04-bar/waterfall-chart.png" width="316px" height="167px" />
+            <div class="des">瀑布图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/04-bar/image-top-bar.html">
+            <img class="lazy" data-original="../../static/images/04-bar/image-top-bar.png" width="316px" height="167px" />
+            <div class="des">自定义柱状图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/04-bar/column-helix.html">
+            <img class="lazy" data-original="../../static/images/04-bar/column-helix.png" width="316px" height="167px" />
+            <div class="des">螺旋柱状图</div>
+          </a>
+        </li>
+      </ul>
+      <h2 id="饼图">饼图</h2>
+      <ul class="demo-detail-list clearfix" id="J_饼图">
+        <li>
+          <a href="../../demo/05-pie/pie.html">
+            <img class="lazy" data-original="../../static/images/05-pie/pie.png" width="316px" height="167px" />
+            <div class="des">饼图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/05-pie/donut.html">
+            <img class="lazy" data-original="../../static/images/05-pie/donut.png" width="316px" height="167px" />
+            <div class="des">环图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/05-pie/pie-nest.html">
+            <img class="lazy" data-original="../../static/images/05-pie/pie-nest.png" width="316px" height="167px" />
+            <div class="des">嵌套饼图</div>
+          </a>
+        </li>
+      </ul>
+      <h2 id="南丁格尔玫瑰图">南丁格尔玫瑰图</h2>
+      <ul class="demo-detail-list clearfix" id="J_南丁格尔玫瑰图">
+        <li>
+          <a href="../../demo/06-rose/rose-01.html">
+            <img class="lazy" data-original="../../static/images/06-rose/rose-01.png" width="316px" height="167px" />
+            <div class="des">南丁格尔玫瑰图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/06-rose/rose-02.html">
+            <img class="lazy" data-original="../../static/images/06-rose/rose-02.png" width="316px" height="167px" />
+            <div class="des">各国消费对比</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/06-rose/rose-03.html">
+            <img class="lazy" data-original="../../static/images/06-rose/rose-03.png" width="316px" height="167px" />
+            <div class="des">指定范围的玫瑰图</div>
+          </a>
+        </li>
+      </ul>
+      <h2 id="股票图">股票图</h2>
+      <ul class="demo-detail-list clearfix" id="J_股票图">
+        <li>
+          <a href="../../demo/07-k/k-chart-01.html">
+            <img class="lazy" data-original="../../static/images/07-k/k-chart-01.png" width="316px" height="167px" />
+            <div class="des">股票图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/07-k/k-chart-02.html">
+            <img class="lazy" data-original="../../static/images/07-k/k-chart-02.png" width="316px" height="167px" />
+            <div class="des">股票图与线图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/07-k/k-chart-03.html">
+            <img class="lazy" data-original="../../static/images/07-k/k-chart-03.png" width="316px" height="167px" />
+            <div class="des">股票图与范围区域图</div>
+          </a>
+        </li>
+      </ul>
+      <h2 id="漏斗图">漏斗图</h2>
+      <ul class="demo-detail-list clearfix" id="J_漏斗图">
+        <li>
+          <a href="../../demo/08-funnel/funnel.html">
+            <img class="lazy" data-original="../../static/images/08-funnel/funnel.png" width="316px" height="167px" />
+            <div class="des">漏斗图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/08-funnel/pyramid.html">
+            <img class="lazy" data-original="../../static/images/08-funnel/pyramid.png" width="316px" height="167px" />
+            <div class="des">尖底漏斗图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/08-funnel/funnel-compare.html">
+            <img class="lazy" data-original="../../static/images/08-funnel/funnel-compare.png" width="316px" height="167px" />
+            <div class="des">对比漏斗图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/08-funnel/funnel-mirror.html">
+            <img class="lazy" data-original="../../static/images/08-funnel/funnel-mirror.png" width="316px" height="167px" />
+            <div class="des">对称漏斗图</div>
+          </a>
+        </li>
+      </ul>
+      <h2 id="热力/色块图">热力/色块图</h2>
+      <ul class="demo-detail-list clearfix" id="J_热力/色块图">
+        <li>
+          <a href="../../demo/09-heatmap/heatmap-01.html">
+            <img class="lazy" data-original="../../static/images/09-heatmap/heatmap-01.png" width="316px" height="167px" />
+            <div class="des">色块图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/09-heatmap/test-case.html">
+            <img class="lazy" data-original="../../static/images/09-heatmap/test-case.png" width="316px" height="167px" />
+            <div class="des">单元测试覆盖率</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/09-heatmap/heatmap-02.html">
+            <img class="lazy" data-original="../../static/images/09-heatmap/heatmap-02.png" width="316px" height="167px" />
+            <div class="des">杭州地铁票价图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/09-heatmap/stock-calendar.html">
+            <img class="lazy" data-original="../../static/images/09-heatmap/stock-calendar.png" width="316px" height="167px" />
+            <div class="des">股票波动图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/09-heatmap/heatmap-canvas.html">
+            <img class="lazy" data-original="../../static/images/09-heatmap/heatmap-canvas.png" width="316px" height="167px" />
+            <div class="des">heatmap canvas</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/09-heatmap/heatmap-03.html">
+            <img class="lazy" data-original="../../static/images/09-heatmap/heatmap-03.png" width="316px" height="167px" />
+            <div class="des">二维正太分布函数热力图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/09-heatmap/image.html">
+            <img class="lazy" data-original="../../static/images/09-heatmap/image.png" width="316px" height="167px" />
+            <div class="des">热力图</div>
+          </a>
+        </li>
+      </ul>
+      <h2 id="地图">地图</h2>
+      <ul class="demo-detail-list clearfix" id="J_地图">
+        <li>
+          <a href="../../demo/10-map/china.html">
+            <img class="lazy" data-original="../../static/images/10-map/china.png" width="316px" height="167px" />
+            <div class="des">中国地图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/10-map/world-map.html">
+            <img class="lazy" data-original="../../static/images/10-map/world-map.png" width="316px" height="167px" />
+            <div class="des">世界地图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/10-map/choropleth-map.html">
+            <img class="lazy" data-original="../../static/images/10-map/choropleth-map.png" width="316px" height="167px" />
+            <div class="des">分级统计图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/10-map/map-bubble.html">
+            <img class="lazy" data-original="../../static/images/10-map/map-bubble.png" width="316px" height="167px" />
+            <div class="des">美国各个机场航线图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/10-map/map-with-heatmap.html">
+            <img class="lazy" data-original="../../static/images/10-map/map-with-heatmap.png" width="316px" height="167px" />
+            <div class="des">地图与热力图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/10-map/world-albers.html">
+            <img class="lazy" data-original="../../static/images/10-map/world-albers.png" width="316px" height="167px" />
+            <div class="des">albers 投影</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/10-map/map-projection.html">
+            <img class="lazy" data-original="../../static/images/10-map/map-projection.png" width="316px" height="167px" />
+            <div class="des">全国各个城市 pm 指数</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/10-map/wind-map.html">
+            <img class="lazy" data-original="../../static/images/10-map/wind-map.png" width="316px" height="167px" />
+            <div class="des">风向地图</div>
+          </a>
+        </li>
+      </ul>
+      <h2 id="treemap">treemap</h2>
+      <ul class="demo-detail-list clearfix" id="J_treemap">
+        <li>
+          <a href="../../demo/11-treemap/treemap.html">
+            <img class="lazy" data-original="../../static/images/11-treemap/treemap.png" width="316px" height="167px" />
+            <div class="des">treemap</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/11-treemap/clickable-treemap.html">
+            <img class="lazy" data-original="../../static/images/11-treemap/clickable-treemap.png" width="316px" height="167px" />
+            <div class="des">可点击 treemap</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/11-treemap/sunburst-chart.html">
+            <img class="lazy" data-original="../../static/images/11-treemap/sunburst-chart.png" width="316px" height="167px" />
+            <div class="des">sunburst chart</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/11-treemap/polar-treemap.html">
+            <img class="lazy" data-original="../../static/images/11-treemap/polar-treemap.png" width="316px" height="167px" />
+            <div class="des">polar treemap</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/11-treemap/polar-slice-dice.html">
+            <img class="lazy" data-original="../../static/images/11-treemap/polar-slice-dice.png" width="316px" height="167px" />
+            <div class="des">polar sliceDice treemap</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/11-treemap/polar-slice-transpose.html">
+            <img class="lazy" data-original="../../static/images/11-treemap/polar-slice-transpose.png" width="316px" height="167px" />
+            <div class="des">polar transposeed treemap</div>
+          </a>
+        </li>
+      </ul>
+      <h2 id="仪表盘">仪表盘</h2>
+      <ul class="demo-detail-list clearfix" id="J_仪表盘">
+        <li>
+          <a href="../../demo/12-dashboards/dashboard.html">
+            <img class="lazy" data-original="../../static/images/12-dashboards/dashboard.png" width="316px" height="167px" />
+            <div class="des">仪表盘</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/12-dashboards/clock.html">
+            <img class="lazy" data-original="../../static/images/12-dashboards/clock.png" width="316px" height="167px" />
+            <div class="des">钟表</div>
+          </a>
+        </li>
+      </ul>
+      <h2 id="关系图">关系图</h2>
+      <ul class="demo-detail-list clearfix" id="J_关系图">
+        <li>
+          <a href="../../demo/13-link/flow.html">
+            <img class="lazy" data-original="../../static/images/13-link/flow.png" width="316px" height="167px" />
+            <div class="des">流程图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/13-link/tree.html">
+            <img class="lazy" data-original="../../static/images/13-link/tree.png" width="316px" height="167px" />
+            <div class="des">结构树</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/13-link/tree-circle.html">
+            <img class="lazy" data-original="../../static/images/13-link/tree-circle.png" width="316px" height="167px" />
+            <div class="des">径向树图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/13-link/department.html">
+            <img class="lazy" data-original="../../static/images/13-link/department.png" width="316px" height="167px" />
+            <div class="des">组织部门</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/13-link/tree-cascade.html">
+            <img class="lazy" data-original="../../static/images/13-link/tree-cascade.png" width="316px" height="167px" />
+            <div class="des">树的展开折叠</div>
+          </a>
+        </li>
+      </ul>
+      <h2 id="雷达图">雷达图</h2>
+      <ul class="demo-detail-list clearfix" id="J_雷达图">
+        <li>
+          <a href="../../demo/14-radar/radar.html">
+            <img class="lazy" data-original="../../static/images/14-radar/radar.png" width="316px" height="167px" />
+            <div class="des">雷达图(区域)</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/14-radar/radar-stacked-percent-area.html">
+            <img class="lazy" data-original="../../static/images/14-radar/radar-stacked-percent-area.png" width="316px" height="167px" />
+            <div class="des">雷达图(百分比层叠区域)</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/14-radar/radar-line.html">
+            <img class="lazy" data-original="../../static/images/14-radar/radar-line.png" width="316px" height="167px" />
+            <div class="des">雷达图（线）</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/14-radar/radar-multiple.html">
+            <img class="lazy" data-original="../../static/images/14-radar/radar-multiple.png" width="316px" height="167px" />
+            <div class="des">雷达图(多维对比)</div>
+          </a>
+        </li>
+      </ul>
+      <h2 id="箱型图">箱型图</h2>
+      <ul class="demo-detail-list clearfix" id="J_箱型图">
+        <li>
+          <a href="../../demo/15-box/boxplot-01.html">
+            <img class="lazy" data-original="../../static/images/15-box/boxplot-01.png" width="316px" height="167px" />
+            <div class="des">箱型图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/15-box/boxplot-02.html">
+            <img class="lazy" data-original="../../static/images/15-box/boxplot-02.png" width="316px" height="167px" />
+            <div class="des">分组箱型图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/15-box/boxplot-03.html">
+            <img class="lazy" data-original="../../static/images/15-box/boxplot-03.png" width="316px" height="167px" />
+            <div class="des">一维箱型图</div>
+          </a>
+        </li>
+      </ul>
+      <h2 id="极坐标">极坐标</h2>
+      <ul class="demo-detail-list clearfix" id="J_极坐标">
+        <li>
+          <a href="../../demo/16-polar/aster-plot.html">
+            <img class="lazy" data-original="../../static/images/16-polar/aster-plot.png" width="316px" height="167px" />
+            <div class="des">Aster plot</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/16-polar/polar-interval.html">
+            <img class="lazy" data-original="../../static/images/16-polar/polar-interval.png" width="316px" height="167px" />
+            <div class="des">自定义的饼图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/16-polar/radial-bar.html">
+            <img class="lazy" data-original="../../static/images/16-polar/radial-bar.png" width="316px" height="167px" />
+            <div class="des">玉玦图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/16-polar/wind-rose.html">
+            <img class="lazy" data-original="../../static/images/16-polar/wind-rose.png" width="316px" height="167px" />
+            <div class="des">Wind rose</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/16-polar/corona.html">
+            <img class="lazy" data-original="../../static/images/16-polar/corona.png" width="316px" height="167px" />
+            <div class="des">日冕图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/16-polar/polar-heatmap.html">
+            <img class="lazy" data-original="../../static/images/16-polar/polar-heatmap.png" width="316px" height="167px" />
+            <div class="des">色块图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/16-polar/polar-box.html">
+            <img class="lazy" data-original="../../static/images/16-polar/polar-box.png" width="316px" height="167px" />
+            <div class="des">极坐标下的箱型图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/16-polar/pizza.html">
+            <img class="lazy" data-original="../../static/images/16-polar/pizza.png" width="316px" height="167px" />
+            <div class="des">圆内点图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/16-polar/polar-line.html">
+            <img class="lazy" data-original="../../static/images/16-polar/polar-line.png" width="316px" height="167px" />
+            <div class="des">线图</div>
+          </a>
+        </li>
+      </ul>
+      <h2 id="其他图表">其他图表</h2>
+      <ul class="demo-detail-list clearfix" id="J_其他图表">
+        <li>
+          <a href="../../demo/17-other/histogram.html">
+            <img class="lazy" data-original="../../static/images/17-other/histogram.png" width="316px" height="167px" />
+            <div class="des">直方图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/17-other/hot-hex.html">
+            <img class="lazy" data-original="../../static/images/17-other/hot-hex.png" width="316px" height="167px" />
+            <div class="des">分块热力图(六边形)</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/17-other/hot-rect.html">
+            <img class="lazy" data-original="../../static/images/17-other/hot-rect.png" width="316px" height="167px" />
+            <div class="des">分块热力图(四边形)</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/17-other/contour.html">
+            <img class="lazy" data-original="../../static/images/17-other/contour.png" width="316px" height="167px" />
+            <div class="des">等高线</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/17-other/stem-leaf.html">
+            <img class="lazy" data-original="../../static/images/17-other/stem-leaf.png" width="316px" height="167px" />
+            <div class="des">茎叶图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/17-other/pareto-chart.html">
+            <img class="lazy" data-original="../../static/images/17-other/pareto-chart.png" width="316px" height="167px" />
+            <div class="des">帕累托图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/17-other/distributioncurve.html">
+            <img class="lazy" data-original="../../static/images/17-other/distributioncurve.png" width="316px" height="167px" />
+            <div class="des">分布曲线图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/17-other/regressioncurve.html">
+            <img class="lazy" data-original="../../static/images/17-other/regressioncurve.png" width="316px" height="167px" />
+            <div class="des">回归曲线图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/17-other/double-axis.html">
+            <img class="lazy" data-original="../../static/images/17-other/double-axis.png" width="316px" height="167px" />
+            <div class="des">双 Y 轴</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/17-other/chart-event.html">
+            <img class="lazy" data-original="../../static/images/17-other/chart-event.png" width="316px" height="167px" />
+            <div class="des">chart 事件支持</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/17-other/imageCloud.html">
+            <img class="lazy" data-original="../../static/images/17-other/imageCloud.png" width="316px" height="167px" />
+            <div class="des">图片词云</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/17-other/cloud.html">
+            <img class="lazy" data-original="../../static/images/17-other/cloud.png" width="316px" height="167px" />
+            <div class="des">词云</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/17-other/table-area.html">
+            <img class="lazy" data-original="../../static/images/17-other/table-area.png" width="316px" height="167px" />
+            <div class="des">表格内图表</div>
+          </a>
+        </li>
+      </ul>
+      <h2 id="分面">分面</h2>
+      <ul class="demo-detail-list clearfix" id="J_分面">
+        <li>
+          <a href="../../demo/18-facet/rect.html">
+            <img class="lazy" data-original="../../static/images/18-facet/rect.png" width="316px" height="167px" />
+            <div class="des">矩阵分面</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/18-facet/circle.html">
+            <img class="lazy" data-original="../../static/images/18-facet/circle.png" width="316px" height="167px" />
+            <div class="des">圆型分面</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/18-facet/row.html">
+            <img class="lazy" data-original="../../static/images/18-facet/row.png" width="316px" height="167px" />
+            <div class="des">行分面</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/18-facet/column.html">
+            <img class="lazy" data-original="../../static/images/18-facet/column.png" width="316px" height="167px" />
+            <div class="des">列分面</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/18-facet/tree-column.html">
+            <img class="lazy" data-original="../../static/images/18-facet/tree-column.png" width="316px" height="167px" />
+            <div class="des">树形分面-柱状图</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/18-facet/tree-m.html">
+            <img class="lazy" data-original="../../static/images/18-facet/tree-m.png" width="316px" height="167px" />
+            <div class="des">树形分面-多级</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/18-facet/mirror.html">
+            <img class="lazy" data-original="../../static/images/18-facet/mirror.png" width="316px" height="167px" />
+            <div class="des">镜像分面</div>
+          </a>
+        </li>
+        <li>
+          <a href="../../demo/18-facet/mirror-transpose.html">
+            <img class="lazy" data-original="../../static/images/18-facet/mirror-transpose.png" width="316px" height="167px" />
+            <div class="des">镜像分面 - 翻转</div>
+          </a>
+        </li>
+      </ul>
+ 
+    </div>
+  </div>
+</div>
+
+<div class="nav-menu hide" id="J_navMenu"></div>
+<script type="text/javascript" src="../../static/jquery.lazyload.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $("img.lazy").lazyload();
+  });
+</script>
+
+  </div>
+  
+  <div id="J_indexFooter" class="invisible"><footer class="footer">
+<!-- 自由扩充区域 -->
+
+</footer>
+  </div>
+
+</body>
+</html>

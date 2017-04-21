@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>G2 - The Grammar Of Graphics </title>
+  <meta name="keywords" content="G2, The Grammar of Graphics, 图形语法,图表绘制引擎,图表库,可视化,数据可视化,AntV,Data Visualization,visualization,visualisation, antd, ant, ant design">
+  <meta name="description" content="G2(The Grammar Of Graphics) 是一个由纯 javascript 编写、强大的语义化图表生成工具，它提供了一整套图形语法，可以让用户通过简单的语法搭建出无数种图表，并且集成了大量的统计工具，支持多种坐标系绘制，可以让用户自由得定制图表，是为大数据时代而准备的强大的可视化工具。">
+  <link rel="icon" href="https://os.alipayobjects.com/rmsportal/VuIJNnUTtJpfuej.png" type="image/x-icon">
+  <link rel="shortcut icon" href="https://os.alipayobjects.com/rmsportal/PBJkVCMxFjrRGEl.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../../static/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../static/codemirror.css" />
+  <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+</head>
+<body><header id="header">
+  
+</header>
+ 
+  <div class="main-container clearfix">
+<div class="body-content demo-detail">
+<div class="demo-title clearfix">
+  <h2 class="title">
+    <a href="../../index.html#其他图表">
+      <span class="parent-title">其他图表 / </span>
+      <span class="title" id="J_chartTitle">双 Y 轴</span>
+    </a>
+  </h2>
+</div>
+<div class="doc-content demo-doc">
+  <div class="doc-inner">
+    <div class="chart-demo">
+      <div id="c1"></div>
+    </div>
+    <div class="wrapper">
+      <div class="code-panel pull-left">
+        <div class="tabs">
+          <div class="tab" >
+            <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+            <label for="tab-1" class="tab-label">源码</label>
+            <div class="tab-content">
+              <textarea id='codeA' name='codeA'>
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>双 Y 轴</title>
+      <link rel="stylesheet" type="text/css" href="../../static/doc.css" />
+      <!--如果不需要jquery ajax 则可以不引入-->
+      <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+      <!-- 引入 G2 脚本 --><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+    </head>
+    <body>
+      <div id="c1"></div>
+      <!-- G2 code start -->
+      <script>
+var data = [
+  {'time': '10:10', 'call': 4, 'waiting': 2, 'people': 2},
+  {'time': '10:15', 'call': 2, 'waiting': 6, 'people': 3},
+  {'time': '10:20', 'call': 13, 'waiting': 2, 'people': 5},
+  {'time': '10:25', 'call': 9, 'waiting': 9, 'people': 1},
+  {'time': '10:30', 'call': 5, 'waiting': 2, 'people': 3},
+  {'time': '10:35', 'call': 8, 'waiting': 2, 'people': 1},
+  {'time': '10:40', 'call': 13, 'waiting': 1, 'people': 2}
+];
+
+var Frame = G2.Frame;
+var frame = new Frame(data);
+frame = Frame.combinColumns(frame, ['call','waiting'],'count','type',['time', 'people']);
+
+var chart = new G2.Chart({
+  id: 'c1',
+  width: 1000,
+  height: 500
+});
+chart.source(frame, {
+  'count': {alias: '话务量（通）', min: 0},
+  'people': {alias: '人数（人）', min: 0}
+});
+// 去除 X 轴标题
+chart.axis('time', {
+  title: null
+});
+
+chart.legend(false);// 不显示图例
+chart.intervalStack().position('time*count').color('type', ['#348cd1', '#43b5d8']); // 绘制层叠柱状图
+chart.line().position('time*people').color('#5ed470').size(2).shape('smooth'); // 绘制曲线图
+chart.point().position('time*people').color('#5ed470'); // 绘制点图
+chart.render();
+</script>
+
+      <!-- G2 code end -->
+    </body>
+  </html>
+              </textarea>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+<script>
+var data = [
+  {'time': '10:10', 'call': 4, 'waiting': 2, 'people': 2},
+  {'time': '10:15', 'call': 2, 'waiting': 6, 'people': 3},
+  {'time': '10:20', 'call': 13, 'waiting': 2, 'people': 5},
+  {'time': '10:25', 'call': 9, 'waiting': 9, 'people': 1},
+  {'time': '10:30', 'call': 5, 'waiting': 2, 'people': 3},
+  {'time': '10:35', 'call': 8, 'waiting': 2, 'people': 1},
+  {'time': '10:40', 'call': 13, 'waiting': 1, 'people': 2}
+];
+
+var Frame = G2.Frame;
+var frame = new Frame(data);
+frame = Frame.combinColumns(frame, ['call','waiting'],'count','type',['time', 'people']);
+
+var chart = new G2.Chart({
+  id: 'c1',
+  width: 1000,
+  height: 500
+});
+chart.source(frame, {
+  'count': {alias: '话务量（通）', min: 0},
+  'people': {alias: '人数（人）', min: 0}
+});
+// 去除 X 轴标题
+chart.axis('time', {
+  title: null
+});
+
+chart.legend(false);// 不显示图例
+chart.intervalStack().position('time*count').color('type', ['#348cd1', '#43b5d8']); // 绘制层叠柱状图
+chart.line().position('time*people').color('#5ed470').size(2).shape('smooth'); // 绘制曲线图
+chart.point().position('time*people').color('#5ed470'); // 绘制点图
+chart.render();
+</script>
+
+
+<script src="../../static/codemirror-compressed.js"></script>
+<script src="../../static/demo-detail.js"></script>
+
+  </div>
+  
+ 
+</body>
+</html>

@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block banner %}
+<div class="banner">
+  <div class="banner-inner">
+    <h1>丰富的图表</h1>
+    <p class="intro">G2 可绘制出多样的图表，我们既支持各种传统图表，<p/>
+    <p class="intro">同时还可以创造出各种各样的图表。</p>
+  </div>
+</div>
+{%- endblock %}
+
+{%- block content %}
+<div class="body-content demo-body">
+  <div class="doc-content demo-doc">
+    <div class="doc-inner">
+    {%- set types = resource.pages|getDemoTypes(post.filepath) %}
+    {%- for type in types %}
+      <h2 id="{{type}}">{{type}}</h2>
+      {%- set pages = resource.pages|getDemoPages(post.filepath,type) %}
+      {%- set typeId = type|trim() %}
+      <ul class="demo-detail-list clearfix" id="J_{{typeId}}">
+      {%- for page in pages %}
+        <li>
+          <a href="{{content_url('')}}/{{page.filepath.replace('.md','.html')}}">
+            {%- set name = page.filepath.replace('demo/','').replace('.md','.png') %}
+            <img class="lazy" data-original="{{static_url('demoImg')}}/{{name}}" width="316px" height="167px" />
+            <div class="des">{{page.title}}</div>
+          </a>
+        </li>
+      {%- endfor %}
+      </ul>
+    {%- endfor %}
+    {{post.html}}
+    </div>
+  </div>
+</div>
+<div class="nav-menu hide" id="J_navMenu"></div>
+<script type="text/javascript" src="{{static_url('jquery.lazyload.js')}}"></script>
+<script type="text/javascript">
+  $(function() {
+    $("img.lazy").lazyload();
+  });
+</script>
+{%- endblock %}
