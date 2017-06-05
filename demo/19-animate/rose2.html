@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>G2 - The Grammar Of Graphics </title>
+  <meta name="keywords" content="G2, The Grammar of Graphics, 图形语法,图表绘制引擎,图表库,可视化,数据可视化,AntV,Data Visualization,visualization,visualisation, antd, ant, ant design">
+  <meta name="description" content="G2(The Grammar Of Graphics) 是一个由纯 javascript 编写、强大的语义化图表生成工具，它提供了一整套图形语法，可以让用户通过简单的语法搭建出无数种图表，并且集成了大量的统计工具，支持多种坐标系绘制，可以让用户自由得定制图表，是为大数据时代而准备的强大的可视化工具。">
+  <link rel="icon" href="https://os.alipayobjects.com/rmsportal/VuIJNnUTtJpfuej.png" type="image/x-icon">
+  <link rel="shortcut icon" href="https://os.alipayobjects.com/rmsportal/PBJkVCMxFjrRGEl.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../../static/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../static/codemirror.css" />
+  <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+</head>
+<body><header id="header">
+  
+</header>
+ 
+  <div class="main-container clearfix">
+<div class="body-content demo-detail">
+<div class="demo-title clearfix">
+  <h2 class="title">
+    <a href="../../index.html#动画">
+      <span class="parent-title">动画 / </span>
+      <span class="title" id="J_chartTitle">玫瑰图 动画</span>
+    </a>
+  </h2>
+</div>
+<div class="doc-content demo-doc">
+  <div class="doc-inner">
+    <div class="chart-demo">
+      <div id="c1"></div>
+    </div>
+    <div class="wrapper">
+      <div class="code-panel pull-left">
+        <div class="tabs">
+          <div class="tab" >
+            <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+            <label for="tab-1" class="tab-label">源码</label>
+            <div class="tab-content">
+              <textarea id='codeA' name='codeA'>
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>玫瑰图 动画</title>
+      <link rel="stylesheet" type="text/css" href="../../static/doc.css" />
+      <!--如果不需要jquery ajax 则可以不引入-->
+      <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+      <!-- 引入 G2 脚本 --><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+    </head>
+    <body>
+      <div id="c1"></div>
+      <!-- G2 code start -->
+      <script>
+  var data = [{"label":"Fisheries","colour":"#9E0041","score":59},{"label":"Mariculture","colour":"#C32F4B","score":24},{"label":"Artisanal Fishing Opportunities","colour":"#E1514B","score":98},{"label":"Natural Products","colour":"#F47245","score":60},{"label":"Carbon Storage","colour":"#FB9F59","score":74},{"label":"Coastal Protection","colour":"#FEC574","score":70},{"label":"Tourism &  Recreation","colour":"#FAE38C","score":42},{"label":"Livelihoods","colour":"#EAF195","score":77},{"label":"Economies","colour":"#C7E89E","score":88},{"label":"Iconic Species","colour":"#9CD6A4","score":60},{"label":"Lasting Special Places","colour":"#6CC4A4","score":65},{"label":"Clean Waters","colour":"#4D9DB4","score":71},{"label":"Habitats","colour":"#4776B4","score":88},{"label":"Species","colour":"#5E4EA1","score":83}];
+  var chart = new G2.Chart({
+    id: 'c1',
+    forceFit: true,
+    height: 450
+  });
+  chart.source(data);
+  chart.coord('polar', {
+    inner: 0.2
+  });
+  chart.legend(false);
+  chart.axis('score', false);
+  chart.axis('label', {
+    labels: null
+  });
+  const animate = G2.Animate;
+  function pathInYRose(shape, animateCfg) {
+    var path = G2.Util.pathToAbsolute(shape.attr('path'));
+    const t1 = [].concat(path[0])
+    t1[0] = 'L';
+    const t2 = [].concat(path[2]);
+    t2[6] = path[3][1];
+    t2[7] = path[3][2];
+    shape.attr('path', [path[0], t1, t2, path[3], path[4], path[5]]);
+    var index = shape.get('index') || (shape.get('origin') && shape.get('origin').index) || 0;
+    var delay = typeof animateCfg.delay === 'function' ? animateCfg.delay(index, shape.id) : animateCfg.delay || 0;
+    var ease = typeof animateCfg.easing === 'function' ? animateCfg.easing(index, shape.id) : animateCfg.easing;
+    var duration = typeof animateCfg.duration === 'function' ? animateCfg.duration(index, shape.id) : animateCfg.duration;
+    var fillOpacity = shape.__attrs.fillOpacity || 1;
+    var strokeOpacity = shape.__attrs.strokeOpacity || 1;
+    shape.attr('fillOpacity', 0);
+    shape.attr('strokeOpacity', 0);
+    var endState = {
+      path: path,
+      delay,
+      fillOpacity,
+      strokeOpacity,
+    };
+    shape.animate(endState, duration, ease);
+  }
+  animate.registAnimation('appear', 'pathInYRose', pathInYRose);
+  const ids = data.map(item => (item.colour + ' ' + item.label));
+  chart.interval().position('label*score').color('colour', function(val) {
+    return val;
+  }).style({
+    stroke: '#999',
+    lineWidth: 1
+  }).tooltip('score')
+    .animate({
+    appear: {
+      animation: 'pathInYRose',
+      delay: (i, id) => {
+        var num = 0;
+        var name = id.split('#')[1];
+        return ids.indexOf('#'+name) * 50;
+      },
+      duration: 450,
+      easing: 'easeOutQuad',
+    }
+  });
+  chart.render();
+</script>
+      <!-- G2 code end -->
+    </body>
+  </html>
+              </textarea>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div><script src="https://a.alipayobjects.com/g/datavis/g2/2.3.0/g2.js"></script>
+<script>
+  var data = [{"label":"Fisheries","colour":"#9E0041","score":59},{"label":"Mariculture","colour":"#C32F4B","score":24},{"label":"Artisanal Fishing Opportunities","colour":"#E1514B","score":98},{"label":"Natural Products","colour":"#F47245","score":60},{"label":"Carbon Storage","colour":"#FB9F59","score":74},{"label":"Coastal Protection","colour":"#FEC574","score":70},{"label":"Tourism &  Recreation","colour":"#FAE38C","score":42},{"label":"Livelihoods","colour":"#EAF195","score":77},{"label":"Economies","colour":"#C7E89E","score":88},{"label":"Iconic Species","colour":"#9CD6A4","score":60},{"label":"Lasting Special Places","colour":"#6CC4A4","score":65},{"label":"Clean Waters","colour":"#4D9DB4","score":71},{"label":"Habitats","colour":"#4776B4","score":88},{"label":"Species","colour":"#5E4EA1","score":83}];
+  var chart = new G2.Chart({
+    id: 'c1',
+    forceFit: true,
+    height: 450
+  });
+  chart.source(data);
+  chart.coord('polar', {
+    inner: 0.2
+  });
+  chart.legend(false);
+  chart.axis('score', false);
+  chart.axis('label', {
+    labels: null
+  });
+  const animate = G2.Animate;
+  function pathInYRose(shape, animateCfg) {
+    var path = G2.Util.pathToAbsolute(shape.attr('path'));
+    const t1 = [].concat(path[0])
+    t1[0] = 'L';
+    const t2 = [].concat(path[2]);
+    t2[6] = path[3][1];
+    t2[7] = path[3][2];
+    shape.attr('path', [path[0], t1, t2, path[3], path[4], path[5]]);
+    var index = shape.get('index') || (shape.get('origin') && shape.get('origin').index) || 0;
+    var delay = typeof animateCfg.delay === 'function' ? animateCfg.delay(index, shape.id) : animateCfg.delay || 0;
+    var ease = typeof animateCfg.easing === 'function' ? animateCfg.easing(index, shape.id) : animateCfg.easing;
+    var duration = typeof animateCfg.duration === 'function' ? animateCfg.duration(index, shape.id) : animateCfg.duration;
+    var fillOpacity = shape.__attrs.fillOpacity || 1;
+    var strokeOpacity = shape.__attrs.strokeOpacity || 1;
+    shape.attr('fillOpacity', 0);
+    shape.attr('strokeOpacity', 0);
+    var endState = {
+      path: path,
+      delay,
+      fillOpacity,
+      strokeOpacity,
+    };
+    shape.animate(endState, duration, ease);
+  }
+  animate.registAnimation('appear', 'pathInYRose', pathInYRose);
+  const ids = data.map(item => (item.colour + ' ' + item.label));
+  chart.interval().position('label*score').color('colour', function(val) {
+    return val;
+  }).style({
+    stroke: '#999',
+    lineWidth: 1
+  }).tooltip('score')
+    .animate({
+    appear: {
+      animation: 'pathInYRose',
+      delay: (i, id) => {
+        var num = 0;
+        var name = id.split('#')[1];
+        return ids.indexOf('#'+name) * 50;
+      },
+      duration: 450,
+      easing: 'easeOutQuad',
+    }
+  });
+  chart.render();
+</script>
+
+<script src="../../static/codemirror-compressed.js"></script>
+<script src="../../static/demo-detail.js"></script>
+
+  </div>
+  
+ 
+</body>
+</html>
